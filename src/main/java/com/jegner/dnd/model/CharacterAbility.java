@@ -1,0 +1,29 @@
+package com.jegner.dnd.model;
+
+import java.util.Map;
+
+import lombok.Data;
+
+@Data
+public class CharacterAbility {
+	
+	private Map<AbilityScore, Integer> abilityScores;
+	public static final int STARTING_SCORE_LOW = 8;
+	public static final int STARTING_SCORE_HIGH = 15;
+	
+	public static int costToBuy(int desiredScore) {
+		if (desiredScore < STARTING_SCORE_LOW || desiredScore > STARTING_SCORE_HIGH) {
+			throw new IllegalArgumentException("Desired score of " + desiredScore 
+					+ " is outside range "+STARTING_SCORE_LOW+" to "+ STARTING_SCORE_HIGH);
+		}
+		
+		if (desiredScore <=13) {
+			return desiredScore - 8;
+		} else if (desiredScore == 14) {
+			return 7;
+		} else { // must be 15
+			return 9;
+		}
+	}
+
+}
