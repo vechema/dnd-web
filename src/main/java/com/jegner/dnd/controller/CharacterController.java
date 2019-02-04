@@ -6,7 +6,7 @@ import com.jegner.dnd.model.Character;
 
 @RestController
 public class CharacterController {
-	
+
 	@RequestMapping("/char")
 	public Character index() {
 		return new Character();

@@ -8,8 +8,8 @@ import lombok.Data;
 
 @Data
 public class Item {
-	
-	private GameEntity entity;	
+
+	private GameEntity entity;
 	private double value;
 	private double weight;
 

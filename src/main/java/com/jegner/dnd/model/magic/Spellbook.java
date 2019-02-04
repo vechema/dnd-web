@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 public class Spellbook {
-	
+
 	private List<Spell> knownSpells;
 	private List<Spell> preparedSpells;
 	private Map<Integer, Integer> spellLevelToSlots;

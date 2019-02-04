@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class Language {
-	
+
 	private String name;
 	private boolean isStandard;
 	private List<Race> typicalSpeakers;

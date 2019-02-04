@@ -7,6 +7,6 @@ import lombok.Data;
 @Data
 public class Container extends Item {
 	private int capacityInLBs;
-	
+
 	private static List<Container> containers;
 }

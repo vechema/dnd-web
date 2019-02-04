@@ -12,7 +12,7 @@ import lombok.Data;
 
 @Data
 public class Spell {
-	
+
 	private GameEntity entity;
 	private int level;
 	private Duration castingTime;

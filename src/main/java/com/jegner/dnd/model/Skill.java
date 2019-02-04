@@ -5,7 +5,7 @@ import java.util.List;
 import com.jegner.dnd.utility.GameEntity;
 
 public class Skill {
-	
+
 	private GameEntity entity;
 	private AbilityScore abilityModifier;
 

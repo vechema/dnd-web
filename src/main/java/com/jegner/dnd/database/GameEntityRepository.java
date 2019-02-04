@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.jegner.dnd.utility.GameEntity;
 
 @Repository
-public interface GameEntityRepository extends JpaRepository<GameEntity, Long>{
+public interface GameEntityRepository extends JpaRepository<GameEntity, Long> {
 
 }

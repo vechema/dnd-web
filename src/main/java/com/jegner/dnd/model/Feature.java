@@ -12,7 +12,7 @@ import lombok.Data;
 
 @Data
 public class Feature {
-	
+
 	private GameEntity entity;
 
 	private static List<Feature> features;

@@ -6,5 +6,5 @@ import lombok.Data;
 
 @Data
 public class LevelingTable {
-	private Map<Integer,Level> levels;
+	private Map<Integer, Level> levels;
 }

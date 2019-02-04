@@ -11,7 +11,7 @@ import lombok.Data;
 
 @Data
 public class CharacterClass {
-	
+
 	private GameEntity entity;
 	private int hitDice;
 	private List<AbilityScore> favoredAbilities;
@@ -21,7 +21,7 @@ public class CharacterClass {
 	private Money startingMoney;
 	private List<Spell> classSpells;
 	private AbilityScore spellcastingAbility;
-	
+
 	private static List<CharacterClass> characterClasses;
-		
+
 }

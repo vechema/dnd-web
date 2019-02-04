@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Data
 public class Race {
-	
+
 	private List<Trait> traits;
 	private Size size;
 	private int startingSpeed;

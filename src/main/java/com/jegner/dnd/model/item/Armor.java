@@ -19,7 +19,7 @@ public class Armor extends Item {
 	private int AC;
 	private boolean isStealth;
 	private EquipmentType equipmentType;
-	
+
 	private Duration donTime;
 	private Duration doffTime;
 
