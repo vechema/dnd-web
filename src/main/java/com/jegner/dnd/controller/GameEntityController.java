@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jegner.dnd.database.GameEntityRepository;
+import com.jegner.dnd.database.repo.GameEntityRepository;
 import com.jegner.dnd.exception.ResourceNotFoundException;
 import com.jegner.dnd.utility.GameEntity;
 

@@ -1,4 +1,4 @@
-package com.jegner.dnd.database;
+package com.jegner.dnd.database.repo;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;
