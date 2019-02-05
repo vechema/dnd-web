@@ -1,9 +1,18 @@
 package com.jegner.dnd.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 import lombok.Data;
 
 @Data
+@Entity
 public class Experience {
+
+	@Id
+	@GeneratedValue
+	private Long id;
 
 	private int experiencePoints;
 

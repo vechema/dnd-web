@@ -2,11 +2,22 @@ package com.jegner.dnd.model;
 
 import java.util.Map;
 
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 import lombok.Data;
 
 @Data
+@Entity
 public class CharacterAbility {
 
+	@Id
+	@GeneratedValue
+	private Long id;
+
+	@ElementCollection
 	private Map<AbilityScore, Integer> abilityScores;
 	public static final int STARTING_SCORE_LOW = 8;
 	public static final int STARTING_SCORE_HIGH = 15;

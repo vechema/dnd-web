@@ -1,9 +1,18 @@
 package com.jegner.dnd.model.item;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 import lombok.Data;
 
 @Data
+@Entity
 public class Money {
+
+	@Id
+	@GeneratedValue
+	private Long id;
 	private double gold;
 
 	public double addCopper(double copper) {
