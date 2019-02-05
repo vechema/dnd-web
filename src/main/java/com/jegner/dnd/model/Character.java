@@ -13,6 +13,13 @@ import javax.persistence.OneToOne;
 import com.jegner.dnd.model.item.Inventory;
 import com.jegner.dnd.model.item.Money;
 import com.jegner.dnd.model.magic.CharacterSpellbook;
+import com.jegner.dnd.model.predefined.Background;
+import com.jegner.dnd.model.predefined.CharacterClass;
+import com.jegner.dnd.model.predefined.Condition;
+import com.jegner.dnd.model.predefined.Feat;
+import com.jegner.dnd.model.predefined.Language;
+import com.jegner.dnd.model.predefined.Race;
+import com.jegner.dnd.model.predefined.Skill;
 import com.jegner.dnd.utility.GameEntity;
 
 import lombok.Data;

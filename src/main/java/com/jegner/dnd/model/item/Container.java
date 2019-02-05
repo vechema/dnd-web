@@ -4,13 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import com.jegner.dnd.utility.Prefetched;
+import com.jegner.dnd.utility.PreDefined;
 
 import lombok.Data;
 
 @Data
 @Entity
-@Prefetched
+@PreDefined
 public class Container extends Item {
 
 	@Id

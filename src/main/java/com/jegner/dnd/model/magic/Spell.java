@@ -13,13 +13,13 @@ import com.jegner.dnd.model.item.Item;
 import com.jegner.dnd.utility.DiceRoll;
 import com.jegner.dnd.utility.Duration;
 import com.jegner.dnd.utility.GameEntity;
-import com.jegner.dnd.utility.Prefetched;
+import com.jegner.dnd.utility.PreDefined;
 
 import lombok.Data;
 
 @Entity
 @Data
-@Prefetched
+@PreDefined
 public class Spell {
 
 	@GeneratedValue

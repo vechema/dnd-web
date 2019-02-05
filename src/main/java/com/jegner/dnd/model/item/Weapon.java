@@ -9,13 +9,13 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import com.jegner.dnd.utility.DiceRoll;
-import com.jegner.dnd.utility.Prefetched;
+import com.jegner.dnd.utility.PreDefined;
 
 import lombok.Data;
 
 @Data
 @Entity
-@Prefetched
+@PreDefined
 public class Weapon extends Item {
 
 	@Id

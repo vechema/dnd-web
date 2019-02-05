@@ -6,13 +6,13 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 import com.jegner.dnd.utility.GameEntity;
-import com.jegner.dnd.utility.Prefetched;
+import com.jegner.dnd.utility.PreDefined;
 
 import lombok.Data;
 
 @Data
 @Entity
-@Prefetched
+@PreDefined
 public class Item {
 
 	@Id
