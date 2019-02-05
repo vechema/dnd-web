@@ -26,7 +26,7 @@ public class Level {
 	private int proficiencyBonus;
 	private int level;
 	@OneToOne
-	private CharacterClass charClass;
+	private Classs charClass;
 	@OneToMany
 	private List<Feature> features;
 	@ElementCollection

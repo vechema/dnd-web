@@ -14,7 +14,7 @@ import com.jegner.dnd.model.item.Inventory;
 import com.jegner.dnd.model.item.Money;
 import com.jegner.dnd.model.magic.CharacterSpellbook;
 import com.jegner.dnd.model.predefined.Background;
-import com.jegner.dnd.model.predefined.CharacterClass;
+import com.jegner.dnd.model.predefined.Classs;
 import com.jegner.dnd.model.predefined.Condition;
 import com.jegner.dnd.model.predefined.Feat;
 import com.jegner.dnd.model.predefined.Language;
@@ -37,7 +37,7 @@ public class Character {
 	private String Player;
 	private boolean isMale;
 	@OneToOne
-	private CharacterClass charClass;
+	private Classs charClass;
 	@OneToOne
 	private Race race;
 	@OneToOne

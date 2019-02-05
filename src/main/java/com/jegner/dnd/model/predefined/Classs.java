@@ -22,7 +22,7 @@ import lombok.Data;
 @Data
 @Entity
 @PreDefined
-public class CharacterClass {
+public class Classs {
 
 	@Id
 	@GeneratedValue

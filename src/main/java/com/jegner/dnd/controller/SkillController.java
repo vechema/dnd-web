@@ -16,54 +16,53 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jegner.dnd.database.repo.GameEntityRepository;
+import com.jegner.dnd.database.repo.SkillRepository;
 import com.jegner.dnd.exception.ResourceNotFoundException;
-import com.jegner.dnd.utility.GameEntity;
+import com.jegner.dnd.model.predefined.Skill;
 
-// TODO autogeneration of this controller for basic types
 @RestController
-@RequestMapping("/entity")
-public class GameEntityController {
+@RequestMapping("/skill")
+public class SkillController {
 
 	@Autowired
-	GameEntityRepository gameEntityRepo;
+	SkillRepository skillRepo;
 
 	@GetMapping("/{id}")
-	public GameEntity getGameEntityById(@PathVariable long id) {
-		return gameEntityRepo.findById(id).orElseThrow(() -> new ResourceNotFoundException("Game Entity", "id", id));
+	public Skill getSkillById(@PathVariable long id) {
+		return skillRepo.findById(id).orElseThrow(() -> new ResourceNotFoundException("Skill", "id", id));
 	}
 
 	@GetMapping("")
-	public List<GameEntity> getAllGameEntities() {
-		return gameEntityRepo.findAll();
+	public List<Skill> getAllGameEntities() {
+		return skillRepo.findAll();
 	}
 
 	@PostMapping("")
-	public GameEntity postGameEntity(@Valid @RequestBody GameEntity gameEntity) {
-		return gameEntityRepo.save(gameEntity);
+	public Skill postSkill(@Valid @RequestBody Skill skill) {
+		return skillRepo.save(skill);
 	}
 
 	@PutMapping("/{id}")
-	public GameEntity updateGameEntity(@PathVariable long id, @Valid @RequestBody GameEntity gameEntityDetails) {
-		GameEntity gameEntity = getGameEntityById(id);
+	public Skill updateSkill(@PathVariable long id, @Valid @RequestBody Skill skillDetails) {
+		Skill skill = getSkillById(id);
 
-		BeanUtils.copyProperties(gameEntityDetails, gameEntity);
+		BeanUtils.copyProperties(skillDetails, skill);
 
 		// Makes it such that the put json does not have to include the id
-		gameEntity.setId(id);
-		return gameEntityRepo.save(gameEntity);
+		skill.setId(id);
+		return skillRepo.save(skill);
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<?> deleteGameEntityById(@PathVariable long id) {
-		gameEntityRepo.deleteById(id);
+	public ResponseEntity<?> deleteSkillById(@PathVariable long id) {
+		skillRepo.deleteById(id);
 
 		return ResponseEntity.ok().build();
 	}
 
 	@DeleteMapping("")
 	public ResponseEntity<?> deleteAllGameEntities() {
-		gameEntityRepo.deleteAll();
+		skillRepo.deleteAll();
 
 		return ResponseEntity.ok().build();
 	}
