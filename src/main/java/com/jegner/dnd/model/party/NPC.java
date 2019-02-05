@@ -1,5 +1,6 @@
 package com.jegner.dnd.model.party;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,8 +17,8 @@ public class NPC {
 	@Id
 	@GeneratedValue
 	private long id;
-	@OneToOne
-	private GameEntity entity;
+	@OneToOne(cascade = CascadeType.ALL)
+	private GameEntity gameEntity;
 	private Alignment alignment;
 	@OneToOne
 	private Location location;

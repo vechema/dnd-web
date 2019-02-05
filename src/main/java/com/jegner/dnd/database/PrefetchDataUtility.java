@@ -29,8 +29,12 @@ public class PrefetchDataUtility {
 		gameEntityRepo.save(new GameEntity());
 		backgroundRepo.save(new Background());
 		// TODO consider some sort of self registration, common interface, and iterate
-		// through
-		backgroundRepo.saveAll(BackgroundPredefined.predefinedBackgrounds());
+		// through. Will have to consider order due to dependencies
+		// Depends on no one - Skill, Feat, Feature, Trait, Armor, Container, Item,
+		// WeaponProperty
 		skillRepo.saveAll(SkillPredefined.predefinedSkills());
+
+		backgroundRepo.saveAll(BackgroundPredefined.predefinedBackgrounds());
+
 	}
 }

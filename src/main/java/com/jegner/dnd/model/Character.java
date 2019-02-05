@@ -3,6 +3,7 @@ package com.jegner.dnd.model;
 import java.util.List;
 import java.util.Map;
 
+import javax.persistence.CascadeType;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,10 +33,12 @@ public class Character {
 	@GeneratedValue
 	private Long id;
 
-	@OneToOne
-	private GameEntity entity;
+	@OneToOne(cascade = CascadeType.ALL)
+	private GameEntity gameEntity;
 	private String Player;
 	private boolean isMale;
+	private int weightInLbs;
+	private int heightInInches;
 	@OneToOne
 	private Classs charClass;
 	@OneToOne

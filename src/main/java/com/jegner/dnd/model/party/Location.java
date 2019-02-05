@@ -2,6 +2,7 @@ package com.jegner.dnd.model.party;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,8 +19,8 @@ public class Location {
 	@Id
 	@GeneratedValue
 	private long id;
-	@OneToOne
-	private GameEntity entity;
+	@OneToOne(cascade = CascadeType.ALL)
+	private GameEntity gameEntity;
 	private Climate climate;
 	@ElementCollection
 	private List<LocationType> locationTypes;

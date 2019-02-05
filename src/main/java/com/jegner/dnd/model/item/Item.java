@@ -1,5 +1,6 @@
 package com.jegner.dnd.model.item;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,8 +20,8 @@ public class Item {
 	@GeneratedValue
 	private Long id;
 
-	@OneToOne
-	private GameEntity entity;
+	@OneToOne(cascade = CascadeType.ALL)
+	private GameEntity gameEntity;
 	private double value;
 	private double weight;
 }

@@ -2,6 +2,7 @@ package com.jegner.dnd.model.magic;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -26,8 +27,8 @@ public class Spell {
 	@Id
 	private Long id;
 
-	@OneToOne
-	private GameEntity entity;
+	@OneToOne(cascade = CascadeType.ALL)
+	private GameEntity gameEntity;
 	private int level;
 	@OneToOne
 	private Duration castingTime;

@@ -2,6 +2,7 @@ package com.jegner.dnd.model.predefined;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -28,6 +29,6 @@ public class Race {
 	private int startingSpeed;
 	@OneToMany
 	private List<Language> languages;
-	@OneToOne
-	private GameEntity entity;
+	@OneToOne(cascade = CascadeType.ALL)
+	private GameEntity gameEntity;
 }
