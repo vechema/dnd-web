@@ -7,5 +7,4 @@ import com.jegner.dnd.model.predefined.Background;
 
 @Repository
 public interface BackgroundRepository extends JpaRepository<Background, Long> {
-
 }

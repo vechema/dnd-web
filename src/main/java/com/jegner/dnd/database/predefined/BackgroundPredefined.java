@@ -2,14 +2,29 @@ package com.jegner.dnd.database.predefined;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.jegner.dnd.database.repo.BackgroundRepository;
 import com.jegner.dnd.model.predefined.Background;
+import com.jegner.dnd.model.predefined.Skill;
 import com.jegner.dnd.utility.GameEntity;
 
-public class BackgroundPredefined {
-	public static List<Background> predefinedBackgrounds() throws MalformedURLException {
+@Component
+public class BackgroundPredefined implements PredefinedMaker<Background> {
+
+	@Autowired
+	BackgroundRepository backgroundRepo;
+
+	@Override
+	public List<Background> generatePredefineds() throws MalformedURLException {
+
+		List<Background> backgrounds = new ArrayList<>();
+
 		Background acolyte = new Background();
 		// Game Entity
 		GameEntity acolyteGE = new GameEntity();
@@ -21,6 +36,9 @@ public class BackgroundPredefined {
 		// Languages
 		// Tool & Skill proficiencies
 		// Items
+		backgrounds.add(acolyte);
+
+		backgroundRepo.saveAll(backgrounds);
 
 		return Arrays.asList(acolyte);
 	}

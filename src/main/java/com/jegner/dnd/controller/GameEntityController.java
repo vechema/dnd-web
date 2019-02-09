@@ -20,10 +20,11 @@ import com.jegner.dnd.database.repo.GameEntityRepository;
 import com.jegner.dnd.exception.ResourceNotFoundException;
 import com.jegner.dnd.utility.GameEntity;
 
-// TODO autogeneration of this controller for basic types
+// TODO autogeneration of this controller for basic types, @RepositoryRestResource
 @RestController
-@RequestMapping("/entity")
+@RequestMapping("/" + GameEntityController.ENTITY_PATH)
 public class GameEntityController {
+	static final String ENTITY_PATH = "entity";
 
 	@Autowired
 	GameEntityRepository gameEntityRepo;
