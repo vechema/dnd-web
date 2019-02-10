@@ -1,8 +1,26 @@
-{
-	"abilityModifier": "DEXTERITY",
-	"gameEntity": {
-		"name": "Arcana",
-		"description": "Arcana is used for recalling magical lore. This can include but is not limited to deciphering spells or summoning circles, determining magic items, knowing the planes of existence and its inhabitants, reading eldritch symbols, and remembering or understanding magic rites or rituals.",
-		"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Arcana"
-	}	
-}
+[
+	{
+		"abilityModifier": "DEXTERITY",
+		"gameEntity": {
+			"name": "Acrobatics",
+			"description": "Acrobatics is a skill used when trying to maintain balance or general nimbleness. Examples include walking across a thin or rickety bridge, running along a slippery surface, or moving out of the way of a projectile. It can also be used to break free of a grapple.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Arcana"
+		}
+	},
+	{
+		"abilityModifier": "WISDOM",
+		"gameEntity": {
+			"name": "Animal Handling",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "DEXTERITY",
+		"gameEntity": {
+			"name": "Arcana",
+			"description": "Arcana is used for recalling magical lore. This can include but is not limited to deciphering spells or summoning circles, determining magic items, knowing the planes of existence and its inhabitants, reading eldritch symbols, and remembering or understanding magic rites or rituals.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Arcana"
+		}
+	}
+]
