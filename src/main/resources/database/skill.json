@@ -16,11 +16,131 @@
 		}
 	},
 	{
-		"abilityModifier": "DEXTERITY",
+		"abilityModifier": "INTELLIGENCE",
 		"gameEntity": {
 			"name": "Arcana",
 			"description": "Arcana is used for recalling magical lore. This can include but is not limited to deciphering spells or summoning circles, determining magic items, knowing the planes of existence and its inhabitants, reading eldritch symbols, and remembering or understanding magic rites or rituals.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Arcana"
+		}
+	},
+	{
+		"abilityModifier": "STRENGTH",
+		"gameEntity": {
+			"name": "Athletics",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "CHARISMA",
+		"gameEntity": {
+			"name": "Deception",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "INTELLIGENCE",
+		"gameEntity": {
+			"name": "History",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "WISDOM",
+		"gameEntity": {
+			"name": "Insight",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "CHARISMA",
+		"gameEntity": {
+			"name": "Intimidation",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "INTELLIGENCE",
+		"gameEntity": {
+			"name": "Investigation",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "WISDOM",
+		"gameEntity": {
+			"name": "Medicine",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "INTELLIGENCE",
+		"gameEntity": {
+			"name": "Nature",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "WISDOM",
+		"gameEntity": {
+			"name": "Perception",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "CHARISMA",
+		"gameEntity": {
+			"name": "Performance",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "CHARISMA",
+		"gameEntity": {
+			"name": "Persuasion",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "INTELLIGENCE",
+		"gameEntity": {
+			"name": "Religion",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "DEXTERITY",
+		"gameEntity": {
+			"name": "Sleight of Hand",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "DEXTERITY",
+		"gameEntity": {
+			"name": "Stealth",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
+		}
+	},
+	{
+		"abilityModifier": "WISDOM",
+		"gameEntity": {
+			"name": "Survival",
+			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
 		}
 	}
 ]
