@@ -21,7 +21,7 @@ public class BackgroundPredefined implements PredefinedMaker<Background> {
 	BackgroundRepository backgroundRepo;
 
 	@Override
-	public List<Background> generatePredefineds() throws MalformedURLException {
+	public List<Background> generatePredefineds() throws Exception {
 
 		List<Background> backgrounds = new ArrayList<>();
 

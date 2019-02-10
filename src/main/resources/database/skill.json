@@ -1,0 +1,8 @@
+{
+	"abilityModifier": "DEXTERITY",
+	"gameEntity": {
+		"name": "Arcana",
+		"description": "Arcana is used for recalling magical lore. This can include but is not limited to deciphering spells or summoning circles, determining magic items, knowing the planes of existence and its inhabitants, reading eldritch symbols, and remembering or understanding magic rites or rituals.",
+		"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Arcana"
+	}	
+}

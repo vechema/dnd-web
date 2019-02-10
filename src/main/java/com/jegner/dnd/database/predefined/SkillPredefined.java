@@ -1,14 +1,16 @@
 package com.jegner.dnd.database.predefined;
 
-import java.net.MalformedURLException;
+import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jegner.dnd.database.repo.SkillRepository;
 import com.jegner.dnd.model.AbilityScore;
 import com.jegner.dnd.model.predefined.Skill;
@@ -21,7 +23,7 @@ public class SkillPredefined implements PredefinedMaker<Skill> {
 	SkillRepository skillRepo;
 
 	@Override
-	public List<Skill> generatePredefineds() throws MalformedURLException {
+	public List<Skill> generatePredefineds() throws Exception {
 
 		List<Skill> skills = new ArrayList<>();
 
@@ -36,6 +38,11 @@ public class SkillPredefined implements PredefinedMaker<Skill> {
 		// Ability Score/modifier
 		acrobatics.setAbilityModifier(AbilityScore.DEXTERITY);
 		skills.add(acrobatics);
+
+		ObjectMapper mapper = new ObjectMapper();
+		File skillFile = new File("src\\main\\resources\\database\\skill.json");
+		Skill arcana = mapper.readValue(skillFile, Skill.class);
+		skills.add(arcana);
 
 		skillRepo.saveAll(skills);
 		return Arrays.asList(acrobatics);
