@@ -1,0 +1,20 @@
+[
+	{
+		"gameEntity": {
+			"name": "Ring Mail",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Heavy_Armor"
+		},
+		"ac": "14",
+		"stealth": false,
+		"equipmentType": "HEAVY_ARMOR",
+		"donTime" : {
+			"amount" : "10",
+			"timeUnit": "MINUTE"
+		},
+		"doffTime" : {
+			"amount" : "10",
+			"timeUnit": "MINUTE"
+		}
+	}
+]

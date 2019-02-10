@@ -23,11 +23,11 @@ public class Armor extends Item {
 
 	@OneToOne(cascade = CascadeType.ALL)
 	private GameEntity gameEntity;
-	private int AC;
+	private int ac;
 	private boolean isStealth;
 	private EquipmentType equipmentType;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Duration donTime;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Duration doffTime;
 }

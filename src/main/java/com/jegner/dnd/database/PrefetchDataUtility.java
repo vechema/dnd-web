@@ -8,7 +8,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.jegner.dnd.database.repo.ArmorRepository;
 import com.jegner.dnd.database.repo.SkillRepository;
+import com.jegner.dnd.model.item.Armor;
 import com.jegner.dnd.model.predefined.Skill;
 
 @Component
@@ -16,6 +18,9 @@ public class PrefetchDataUtility {
 
 	@Autowired
 	SkillRepository skillRepo;
+
+	@Autowired
+	ArmorRepository armorRepo;
 
 	private ObjectMapper mapper = new ObjectMapper();
 
@@ -28,6 +33,7 @@ public class PrefetchDataUtility {
 		// Depends on no one - Skill, Feat, Feature, Trait, Armor, Container, Item,
 		// WeaponProperty
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "skill.json"), Skill[].class, skillRepo);
+		generatePredefineds(new File(PREDEFINED_JSON_PATH + "armor.json"), Armor[].class, armorRepo);
 
 	}
 
