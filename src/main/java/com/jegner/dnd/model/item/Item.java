@@ -22,6 +22,6 @@ public class Item {
 
 	@OneToOne(cascade = CascadeType.ALL)
 	private GameEntity gameEntity;
-	private double value;
-	private double weight;
+	private double valueInGold;
+	private double weightInLbs;
 }
