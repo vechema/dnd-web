@@ -1,11 +1,11 @@
 package com.jegner.dnd.model.item;
 
-import java.util.Map;
+import java.util.List;
 
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import lombok.Data;
 
@@ -16,6 +16,6 @@ public class Inventory {
 	@Id
 	@GeneratedValue
 	private Long id;
-	@ElementCollection
-	private Map<Item, Integer> items;
+	@OneToMany
+	private List<InventoryItem> items;
 }

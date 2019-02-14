@@ -8,7 +8,12 @@ import com.jegner.dnd.model.Character;
 public class CharacterController {
 
 	@RequestMapping("/char")
-	public Character index() {
+	public Character newCharacter() {
 		return new Character();
+	}
+
+	@RequestMapping("/")
+	public String index() {
+		return "New phone, who dis?";
 	}
 }
