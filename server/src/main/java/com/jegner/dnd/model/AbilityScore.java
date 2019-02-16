@@ -6,17 +6,7 @@ import com.jegner.dnd.model.modify.ModifierField;
 
 public enum AbilityScore {
 
-	STRENGTH(10), DEXTERITY(10), CONSTITUTION(10), INTELLIGENCE(10), WISDOM(10), CHARISMA(10);
-
-	private int abilityScore;
-
-	private AbilityScore(int abilityScore) {
-		this.abilityScore = abilityScore;
-	}
-
-	private int calculateModifier() {
-		return this.abilityScore / 2 - 5;
-	}
+	STRENGTH, DEXTERITY, CONSTITUTION, INTELLIGENCE, WISDOM, CHARISMA;
 
 	public static ModifierField abilityScoreToModifier(AbilityScore abilityScore) {
 		ModifierField modifierField = null;

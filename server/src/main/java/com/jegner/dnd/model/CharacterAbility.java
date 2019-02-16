@@ -37,4 +37,12 @@ public class CharacterAbility {
 		}
 	}
 
+	public int calculateModifier(AbilityScore abilityScore) {
+		return calculateModifier(abilityScore);
+	}
+
+	public static int calculateModifier(int abilityScore) {
+		return abilityScore / 2 - 5;
+	}
+
 }
