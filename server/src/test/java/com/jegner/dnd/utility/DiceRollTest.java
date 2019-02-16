@@ -1,4 +1,4 @@
-package com.jegner.dnd.model;
+package com.jegner.dnd.utility;
 
 import java.util.HashMap;
 import java.util.Map;

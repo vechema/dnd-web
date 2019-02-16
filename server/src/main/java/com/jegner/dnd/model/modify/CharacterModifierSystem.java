@@ -26,6 +26,10 @@ public class CharacterModifierSystem {
 		return getCalculated(ModifiedField.AC);
 	}
 
+	public int getCharacterInitiative() {
+		return getCalculated(ModifiedField.INITIATIVE);
+	}
+
 	private int getCalculated(ModifiedField modifiedField) {
 		int result = 0;
 		for (Modifier modifier : modifiers) {

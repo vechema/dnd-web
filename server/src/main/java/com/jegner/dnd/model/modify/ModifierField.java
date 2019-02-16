@@ -1,5 +1,5 @@
 package com.jegner.dnd.model.modify;
 
 public enum ModifierField {
-	DEX_MOD
+	STRENGTH_MOD, DEXTERITY_MOD, CONSTITUTION_MOD, INTELLIGENCE_MOD, WISDOM_MOD, CHARISMA_MOD
 }
