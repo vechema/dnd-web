@@ -21,6 +21,12 @@ public class Modified {
 	private List<ModifierField> modifierClasses;
 	private ModifiedField modifiedField;
 
+	// Need to put blank constructor for JPA because adding the string one got rid
+	// of the default no param constructor
+	public Modified() {
+
+	}
+
 	// Added because JPA complained:
 	// Cannot construct instance of `com.jegner.dnd.model.modify.Modified` (although
 	// at least one Creator exists): no String-argument constructor/factory method
