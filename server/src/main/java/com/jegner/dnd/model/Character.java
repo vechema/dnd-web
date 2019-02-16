@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
 import com.jegner.dnd.model.item.Inventory;
 import com.jegner.dnd.model.item.Money;
 import com.jegner.dnd.model.magic.CharacterSpellbook;
-import com.jegner.dnd.model.modify.ModifierSystem;
+import com.jegner.dnd.model.modify.CharacterModifierSystem;
 import com.jegner.dnd.model.predefined.Background;
 import com.jegner.dnd.model.predefined.Classs;
 import com.jegner.dnd.model.predefined.Condition;
@@ -71,6 +71,6 @@ public class Character {
 	@OneToMany
 	private List<Condition> conditions;
 	@OneToOne
-	private ModifierSystem modSys;
+	private CharacterModifierSystem modSys;
 
 }
