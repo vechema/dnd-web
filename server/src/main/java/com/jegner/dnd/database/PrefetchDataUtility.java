@@ -24,8 +24,8 @@ public class PrefetchDataUtility {
 	@Autowired
 	ArmorRepository armorRepo;
 
-	//@Autowired
-	//AbilityScoreRepo abilityScoreRepo;
+	@Autowired
+	AbilityScoreRepo abilityScoreRepo;
 
 	private ObjectMapper mapper = new ObjectMapper();
 
@@ -37,8 +37,8 @@ public class PrefetchDataUtility {
 
 		// Depends on no one - Skill, Feat, Feature, Trait, Armor, Container, Item,
 		// WeaponProperty
-		//generatePredefineds(new File(PREDEFINED_JSON_PATH + "AbilityScore.json"), AbilityScore[].class, abilityScoreRepo);
-		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Skill.json"), Skill[].class, skillRepo);
+		generatePredefineds(new File(PREDEFINED_JSON_PATH + "AbilityScore.json"), AbilityScore[].class, abilityScoreRepo);
+		//generatePredefineds(new File(PREDEFINED_JSON_PATH + "Skill.json"), Skill[].class, skillRepo);
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Armor.json"), Armor[].class, armorRepo);
 
 	}

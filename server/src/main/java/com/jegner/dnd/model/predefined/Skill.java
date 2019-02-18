@@ -23,5 +23,6 @@ public class Skill {
 
 	@OneToOne(cascade = CascadeType.ALL)
 	private GameEntity gameEntity;
+	@OneToOne
 	private AbilityScore abilityModifier;
 }

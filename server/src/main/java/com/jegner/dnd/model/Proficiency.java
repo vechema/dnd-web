@@ -23,7 +23,7 @@ public class Proficiency {
 	private long id;
 	@OneToMany
 	private List<Item> items; // tools
-	@ElementCollection
+	@OneToMany
 	private List<AbilityScore> abilityScores;
 	@OneToMany
 	private List<Skill> skills;

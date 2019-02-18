@@ -1,0 +1,44 @@
+[
+	{
+		"gameEntity": {
+			"name": "Strength",
+			"description": "Strength measures physical prowess. How much a character can carry is determined by their strength, and many weapons use strength to determine the force of their strikes. Strength is used in the Athletics skill. ",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Ability_Scores#Strength"
+		}
+	},
+	{
+		"gameEntity": {
+			"name": "Dexterity",
+			"description": "For feats of agility, dexterity is used. This includes the skills Stealth, Sleight of Hand, and Acrobatics. Dexterity is also used for weapons with the finesse property, or any ranged weapon. Perhaps most importantly, though, dexterity helps determine armor class, making it relevant to almost every character.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Ability_Scores#Dexterity"
+		}
+	},
+	{
+		"gameEntity": {
+			"name": "Constitution",
+			"description": "The hardiness of characters is measured in their constitution. While not used for any skills, constitution adds to a character's hit points and holds great importance as a result.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Ability_Scores#Constitution"
+		}
+	},
+	{
+		"gameEntity": {
+			"name": "Intelligence",
+			"description": "Intelligence is frequently confused with wisdom, but speaks of a character's deduction, reasoning, memory, and capacity for learning. Many creatures at 2 or lower intelligence are incapable of speech and are immune to spells that rely on intelligence, such as Detect Thoughts and Psychic Scream. Intelligence is used for the Arcana, History, Investigation, Nature, and Religion skills.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Ability_Scores#Intelligence"
+		}
+	},
+	{
+		"gameEntity": {
+			"name": "Wisdom",
+			"description": "The ability to properly gauge one's surroundings, the intention of others, and act with caution can be found in wisdom. It's known by players as the most common save against spells despite dexterity actually being the most common, beating wisdom by 11 more saves. The skills Animal Handling, Insight, Medicine, Perception, and Survival use wisdom.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Ability_Scores#Wisdom"
+		}
+	},
+	{
+		"gameEntity": {
+			"name": "Charisma",
+			"description": "Best described as the force of a character's personality, charisma involves social skills. Deception, Intimidation, Performance, and Persuasion all use charisma. Tools such as the Disguise Kit also tend to rely on charisma. The ability is all about how a character presents themselves to the world.",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Ability_Scores#Charisma"
+		}
+	}
+]

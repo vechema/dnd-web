@@ -41,6 +41,7 @@ public class Spell {
 	@OneToOne
 	private DiceRoll damage;
 	private SchoolOfMagic schoolOfMagic;
+	@OneToOne
 	private AbilityScore save;
 	private boolean isRitual;
 	private boolean requiresConcentration;

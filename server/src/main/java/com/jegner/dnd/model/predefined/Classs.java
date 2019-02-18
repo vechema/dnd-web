@@ -32,7 +32,7 @@ public class Classs {
 	@OneToOne(cascade = CascadeType.ALL)
 	private GameEntity gameEntity;
 	private int hitDice;
-	@ElementCollection
+	@OneToMany
 	private List<AbilityScore> favoredAbilities;
 	@OneToOne
 	private Proficiency proficiencies;
@@ -44,6 +44,7 @@ public class Classs {
 	private Money startingMoney;
 	@OneToMany
 	private List<Spell> classSpells;
+	@OneToOne
 	private AbilityScore spellcastingAbility;
 
 }

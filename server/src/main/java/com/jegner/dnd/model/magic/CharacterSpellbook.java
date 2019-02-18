@@ -18,6 +18,7 @@ public class CharacterSpellbook {
 	private Long id;
 	@OneToOne
 	private Spellbook spellbook;
+	@OneToOne
 	private AbilityScore spellcastingAbility;
 	private int spellSaveDC;
 	private int spellAttackModifier;
