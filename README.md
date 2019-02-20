@@ -4,7 +4,7 @@ A website used to play DnD. Node, Java, Maven, Angular, oh my!
 
 ## Client
 
-Angular 7 to create frontend
+Angular 7 to create frontend and beautiful user experience
 
 ### Starting the client
 
