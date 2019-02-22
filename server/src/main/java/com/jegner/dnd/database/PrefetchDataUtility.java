@@ -3,11 +3,15 @@ package com.jegner.dnd.database;
 import java.io.File;
 import java.util.Arrays;
 
+import javax.persistence.EntityManager;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.http.converter.json.SpringHandlerInstantiator;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
 import com.jegner.dnd.database.repo.AbilityScoreRepo;
 import com.jegner.dnd.database.repo.ArmorRepository;
 import com.jegner.dnd.database.repo.SkillRepository;
@@ -19,27 +23,32 @@ import com.jegner.dnd.model.predefined.Skill;
 public class PrefetchDataUtility {
 
 	@Autowired
-	SkillRepository skillRepo;
+	private SkillRepository skillRepo;
 
 	@Autowired
-	ArmorRepository armorRepo;
+	private ArmorRepository armorRepo;
 
 	@Autowired
-	AbilityScoreRepo abilityScoreRepo;
+	private AbilityScoreRepo abilityScoreRepo;
 
 	private ObjectMapper mapper = new ObjectMapper();
 
 	private static final String PREDEFINED_JSON_PATH = "src\\main\\resources\\database\\";
 
 	public void initializeAllData() throws Exception {
+
 		// TODO consider some sort of self registration, common interface, and iterate
 		// through. Will have to consider order due to dependencies
 
-		// Depends on no one - Skill, Feat, Feature, Trait, Armor, Container, Item,
+		// Depends on no one - Feat, Feature, Trait, Armor, Container, Item,
 		// WeaponProperty
-		generatePredefineds(new File(PREDEFINED_JSON_PATH + "AbilityScore.json"), AbilityScore[].class, abilityScoreRepo);
-		//generatePredefineds(new File(PREDEFINED_JSON_PATH + "Skill.json"), Skill[].class, skillRepo);
+		generatePredefineds(new File(PREDEFINED_JSON_PATH + "AbilityScore.json"), AbilityScore[].class,
+				abilityScoreRepo);
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Armor.json"), Armor[].class, armorRepo);
+
+		// Depends on one
+		// Skill (ability score)
+		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Skill.json"), Skill[].class, skillRepo);
 
 	}
 

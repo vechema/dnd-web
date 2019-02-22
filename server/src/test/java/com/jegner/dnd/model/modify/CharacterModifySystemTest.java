@@ -6,6 +6,6 @@ public class CharacterModifySystemTest {
 
 	@Test
 	public void armorTest() {
-		
+
 	}
 }
