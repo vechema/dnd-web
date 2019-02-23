@@ -30,8 +30,6 @@ public class Armor extends Item {
 
 	@OneToOne(cascade = CascadeType.ALL)
 	private GameEntity gameEntity;
-	@OneToOne(cascade = CascadeType.ALL)
-	private Modified ac;
 	private boolean isStealth;
 	private EquipmentType equipmentType;
 	@OneToOne(cascade = CascadeType.ALL)

@@ -1,5 +1,6 @@
 package com.jegner.dnd.model.modify;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -22,8 +23,21 @@ public class CharacterModifierSystem {
 	@OneToMany
 	List<Modified> modifieds;
 
+	public CharacterModifierSystem() {
+		modifiers = new ArrayList<>();
+		modifieds = new ArrayList<>();
+	}
+
+	public void addModifier(Modifier modifier) {
+		modifiers.add(modifier);
+	}
+
+	public void addModified(Modified modified) {
+		modifieds.add(modified);
+	}
+
 	public int getCharacterAC() {
-		return getCalculated(ModifiedField.AC);
+		return getCalculated(ModifiedField.CHARACTER_AC);
 	}
 
 	public int getCharacterInitiative() {

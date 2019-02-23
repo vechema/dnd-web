@@ -11,16 +11,28 @@ import lombok.Data;
 
 @Data
 @Entity
+/**
+ * Something that modifies other values (AC, HP)
+ * 
+ * @author Jo
+ *
+ */
 public class Modifier {
 
 	@GeneratedValue
 	@Id
 	private Long id;
+	/**
+	 * Which field it is that modifies things
+	 */
 	private ModifierField modifierField;
+	/**
+	 * Map fields modded (HP, AC) -> how much modded
+	 */
 	@ElementCollection
 	private Map<ModifiedField, Integer> modifierFields;
 
-	public int getModAmount(ModifierField modifierField) {
-		return modifierFields.get(modifierField);
+	public int getModAmount(ModifiedField modifiedField) {
+		return modifierFields.get(modifiedField);
 	}
 }

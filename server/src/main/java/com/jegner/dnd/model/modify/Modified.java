@@ -11,15 +11,27 @@ import lombok.Data;
 
 @Data
 @Entity
+/**
+ * An object that is modified by something else
+ * 
+ * @author Jo
+ *
+ */
 public class Modified {
 
 	@GeneratedValue
 	@Id
 	private Long id;
 	private int base;
-	@ElementCollection
-	private List<ModifierField> modifierClasses;
+	/**
+	 * Field that is modified (AC, HP, etc)
+	 */
 	private ModifiedField modifiedField;
+	@ElementCollection
+	/**
+	 * What is effecting the modified field
+	 */
+	private List<Modifier> modifiers;
 
 	// Need to put blank constructor for JPA because adding the string one got rid
 	// of the default no param constructor
@@ -33,5 +45,13 @@ public class Modified {
 	// to deserialize from String value ('14')
 	public Modified(String noop) {
 
+	}
+
+	public int getModAmount() {
+		int modAmount = base;
+		for (Modifier modifier : modifiers) {
+			modAmount += modifier.getModAmount(modifiedField);
+		}
+		return modAmount;
 	}
 }

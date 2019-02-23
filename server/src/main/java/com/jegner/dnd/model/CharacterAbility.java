@@ -1,5 +1,6 @@
 package com.jegner.dnd.model;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.persistence.ElementCollection;
@@ -18,7 +19,7 @@ public class CharacterAbility {
 	private Long id;
 
 	@ElementCollection
-	private Map<AbilityScore, Integer> abilityScores;
+	private List<AbilityScore> abilityScores;
 	public static final int STARTING_SCORE_LOW = 8;
 	public static final int STARTING_SCORE_HIGH = 15;
 
@@ -35,14 +36,6 @@ public class CharacterAbility {
 		} else { // must be 15
 			return 9;
 		}
-	}
-
-	public int calculateModifier(AbilityScore abilityScore) {
-		return calculateModifier(abilityScore);
-	}
-
-	public static int calculateModifier(int abilityScore) {
-		return abilityScore / 2 - 5;
 	}
 
 }

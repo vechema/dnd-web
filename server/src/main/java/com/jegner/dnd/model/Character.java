@@ -12,9 +12,12 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import com.jegner.dnd.model.item.Inventory;
+import com.jegner.dnd.model.item.Item;
 import com.jegner.dnd.model.item.Money;
 import com.jegner.dnd.model.magic.CharacterSpellbook;
 import com.jegner.dnd.model.modify.CharacterModifierSystem;
+import com.jegner.dnd.model.modify.Modified;
+import com.jegner.dnd.model.modify.Modifier;
 import com.jegner.dnd.model.predefined.Background;
 import com.jegner.dnd.model.predefined.Classs;
 import com.jegner.dnd.model.predefined.Condition;
@@ -72,5 +75,29 @@ public class Character {
 	private List<Condition> conditions;
 	@OneToOne
 	private CharacterModifierSystem modSys;
+
+	public Character() {
+		modSys = new CharacterModifierSystem();
+	}
+
+	public int getAC() {
+		return modSys.getCharacterAC();
+	}
+
+	public void addItem(Item item) {
+		inventory.add(item);
+	}
+
+	public void equip(Item item) {
+		inventory.equip(item);
+		Modifier itemModifier = item.getGameEntity().getModifier();
+		Modified itemModified = item.getGameEntity().getModified();
+		if (itemModifier != null) {
+			modSys.addModifier(itemModifier);
+		}
+		if (itemModified != null) {
+			modSys.addModified(itemModified);
+		}
+	}
 
 }
