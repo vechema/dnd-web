@@ -2,6 +2,7 @@ package com.jegner.dnd.database;
 
 import java.io.File;
 import java.util.Arrays;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 
@@ -42,8 +43,9 @@ public class PrefetchDataUtility {
 
 		// Depends on no one - Feat, Feature, Trait, Armor, Container, Item,
 		// WeaponProperty
-		generatePredefineds(new File(PREDEFINED_JSON_PATH + "AbilityScore.json"), AbilityScore[].class,
-				abilityScoreRepo);
+		List<AbilityScore> abilityScores = generatePredefineds(new File(PREDEFINED_JSON_PATH + "AbilityScore.json"),
+				AbilityScore[].class, abilityScoreRepo);
+		AbilityScore.setAbilityScores(abilityScores);
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Armor.json"), Armor[].class, armorRepo);
 
 		// Depends on one
@@ -52,8 +54,10 @@ public class PrefetchDataUtility {
 
 	}
 
-	private <T> void generatePredefineds(File file, Class<T[]> class1, JpaRepository<T, Long> repo) throws Exception {
-		T[] predefineds = mapper.readValue(file, class1);
-		repo.saveAll(Arrays.asList(predefineds));
+	private <T> List<T> generatePredefineds(File file, Class<T[]> class1, JpaRepository<T, Long> repo)
+			throws Exception {
+		List<T> predefineds = Arrays.asList(mapper.readValue(file, class1));
+		repo.saveAll(predefineds);
+		return predefineds;
 	}
 }
