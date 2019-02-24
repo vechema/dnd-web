@@ -1,5 +1,8 @@
 package com.jegner.dnd.model.modify;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,42 +27,36 @@ public class CharacterModifySystemTest {
 		character.setInventory(inventory);
 
 		// Set AbilityScore
-		CharacterAbility charAbility = new CharacterAbility();
 		AbilityScore dex = new AbilityScore();
-		dex.setValue(12);
+		int dexScore = 12;
+
 		// Dex modifier
-		Modifier dexMod = new Modifier();
-		dexMod.setModifierField(ModifierField.DEXTERITY_MOD);
-		Map<ModifiedField, Integer> dexModifierFieldsMap = new HashMap<>();
-		dexModifierFieldsMap.put(ModifiedField.ARMOR_AC, dex.calculateModifier());
-		dexMod.setModifierFields(dexModifierFieldsMap);
+		Modify dexMod = new Modify();
+		dexMod.setModifyField(ModifyField.DEXTERITY_MOD);
+		dexMod.setBase(CharacterAbility.calculateModifier(dexScore));
 
 		GameEntity dexGameEntity = new GameEntity();
 		dexGameEntity.setName("Dexterity");
-		dexGameEntity.setModifier(dexMod);
+		dexGameEntity.setModify(dexMod);
 		dex.setGameEntity(dexGameEntity);
+
+		// Give the dex to the player
+		character.addAbilityScore(dex, dexScore);
 
 		// Create Armor
 		Armor armor = new Armor();
 
 		// What is armor modified by? Dex in this case
-		Modified armorModifiedByDexMod = new Modified();
-		armorModifiedByDexMod.setBase(14);
-		armorModifiedByDexMod.setModifiedField(ModifiedField.ARMOR_AC);
-		armorModifiedByDexMod.setModifiers(Arrays.asList(dexMod));
-
-		// What is it modifying? Character AC
-		Modifier armorCharAcModifier = new Modifier();
-		armorCharAcModifier.setModifierField(ModifierField.ARMOR_AC);
-		Map<ModifiedField, Integer> armorModMap = new HashMap<>();
-		armorModMap.put(ModifiedField.CHARACTER_AC, armorModifiedByDexMod.getModAmount());
-		armorCharAcModifier.setModifierFields(armorModMap);
+		Modify armorModify = new Modify();
+		armorModify.setBase(14);
+		armorModify.setModifyField(ModifyField.ARMOR_AC);
+		armorModify.setFieldsIModify(Arrays.asList(ModifyField.CHARACTER_AC));
+		armorModify.setFieldsThatModifyMe(Arrays.asList(ModifyField.DEXTERITY_MOD));
 
 		// Wrap it up together
 		GameEntity armorGameEntity = new GameEntity();
 		armorGameEntity.setName("Ring Mail");
-		armorGameEntity.setModified(armorModifiedByDexMod);
-		armorGameEntity.setModifier(armorCharAcModifier);
+		armorGameEntity.setModify(armorModify);
 		armor.setGameEntity(armorGameEntity);
 
 		// Put armor in character inventory & equip
@@ -68,8 +65,9 @@ public class CharacterModifySystemTest {
 
 		// Get Character AC
 		int ac = character.getAC();
-
 		System.out.println(ac);
+
+		assertThat(ac, is(armor.getGameEntity().getModify().getBase() + CharacterAbility.calculateModifier(dexScore)));
 
 	}
 }

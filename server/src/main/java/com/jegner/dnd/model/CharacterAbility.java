@@ -1,6 +1,6 @@
 package com.jegner.dnd.model;
 
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.persistence.ElementCollection;
@@ -19,9 +19,13 @@ public class CharacterAbility {
 	private Long id;
 
 	@ElementCollection
-	private List<AbilityScore> abilityScores;
+	private Map<AbilityScore, Integer> abilityScores;
 	public static final int STARTING_SCORE_LOW = 8;
 	public static final int STARTING_SCORE_HIGH = 15;
+
+	public CharacterAbility() {
+		abilityScores = new HashMap<>();
+	}
 
 	public static int costToBuy(int desiredScore) {
 		if (desiredScore < STARTING_SCORE_LOW || desiredScore > STARTING_SCORE_HIGH) {
@@ -36,6 +40,14 @@ public class CharacterAbility {
 		} else { // must be 15
 			return 9;
 		}
+	}
+
+	public int calculateModifier(AbilityScore abilityScore) {
+		return calculateModifier(abilityScores.get(abilityScore));
+	}
+
+	public static int calculateModifier(int abilityScore) {
+		return abilityScore / 2 - 5;
 	}
 
 }

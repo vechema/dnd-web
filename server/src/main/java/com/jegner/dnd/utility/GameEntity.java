@@ -9,8 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-import com.jegner.dnd.model.modify.Modified;
-import com.jegner.dnd.model.modify.Modifier;
+import com.jegner.dnd.model.modify.Modify;
 
 import lombok.Data;
 
@@ -27,8 +26,6 @@ public class GameEntity {
 	private URL referenceURL;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	private Modified modified;
-	@OneToOne(cascade = CascadeType.ALL)
-	private Modifier modifier;
+	private Modify modify;
 
 }

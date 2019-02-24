@@ -3,9 +3,13 @@
 		"gameEntity": {
 			"name": "Ring Mail",
 			"description": "",
-			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Heavy_Armor"
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Heavy_Armor",
+			"modify": {
+				"base" : "14",
+				"modifyField" : "ARMOR_AC",
+				"fieldsIModify" : ["CHARACTER_AC"]
+			}
 		},
-		"ac": "14",
 		"stealth": false,
 		"equipmentType": "HEAVY_ARMOR",
 		"donTime" : {

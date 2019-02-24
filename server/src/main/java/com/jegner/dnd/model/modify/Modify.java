@@ -1,5 +1,6 @@
 package com.jegner.dnd.model.modify;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.ElementCollection;
@@ -17,7 +18,7 @@ import lombok.Data;
  * @author Jo
  *
  */
-public class Modified {
+public class Modify {
 
 	@GeneratedValue
 	@Id
@@ -26,32 +27,30 @@ public class Modified {
 	/**
 	 * Field that is modified (AC, HP, etc)
 	 */
-	private ModifiedField modifiedField;
-	@ElementCollection
+	private ModifyField modifyField;
 	/**
-	 * What is effecting the modified field
+	 * What fields this modify affects
 	 */
-	private List<Modifier> modifiers;
+	@ElementCollection
+	private List<ModifyField> fieldsIModify;
+	/**
+	 * What fields affects this modify
+	 */
+	@ElementCollection
+	private List<ModifyField> fieldsThatModifyMe;
 
 	// Need to put blank constructor for JPA because adding the string one got rid
 	// of the default no param constructor
-	public Modified() {
-
+	public Modify() {
+		fieldsIModify = new ArrayList<>();
+		fieldsThatModifyMe = new ArrayList<>();
 	}
 
 	// Added because JPA complained:
 	// Cannot construct instance of `com.jegner.dnd.model.modify.Modified` (although
 	// at least one Creator exists): no String-argument constructor/factory method
 	// to deserialize from String value ('14')
-	public Modified(String noop) {
+	public Modify(String noop) {
 
-	}
-
-	public int getModAmount() {
-		int modAmount = base;
-		for (Modifier modifier : modifiers) {
-			modAmount += modifier.getModAmount(modifiedField);
-		}
-		return modAmount;
 	}
 }

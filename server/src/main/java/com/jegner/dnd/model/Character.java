@@ -16,8 +16,7 @@ import com.jegner.dnd.model.item.Item;
 import com.jegner.dnd.model.item.Money;
 import com.jegner.dnd.model.magic.CharacterSpellbook;
 import com.jegner.dnd.model.modify.CharacterModifierSystem;
-import com.jegner.dnd.model.modify.Modified;
-import com.jegner.dnd.model.modify.Modifier;
+import com.jegner.dnd.model.modify.Modify;
 import com.jegner.dnd.model.predefined.Background;
 import com.jegner.dnd.model.predefined.Classs;
 import com.jegner.dnd.model.predefined.Condition;
@@ -78,6 +77,7 @@ public class Character {
 
 	public Character() {
 		modSys = new CharacterModifierSystem();
+		charAbility = new CharacterAbility();
 	}
 
 	public int getAC() {
@@ -90,14 +90,15 @@ public class Character {
 
 	public void equip(Item item) {
 		inventory.equip(item);
-		Modifier itemModifier = item.getGameEntity().getModifier();
-		Modified itemModified = item.getGameEntity().getModified();
-		if (itemModifier != null) {
-			modSys.addModifier(itemModifier);
+		Modify itemModify = item.getGameEntity().getModify();
+		if (itemModify != null) {
+			modSys.addModify(itemModify);
 		}
-		if (itemModified != null) {
-			modSys.addModified(itemModified);
-		}
+	}
+
+	public void addAbilityScore(AbilityScore abilityScore, int value) {
+		charAbility.getAbilityScores().put(abilityScore, value);
+		modSys.addModify(abilityScore.getGameEntity().getModify());
 	}
 
 }

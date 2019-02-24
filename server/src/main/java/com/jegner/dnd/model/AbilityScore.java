@@ -9,8 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 
-import com.jegner.dnd.model.modify.Modified;
-import com.jegner.dnd.model.modify.Modifier;
 import com.jegner.dnd.utility.GameEntity;
 
 import lombok.Data;
@@ -25,8 +23,6 @@ public class AbilityScore {
 	@GeneratedValue
 	private long id;
 
-	private int value;
-
 	@OneToOne(cascade = CascadeType.ALL)
 	private GameEntity gameEntity;
 
@@ -39,13 +35,5 @@ public class AbilityScore {
 		return abilityScores.stream()
 				.filter(abilityScore -> abilityScore.getGameEntity().getName().equalsIgnoreCase(name)).findFirst()
 				.get();
-	}
-
-	public static int calculateModifier(int abilityScore) {
-		return abilityScore / 2 - 5;
-	}
-
-	public int calculateModifier() {
-		return calculateModifier(this.value);
 	}
 }
