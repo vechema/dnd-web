@@ -1,6 +1,230 @@
 [
 	{
 		"gameEntity": {
+			"name": "Shield",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Shields",
+			"modify": {
+				"base" : "2",
+				"modifyField" : "ARMOR_AC",
+				"fieldsIModify" : ["CHARACTER_AC"]
+			}
+		},
+		"stealth": true,
+		"equipmentType": "SHIELD",
+		"donTime" : {
+			"amount" : "1",
+			"timeUnit": "ACTION"
+		},
+		"doffTime" : {
+			"amount" : "1",
+			"timeUnit": "ACTION"
+		},
+		"weightInLbs": "6",
+		"valueInGold": "10"
+	},
+	{
+		"gameEntity": {
+			"name": "Padded",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Light_Armor",
+			"modify": {
+				"base" : "11",
+				"modifyField" : "ARMOR_AC",
+				"fieldsIModify" : ["CHARACTER_AC"],
+				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+			}
+		},
+		"stealth": false,
+		"equipmentType": "LIGHT_ARMOR",
+		"donTime" : {
+			"amount" : "1",
+			"timeUnit": "MINUTE"
+		},
+		"doffTime" : {
+			"amount" : "1",
+			"timeUnit": "MINUTE"
+		},
+		"weightInLbs": "8",
+		"valueInGold": "5"
+	},
+	{
+		"gameEntity": {
+			"name": "Leather",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Light_Armor",
+			"modify": {
+				"base" : "11",
+				"modifyField" : "ARMOR_AC",
+				"fieldsIModify" : ["CHARACTER_AC"],
+				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+			}
+		},
+		"stealth": true,
+		"equipmentType": "LIGHT_ARMOR",
+		"donTime" : {
+			"amount" : "1",
+			"timeUnit": "MINUTE"
+		},
+		"doffTime" : {
+			"amount" : "1",
+			"timeUnit": "MINUTE"
+		},
+		"weightInLbs": "10",
+		"valueInGold": "10"
+	},
+	{
+		"gameEntity": {
+			"name": "Studded Leather",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Light_Armor",
+			"modify": {
+				"base" : "12",
+				"modifyField" : "ARMOR_AC",
+				"fieldsIModify" : ["CHARACTER_AC"],
+				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+			}
+		},
+		"stealth": true,
+		"equipmentType": "LIGHT_ARMOR",
+		"donTime" : {
+			"amount" : "1",
+			"timeUnit": "MINUTE"
+		},
+		"doffTime" : {
+			"amount" : "1",
+			"timeUnit": "MINUTE"
+		},
+		"weightInLbs": "13",
+		"valueInGold": "45"
+	},
+	{
+		"gameEntity": {
+			"name": "Hide",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Medium_Armor",
+			"modify": {
+				"base" : "12",
+				"modifyField" : "ARMOR_AC",
+				"fieldsIModify" : ["CHARACTER_AC"],
+				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+			}
+		},
+		"stealth": true,
+		"equipmentType": "MEDIUM_ARMOR",
+		"donTime" : {
+			"amount" : "5",
+			"timeUnit": "MINUTE"
+		},
+		"doffTime" : {
+			"amount" : "1",
+			"timeUnit": "MINUTE"
+		},
+		"weightInLbs": "12",
+		"valueInGold": "10"
+	},
+	{
+		"gameEntity": {
+			"name": "Chain Shirt",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Medium_Armor",
+			"modify": {
+				"base" : "13",
+				"modifyField" : "ARMOR_AC",
+				"fieldsIModify" : ["CHARACTER_AC"],
+				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+			}
+		},
+		"stealth": true,
+		"equipmentType": "MEDIUM_ARMOR",
+		"donTime" : {
+			"amount" : "5",
+			"timeUnit": "MINUTE"
+		},
+		"doffTime" : {
+			"amount" : "1",
+			"timeUnit": "MINUTE"
+		},
+		"weightInLbs": "20",
+		"valueInGold": "50"
+	},
+	{
+		"gameEntity": {
+			"name": "Scale Mail",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Medium_Armor",
+			"modify": {
+				"base" : "14",
+				"modifyField" : "ARMOR_AC",
+				"fieldsIModify" : ["CHARACTER_AC"],
+				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+			}
+		},
+		"stealth": false,
+		"equipmentType": "MEDIUM_ARMOR",
+		"donTime" : {
+			"amount" : "5",
+			"timeUnit": "MINUTE"
+		},
+		"doffTime" : {
+			"amount" : "1",
+			"timeUnit": "MINUTE"
+		},
+		"weightInLbs": "45",
+		"valueInGold": "50"
+	},
+	{
+		"gameEntity": {
+			"name": "Breastplate",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Medium_Armor",
+			"modify": {
+				"base" : "14",
+				"modifyField" : "ARMOR_AC",
+				"fieldsIModify" : ["CHARACTER_AC"],
+				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+			}
+		},
+		"stealth": true,
+		"equipmentType": "MEDIUM_ARMOR",
+		"donTime" : {
+			"amount" : "5",
+			"timeUnit": "MINUTE"
+		},
+		"doffTime" : {
+			"amount" : "1",
+			"timeUnit": "MINUTE"
+		},
+		"weightInLbs": "20",
+		"valueInGold": "400"
+	},
+	{
+		"gameEntity": {
+			"name": "Half Plate",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Medium_Armor",
+			"modify": {
+				"base" : "15",
+				"modifyField" : "ARMOR_AC",
+				"fieldsIModify" : ["CHARACTER_AC"],
+				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+			}
+		},
+		"stealth": false,
+		"equipmentType": "MEDIUM_ARMOR",
+		"donTime" : {
+			"amount" : "5",
+			"timeUnit": "MINUTE"
+		},
+		"doffTime" : {
+			"amount" : "1",
+			"timeUnit": "MINUTE"
+		},
+		"weightInLbs": "40",
+		"valueInGold": "750"
+	},
+	{
+		"gameEntity": {
 			"name": "Ring Mail",
 			"description": "",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Heavy_Armor",
@@ -17,10 +241,82 @@
 			"timeUnit": "MINUTE"
 		},
 		"doffTime" : {
-			"amount" : "10",
+			"amount" : "5",
 			"timeUnit": "MINUTE"
 		},
 		"weightInLbs": "40",
+		"valueInGold": "30"
+	},
+	{
+		"gameEntity": {
+			"name": "Chain Mail",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Heavy_Armor",
+			"modify": {
+				"base" : "16",
+				"modifyField" : "ARMOR_AC",
+				"fieldsIModify" : ["CHARACTER_AC"]
+			}
+		},
+		"stealth": false,
+		"equipmentType": "HEAVY_ARMOR",
+		"donTime" : {
+			"amount" : "10",
+			"timeUnit": "MINUTE"
+		},
+		"doffTime" : {
+			"amount" : "5",
+			"timeUnit": "MINUTE"
+		},
+		"weightInLbs": "55",
 		"valueInGold": "75"
+	},
+	{
+		"gameEntity": {
+			"name": "Splint",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Heavy_Armor",
+			"modify": {
+				"base" : "17",
+				"modifyField" : "ARMOR_AC",
+				"fieldsIModify" : ["CHARACTER_AC"]
+			}
+		},
+		"stealth": false,
+		"equipmentType": "HEAVY_ARMOR",
+		"donTime" : {
+			"amount" : "10",
+			"timeUnit": "MINUTE"
+		},
+		"doffTime" : {
+			"amount" : "5",
+			"timeUnit": "MINUTE"
+		},
+		"weightInLbs": "60",
+		"valueInGold": "200"
+	},
+	{
+		"gameEntity": {
+			"name": "Plate",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Heavy_Armor",
+			"modify": {
+				"base" : "18",
+				"modifyField" : "ARMOR_AC",
+				"fieldsIModify" : ["CHARACTER_AC"]
+			}
+		},
+		"stealth": false,
+		"equipmentType": "HEAVY_ARMOR",
+		"donTime" : {
+			"amount" : "10",
+			"timeUnit": "MINUTE"
+		},
+		"doffTime" : {
+			"amount" : "5",
+			"timeUnit": "MINUTE"
+		},
+		"weightInLbs": "65",
+		"valueInGold": "1500"
 	}
 ]
