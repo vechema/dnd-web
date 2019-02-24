@@ -30,19 +30,27 @@ public class CharacterModifierSystem {
 		ModifyField nModField = nMod.getModifyField();
 		// If eMod modifies nMod, add eMod to nMod's list of modifiers & add nMod to
 		// eMod's list of modifieds
-		modifies.stream().filter(eMod -> eMod.getFieldsIModify().contains(nModField))
-				.forEach(eMod -> nMod.getFieldsThatModifyMe().add(eMod.getModifyField()));
+		modifies.stream()
+				.filter(eMod -> eMod.getFieldsIModify().contains(nModField)
+						&& !nMod.getFieldsThatModifyMe().containsKey(eMod.getModifyField()))
+				.forEach(eMod -> nMod.getFieldsThatModifyMe().put(eMod.getModifyField(), Integer.MAX_VALUE));
 
-		modifies.stream().filter(eMod -> nMod.getFieldsThatModifyMe().contains(eMod.getModifyField()))
+		modifies.stream()
+				.filter(eMod -> nMod.getFieldsThatModifyMe().containsKey(eMod.getModifyField())
+						&& !eMod.getFieldsIModify().contains(nModField))
 				.forEach(eMod -> eMod.getFieldsIModify().add(nModField));
 
 		// If nMod modifies emod, add nMod to eMod's list of modifiers & add eMod to
 		// nMod's list of modifieds
-		modifies.stream().filter(eMod -> eMod.getFieldsThatModifyMe().contains(nModField))
+		modifies.stream()
+				.filter(eMod -> eMod.getFieldsThatModifyMe().containsKey(nModField)
+						&& !nMod.getFieldsIModify().contains(eMod.getModifyField()))
 				.forEach(eMod -> nMod.getFieldsIModify().add(eMod.getModifyField()));
 
-		modifies.stream().filter(eMod -> nMod.getFieldsIModify().contains(eMod.getModifyField()))
-				.forEach(eMod -> eMod.getFieldsThatModifyMe().add(nModField));
+		modifies.stream()
+				.filter(eMod -> nMod.getFieldsIModify().contains(eMod.getModifyField())
+						&& !eMod.getFieldsThatModifyMe().containsKey(nModField))
+				.forEach(eMod -> eMod.getFieldsThatModifyMe().put(nModField, Integer.MAX_VALUE));
 
 		// Finally, add it the the list
 		modifies.add(nMod);
@@ -81,7 +89,9 @@ public class CharacterModifierSystem {
 				result += modify.getBase();
 				// If that modify has something that modifies IT, need to look for it
 				for (Modify modifier : getModifyOfModField(modify.getModifyField())) {
-					return getCalculated(modify.getModifyField(), result);
+					result += modify.getFieldThatModifiesMeAmount(modifier.getModifyField(), modifier);
+					// TODO make recursive later if needed
+					// return getCalculated(modify.getModifyField(), result);
 				}
 			}
 		}

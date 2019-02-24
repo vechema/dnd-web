@@ -28,12 +28,13 @@ public class CharacterModifySystemTest {
 
 		// Set AbilityScore
 		AbilityScore dex = new AbilityScore();
-		int dexScore = 12;
+		int dexScore = 18;
+		int dexModAmount = CharacterAbility.calculateModifier(dexScore);
 
 		// Dex modifier
 		Modify dexMod = new Modify();
 		dexMod.setModifyField(ModifyField.DEXTERITY_MOD);
-		dexMod.setBase(CharacterAbility.calculateModifier(dexScore));
+		dexMod.setBase(dexModAmount);
 
 		GameEntity dexGameEntity = new GameEntity();
 		dexGameEntity.setName("Dexterity");
@@ -51,7 +52,10 @@ public class CharacterModifySystemTest {
 		armorModify.setBase(14);
 		armorModify.setModifyField(ModifyField.ARMOR_AC);
 		armorModify.setFieldsIModify(Arrays.asList(ModifyField.CHARACTER_AC));
-		armorModify.setFieldsThatModifyMe(Arrays.asList(ModifyField.DEXTERITY_MOD));
+
+		Map<ModifyField, Integer> fieldsThatModifyMeMap = new HashMap<>();
+		fieldsThatModifyMeMap.put(ModifyField.DEXTERITY_MOD, Integer.MAX_VALUE);
+		armorModify.setFieldsThatModifyMe(fieldsThatModifyMeMap);
 
 		// Wrap it up together
 		GameEntity armorGameEntity = new GameEntity();
@@ -67,7 +71,12 @@ public class CharacterModifySystemTest {
 		int ac = character.getAC();
 		System.out.println(ac);
 
-		assertThat(ac, is(armor.getGameEntity().getModify().getBase() + CharacterAbility.calculateModifier(dexScore)));
+		assertThat(ac, is(armor.getGameEntity().getModify().getBase() + dexModAmount));
 
+		int dexModLimit = 2;
+		fieldsThatModifyMeMap.put(ModifyField.DEXTERITY_MOD, dexModLimit);
+		ac = character.getAC();
+		System.out.println(ac);
+		assertThat(ac, is(armor.getGameEntity().getModify().getBase() + dexModLimit));
 	}
 }

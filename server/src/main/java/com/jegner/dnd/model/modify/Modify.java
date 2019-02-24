@@ -1,7 +1,9 @@
 package com.jegner.dnd.model.modify;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -34,16 +36,16 @@ public class Modify {
 	@ElementCollection
 	private List<ModifyField> fieldsIModify;
 	/**
-	 * What fields affects this modify
+	 * What fields affects this modify -> Limit
 	 */
 	@ElementCollection
-	private List<ModifyField> fieldsThatModifyMe;
+	private Map<ModifyField, Integer> fieldsThatModifyMe;
 
 	// Need to put blank constructor for JPA because adding the string one got rid
 	// of the default no param constructor
 	public Modify() {
 		fieldsIModify = new ArrayList<>();
-		fieldsThatModifyMe = new ArrayList<>();
+		fieldsThatModifyMe = new HashMap<>();
 	}
 
 	// Added because JPA complained:
@@ -52,5 +54,12 @@ public class Modify {
 	// to deserialize from String value ('14')
 	public Modify(String noop) {
 
+	}
+
+	public int getFieldThatModifiesMeAmount(ModifyField modField, Modify modify) {
+		if (!fieldsThatModifyMe.containsKey(modField)) {
+			return modify.getBase();
+		}
+		return Math.min(fieldsThatModifyMe.get(modField), modify.getBase());
 	}
 }

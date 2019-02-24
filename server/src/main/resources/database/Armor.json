@@ -32,7 +32,7 @@
 				"base" : "11",
 				"modifyField" : "ARMOR_AC",
 				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "1000"}
 			}
 		},
 		"stealth": false,
@@ -57,7 +57,7 @@
 				"base" : "11",
 				"modifyField" : "ARMOR_AC",
 				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "1000"}
 			}
 		},
 		"stealth": true,
@@ -82,7 +82,7 @@
 				"base" : "12",
 				"modifyField" : "ARMOR_AC",
 				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "1000"}
 			}
 		},
 		"stealth": true,
@@ -107,7 +107,7 @@
 				"base" : "12",
 				"modifyField" : "ARMOR_AC",
 				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
 			}
 		},
 		"stealth": true,
@@ -132,7 +132,7 @@
 				"base" : "13",
 				"modifyField" : "ARMOR_AC",
 				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
 			}
 		},
 		"stealth": true,
@@ -157,7 +157,7 @@
 				"base" : "14",
 				"modifyField" : "ARMOR_AC",
 				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
 			}
 		},
 		"stealth": false,
@@ -182,7 +182,7 @@
 				"base" : "14",
 				"modifyField" : "ARMOR_AC",
 				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
 			}
 		},
 		"stealth": true,
@@ -207,7 +207,7 @@
 				"base" : "15",
 				"modifyField" : "ARMOR_AC",
 				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : ["DEXTERITY_MOD"]
+				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
 			}
 		},
 		"stealth": false,
