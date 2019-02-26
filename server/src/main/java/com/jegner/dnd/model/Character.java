@@ -15,7 +15,7 @@ import com.jegner.dnd.model.item.Inventory;
 import com.jegner.dnd.model.item.Item;
 import com.jegner.dnd.model.item.Money;
 import com.jegner.dnd.model.magic.CharacterSpellbook;
-import com.jegner.dnd.model.modify.CharacterModifierSystem;
+import com.jegner.dnd.model.modify.CharacterModifySystem;
 import com.jegner.dnd.model.modify.Modify;
 import com.jegner.dnd.model.predefined.Background;
 import com.jegner.dnd.model.predefined.Classs;
@@ -73,10 +73,10 @@ public class Character {
 	@OneToMany
 	private List<Condition> conditions;
 	@OneToOne
-	private CharacterModifierSystem modSys;
+	private CharacterModifySystem modSys;
 
 	public Character() {
-		modSys = new CharacterModifierSystem();
+		modSys = new CharacterModifySystem();
 		charAbility = new CharacterAbility();
 	}
 

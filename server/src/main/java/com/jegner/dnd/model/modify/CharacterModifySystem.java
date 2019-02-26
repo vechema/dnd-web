@@ -13,7 +13,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class CharacterModifierSystem {
+public class CharacterModifySystem {
 
 	@Id
 	@GeneratedValue
@@ -22,7 +22,7 @@ public class CharacterModifierSystem {
 	@OneToMany
 	List<Modify> modifies;
 
-	public CharacterModifierSystem() {
+	public CharacterModifySystem() {
 		modifies = new ArrayList<>();
 	}
 
@@ -88,11 +88,7 @@ public class CharacterModifierSystem {
 			if (modify.getFieldsIModify().contains(fieldBeingModified)) {
 				result += modify.getBase();
 				// If that modify has something that modifies IT, need to look for it
-				for (Modify modifier : getModifyOfModField(modify.getModifyField())) {
-					result += modify.getFieldThatModifiesMeAmount(modifier.getModifyField(), modifier);
-					// TODO make recursive later if needed
-					// return getCalculated(modify.getModifyField(), result);
-				}
+				result += modify.getFieldThatModifiesMeAmount(getModifyOfModField(modify.getModifyField()));
 			}
 		}
 		return result;

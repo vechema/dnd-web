@@ -4,20 +4,18 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.persistence.EntityManager;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.http.converter.json.SpringHandlerInstantiator;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectReader;
 import com.jegner.dnd.database.repo.AbilityScoreRepo;
 import com.jegner.dnd.database.repo.ArmorRepository;
 import com.jegner.dnd.database.repo.SkillRepository;
+import com.jegner.dnd.database.repo.WeaponPropertyRepository;
 import com.jegner.dnd.model.AbilityScore;
 import com.jegner.dnd.model.item.Armor;
+import com.jegner.dnd.model.item.WeaponProperty;
 import com.jegner.dnd.model.predefined.Skill;
 
 @Component
@@ -31,6 +29,9 @@ public class PrefetchDataUtility {
 
 	@Autowired
 	private AbilityScoreRepo abilityScoreRepo;
+
+	@Autowired
+	private WeaponPropertyRepository weaponPropRepo;
 
 	private ObjectMapper mapper = new ObjectMapper();
 
@@ -47,6 +48,8 @@ public class PrefetchDataUtility {
 				AbilityScore[].class, abilityScoreRepo);
 		AbilityScore.setAbilityScores(abilityScores);
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Armor.json"), Armor[].class, armorRepo);
+		generatePredefineds(new File(PREDEFINED_JSON_PATH + "WeaponProperty.json"), WeaponProperty[].class,
+				weaponPropRepo);
 
 		// Depends on one
 		// Skill (ability score)

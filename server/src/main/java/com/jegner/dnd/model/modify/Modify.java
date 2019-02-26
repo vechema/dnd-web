@@ -41,25 +41,32 @@ public class Modify {
 	@ElementCollection
 	private Map<ModifyField, Integer> fieldsThatModifyMe;
 
-	// Need to put blank constructor for JPA because adding the string one got rid
-	// of the default no param constructor
+	private ModifyOperation modifyOperation;
+
 	public Modify() {
 		fieldsIModify = new ArrayList<>();
 		fieldsThatModifyMe = new HashMap<>();
+		modifyOperation = ModifyOperation.SUM;
 	}
 
-	// Added because JPA complained:
-	// Cannot construct instance of `com.jegner.dnd.model.modify.Modified` (although
-	// at least one Creator exists): no String-argument constructor/factory method
-	// to deserialize from String value ('14')
-	public Modify(String noop) {
+	public int getFieldThatModifiesMeAmount(List<Modify> modifies) {
+		int result = 0;
+		for (Modify modify : modifies) {
+			if (fieldsThatModifyMe.containsKey(modify.getModifyField())) {
+				switch (modifyOperation) {
+					case MAX:
+						result = Math.max(result,
+								Math.min(fieldsThatModifyMe.get(modify.getModifyField()), modify.getBase()));
+						break;
+					case SUM:
+						result += Math.min(fieldsThatModifyMe.get(modify.getModifyField()), modify.getBase());
+						break;
+					default:
+						break;
 
-	}
-
-	public int getFieldThatModifiesMeAmount(ModifyField modField, Modify modify) {
-		if (!fieldsThatModifyMe.containsKey(modField)) {
-			return modify.getBase();
+				}
+			}
 		}
-		return Math.min(fieldsThatModifyMe.get(modField), modify.getBase());
+		return result;
 	}
 }

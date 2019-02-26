@@ -25,6 +25,8 @@ public class Weapon extends Item {
 	@OneToOne
 	private DiceRoll damage;
 	private DamageType damageType;
+	private int normalRange;
+	private int maxRange;
 	@OneToMany
 	private List<WeaponProperty> properties;
 	private EquipmentType equipmentType;
