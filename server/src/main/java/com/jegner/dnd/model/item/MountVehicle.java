@@ -5,13 +5,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-import com.jegner.dnd.utility.PreDefined;
+import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
 
 @Data
 @Entity
-@PreDefined
+@Predefined
 public class MountVehicle extends Container {
 
 	@Id

@@ -9,11 +9,11 @@ import java.util.Map;
 
 import org.testng.annotations.Test;
 
-import com.jegner.dnd.model.AbilityScore;
 import com.jegner.dnd.model.Character;
 import com.jegner.dnd.model.CharacterAbility;
 import com.jegner.dnd.model.item.Armor;
 import com.jegner.dnd.model.item.Inventory;
+import com.jegner.dnd.model.predefined.AbilityScore;
 import com.jegner.dnd.utility.GameEntity;
 
 public class CharacterModifySystemTest {

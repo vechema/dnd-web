@@ -8,13 +8,13 @@ import javax.persistence.OneToOne;
 
 import com.jegner.dnd.utility.Duration;
 import com.jegner.dnd.utility.GameEntity;
-import com.jegner.dnd.utility.PreDefined;
+import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
 
 @Entity
 @Data
-@PreDefined
+@Predefined
 public class Armor extends Item {
 
 	@GeneratedValue

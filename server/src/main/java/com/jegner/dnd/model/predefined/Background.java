@@ -12,13 +12,13 @@ import javax.persistence.OneToOne;
 import com.jegner.dnd.model.Proficiency;
 import com.jegner.dnd.model.item.Item;
 import com.jegner.dnd.utility.GameEntity;
-import com.jegner.dnd.utility.PreDefined;
+import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
 
 @Data
 @Entity
-@PreDefined
+@Predefined
 public class Background {
 
 	@Id

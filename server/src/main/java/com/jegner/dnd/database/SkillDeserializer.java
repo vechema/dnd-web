@@ -8,7 +8,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
-import com.jegner.dnd.model.AbilityScore;
+import com.jegner.dnd.model.predefined.AbilityScore;
 import com.jegner.dnd.model.predefined.Skill;
 import com.jegner.dnd.utility.GameEntity;
 

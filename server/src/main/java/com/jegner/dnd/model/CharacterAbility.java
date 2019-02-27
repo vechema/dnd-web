@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import com.jegner.dnd.model.predefined.AbilityScore;
+
 import lombok.Data;
 
 @Data

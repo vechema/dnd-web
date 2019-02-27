@@ -8,15 +8,14 @@ import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.jegner.dnd.database.SkillDeserializer;
-import com.jegner.dnd.model.AbilityScore;
 import com.jegner.dnd.utility.GameEntity;
-import com.jegner.dnd.utility.PreDefined;
+import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
 
 @Data
 @Entity
-@PreDefined
+@Predefined
 @JsonDeserialize(using = SkillDeserializer.class)
 public class Skill {
 

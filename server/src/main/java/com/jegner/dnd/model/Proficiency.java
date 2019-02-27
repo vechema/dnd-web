@@ -10,6 +10,7 @@ import javax.persistence.OneToMany;
 
 import com.jegner.dnd.model.item.EquipmentType;
 import com.jegner.dnd.model.item.Item;
+import com.jegner.dnd.model.predefined.AbilityScore;
 import com.jegner.dnd.model.predefined.Skill;
 
 import lombok.Data;

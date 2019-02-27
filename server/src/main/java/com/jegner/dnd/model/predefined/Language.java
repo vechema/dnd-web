@@ -8,13 +8,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import com.jegner.dnd.model.LanguageScript;
-import com.jegner.dnd.utility.PreDefined;
+import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
 
 @Entity
 @Data
-@PreDefined
+@Predefined
 public class Language {
 
 	@Id

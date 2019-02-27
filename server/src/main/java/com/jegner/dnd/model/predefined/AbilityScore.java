@@ -1,4 +1,4 @@
-package com.jegner.dnd.model;
+package com.jegner.dnd.model.predefined;
 
 import java.util.List;
 
@@ -10,6 +10,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 
 import com.jegner.dnd.utility.GameEntity;
+import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
 import lombok.Getter;
@@ -17,6 +18,7 @@ import lombok.Setter;
 
 @Data
 @Entity
+@Predefined
 public class AbilityScore {
 
 	@Id

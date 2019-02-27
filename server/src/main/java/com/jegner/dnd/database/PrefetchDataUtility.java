@@ -13,9 +13,9 @@ import com.jegner.dnd.database.repo.AbilityScoreRepo;
 import com.jegner.dnd.database.repo.ArmorRepository;
 import com.jegner.dnd.database.repo.SkillRepository;
 import com.jegner.dnd.database.repo.WeaponPropertyRepository;
-import com.jegner.dnd.model.AbilityScore;
 import com.jegner.dnd.model.item.Armor;
 import com.jegner.dnd.model.item.WeaponProperty;
+import com.jegner.dnd.model.predefined.AbilityScore;
 import com.jegner.dnd.model.predefined.Skill;
 
 @Component

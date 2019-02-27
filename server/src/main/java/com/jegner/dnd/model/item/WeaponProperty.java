@@ -7,13 +7,13 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 import com.jegner.dnd.utility.GameEntity;
-import com.jegner.dnd.utility.PreDefined;
+import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
 
 @Entity
 @Data
-@PreDefined
+@Predefined
 public class WeaponProperty {
 
 	@GeneratedValue
