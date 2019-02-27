@@ -11,16 +11,18 @@
 			"name": "Finesse",
 			"description": "When making an attack with a finesse weapon, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls. ",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#Weapon_Properties",
-			"modify": {
-				"base" : "0",
-				"modifyField" : "ATTACK_HIT_MOD",
-				"fieldsIModify" : ["ATTACK_HIT"],
-				"fieldsThatModifyMe" : {
-					"DEXTERITY_MOD": "1000", 
-					"STRENGTH_MOD": "1000"
-				},
-				"modifyOperation" : "MAX"
-			}
+			"modifys": [
+				{
+					"base" : "0",
+					"modifyField" : "ATTACK_HIT_MOD",
+					"fieldsIModify" : ["ATTACK_HIT"],
+					"fieldsThatModifyMe" : {
+						"DEXTERITY_MOD": "1000", 
+						"STRENGTH_MOD": "1000"
+					},
+					"modifyOperation" : "MAX"
+				}
+			]
 		}
 	}
 ]

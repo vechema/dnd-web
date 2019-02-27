@@ -1,6 +1,6 @@
 package com.jegner.dnd.model.predefined;
 
-import java.util.Map;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,5 +20,9 @@ public class LevelingTable {
 	@GeneratedValue
 	private Long id;
 	@OneToMany
-	private Map<Integer, Level> levels;
+	private List<Level> levels;
+
+	public Level getLevel(int level) {
+		return levels.stream().filter(levelObj -> levelObj.getLevel() == level).findFirst().get();
+	}
 }

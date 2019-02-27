@@ -4,11 +4,13 @@
 			"name": "Shield",
 			"description": "",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Shields",
-			"modify": {
-				"base" : "2",
-				"modifyField" : "ARMOR_AC",
-				"fieldsIModify" : ["CHARACTER_AC"]
-			}
+			"modifys": [
+				{
+					"base" : "2",
+					"modifyField" : "ARMOR_AC",
+					"fieldsIModify" : ["CHARACTER_AC"]
+				}
+			]
 		},
 		"stealth": true,
 		"equipmentType": "SHIELD",
@@ -28,12 +30,14 @@
 			"name": "Padded",
 			"description": "",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Light_Armor",
-			"modify": {
-				"base" : "11",
-				"modifyField" : "ARMOR_AC",
-				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "1000"}
-			}
+			"modifys": [
+				{
+					"base" : "11",
+					"modifyField" : "ARMOR_AC",
+					"fieldsIModify" : ["CHARACTER_AC"],
+					"fieldsThatModifyMe" : {"DEXTERITY_MOD": "1000"}
+				}
+			]
 		},
 		"stealth": false,
 		"equipmentType": "LIGHT_ARMOR",
@@ -53,12 +57,14 @@
 			"name": "Leather",
 			"description": "",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Light_Armor",
-			"modify": {
-				"base" : "11",
-				"modifyField" : "ARMOR_AC",
-				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "1000"}
-			}
+			"modifys": [
+				{
+					"base" : "11",
+					"modifyField" : "ARMOR_AC",
+					"fieldsIModify" : ["CHARACTER_AC"],
+					"fieldsThatModifyMe" : {"DEXTERITY_MOD": "1000"}
+				}
+			]
 		},
 		"stealth": true,
 		"equipmentType": "LIGHT_ARMOR",
@@ -78,12 +84,14 @@
 			"name": "Studded Leather",
 			"description": "",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Light_Armor",
-			"modify": {
-				"base" : "12",
-				"modifyField" : "ARMOR_AC",
-				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "1000"}
-			}
+			"modifys": [
+				{
+					"base" : "12",
+					"modifyField" : "ARMOR_AC",
+					"fieldsIModify" : ["CHARACTER_AC"],
+					"fieldsThatModifyMe" : {"DEXTERITY_MOD": "1000"}
+				}
+			]
 		},
 		"stealth": true,
 		"equipmentType": "LIGHT_ARMOR",
@@ -103,12 +111,14 @@
 			"name": "Hide",
 			"description": "",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Medium_Armor",
-			"modify": {
-				"base" : "12",
-				"modifyField" : "ARMOR_AC",
-				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
-			}
+			"modifys": [
+				{
+					"base" : "12",
+					"modifyField" : "ARMOR_AC",
+					"fieldsIModify" : ["CHARACTER_AC"],
+					"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
+				}
+			]
 		},
 		"stealth": true,
 		"equipmentType": "MEDIUM_ARMOR",
@@ -128,12 +138,14 @@
 			"name": "Chain Shirt",
 			"description": "",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Medium_Armor",
-			"modify": {
-				"base" : "13",
-				"modifyField" : "ARMOR_AC",
-				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
-			}
+			"modifys": [
+				{
+					"base" : "13",
+					"modifyField" : "ARMOR_AC",
+					"fieldsIModify" : ["CHARACTER_AC"],
+					"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
+				}
+			]
 		},
 		"stealth": true,
 		"equipmentType": "MEDIUM_ARMOR",
@@ -153,12 +165,14 @@
 			"name": "Scale Mail",
 			"description": "",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Medium_Armor",
-			"modify": {
-				"base" : "14",
-				"modifyField" : "ARMOR_AC",
-				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
-			}
+			"modifys": [
+				{
+					"base" : "14",
+					"modifyField" : "ARMOR_AC",
+					"fieldsIModify" : ["CHARACTER_AC"],
+					"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
+				}
+			]
 		},
 		"stealth": false,
 		"equipmentType": "MEDIUM_ARMOR",
@@ -178,12 +192,14 @@
 			"name": "Breastplate",
 			"description": "",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Medium_Armor",
-			"modify": {
-				"base" : "14",
-				"modifyField" : "ARMOR_AC",
-				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
-			}
+			"modifys": [
+				{
+					"base" : "14",
+					"modifyField" : "ARMOR_AC",
+					"fieldsIModify" : ["CHARACTER_AC"],
+					"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
+				}
+			]
 		},
 		"stealth": true,
 		"equipmentType": "MEDIUM_ARMOR",
@@ -203,12 +219,14 @@
 			"name": "Half Plate",
 			"description": "",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Medium_Armor",
-			"modify": {
-				"base" : "15",
-				"modifyField" : "ARMOR_AC",
-				"fieldsIModify" : ["CHARACTER_AC"],
-				"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
-			}
+			"modifys": [
+				{
+					"base" : "15",
+					"modifyField" : "ARMOR_AC",
+					"fieldsIModify" : ["CHARACTER_AC"],
+					"fieldsThatModifyMe" : {"DEXTERITY_MOD": "2"}
+				}
+			]
 		},
 		"stealth": false,
 		"equipmentType": "MEDIUM_ARMOR",
@@ -228,11 +246,13 @@
 			"name": "Ring Mail",
 			"description": "",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Heavy_Armor",
-			"modify": {
-				"base" : "14",
-				"modifyField" : "ARMOR_AC",
-				"fieldsIModify" : ["CHARACTER_AC"]
-			}
+			"modifys": [
+				{
+					"base" : "14",
+					"modifyField" : "ARMOR_AC",
+					"fieldsIModify" : ["CHARACTER_AC"]
+				}
+			]
 		},
 		"stealth": false,
 		"equipmentType": "HEAVY_ARMOR",
@@ -252,11 +272,13 @@
 			"name": "Chain Mail",
 			"description": "",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Heavy_Armor",
-			"modify": {
-				"base" : "16",
-				"modifyField" : "ARMOR_AC",
-				"fieldsIModify" : ["CHARACTER_AC"]
-			}
+			"modifys": [
+				{
+					"base" : "16",
+					"modifyField" : "ARMOR_AC",
+					"fieldsIModify" : ["CHARACTER_AC"]
+				}
+			]
 		},
 		"stealth": false,
 		"equipmentType": "HEAVY_ARMOR",
@@ -276,11 +298,13 @@
 			"name": "Splint",
 			"description": "",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Heavy_Armor",
-			"modify": {
-				"base" : "17",
-				"modifyField" : "ARMOR_AC",
-				"fieldsIModify" : ["CHARACTER_AC"]
-			}
+			"modifys": [
+				{
+					"base" : "17",
+					"modifyField" : "ARMOR_AC",
+					"fieldsIModify" : ["CHARACTER_AC"]
+				}
+			]
 		},
 		"stealth": false,
 		"equipmentType": "HEAVY_ARMOR",
@@ -300,11 +324,13 @@
 			"name": "Plate",
 			"description": "",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Armor_and_Shields#Heavy_Armor",
-			"modify": {
-				"base" : "18",
-				"modifyField" : "ARMOR_AC",
-				"fieldsIModify" : ["CHARACTER_AC"]
-			}
+			"modifys": [
+				{
+					"base" : "18",
+					"modifyField" : "ARMOR_AC",
+					"fieldsIModify" : ["CHARACTER_AC"]
+				}
+			]
 		},
 		"stealth": false,
 		"equipmentType": "HEAVY_ARMOR",

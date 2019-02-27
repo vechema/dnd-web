@@ -43,6 +43,7 @@ public class Character {
 	private boolean isMale;
 	private int weightInLbs;
 	private int heightInInches;
+	private int currentLevel;
 	@OneToOne
 	private Classs charClass;
 	@OneToOne
@@ -79,10 +80,19 @@ public class Character {
 	public Character() {
 		modSys = new CharacterModifySystem();
 		charAbility = new CharacterAbility();
+		inventory = new Inventory();
 	}
 
 	public int getAC() {
 		return modSys.getCharacterAC();
+	}
+
+	public int getInitiative() {
+		return modSys.getCharacterInitiative();
+	}
+
+	public int getAttackHit() {
+		return modSys.getCharacterAttackHit();
 	}
 
 	public void addItem(Item item) {
@@ -91,15 +101,18 @@ public class Character {
 
 	public void equip(Item item) {
 		inventory.equip(item);
-		Modify itemModify = item.getGameEntity().getModify();
-		if (itemModify != null) {
-			modSys.addModify(itemModify);
-		}
+		modSys.addModifys(item.getGameEntity().getModifys());
 	}
 
 	public void addAbilityScore(AbilityScore abilityScore, int value) {
 		charAbility.getAbilityScores().put(abilityScore, value);
-		modSys.addModify(abilityScore.getGameEntity().getModify());
+		modSys.addModifys(abilityScore.getGameEntity().getModifys());
+	}
+
+	public void setCurrentLevel(int level) {
+		this.currentLevel = level;
+		// TODO Need to remove old level modifys
+		modSys.addModify(this.charClass.getLevelingTable().getLevel(currentLevel).getProficiencyBonus());
 	}
 
 }

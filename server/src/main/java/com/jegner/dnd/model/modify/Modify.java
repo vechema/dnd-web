@@ -1,6 +1,7 @@
 package com.jegner.dnd.model.modify;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -47,11 +48,24 @@ public class Modify {
 		fieldsIModify = new ArrayList<>();
 		fieldsThatModifyMe = new HashMap<>();
 		modifyOperation = ModifyOperation.SUM;
+		base = 0;
 	}
 
-	public int getFieldThatModifiesMeAmount(List<Modify> modifies) {
+	public void addFieldThatModifyMe(ModifyField modifyField, int limit) {
+		fieldsThatModifyMe.put(modifyField, limit);
+	}
+
+	public void addFieldThatModifyMe(ModifyField modifyField) {
+		addFieldThatModifyMe(modifyField, Integer.MAX_VALUE);
+	}
+
+	public void setFieldIModify(ModifyField modifyField) {
+		setFieldsIModify(Arrays.asList(modifyField));
+	}
+
+	public int getFieldThatModifiesMeAmount(List<Modify> modifiesMe) {
 		int result = 0;
-		for (Modify modify : modifies) {
+		for (Modify modify : modifiesMe) {
 			if (fieldsThatModifyMe.containsKey(modify.getModifyField())) {
 				switch (modifyOperation) {
 					case MAX:

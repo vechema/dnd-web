@@ -19,5 +19,7 @@ public enum ModifyField {
 	CHARISMA,
 	CHARISMA_MOD,
 	ATTACK_HIT, // For proficiency, magic, and attack_hit_mod
-	ATTACK_HIT_MOD // To figure out if use strength of dex mod due to finesse or Monk martial arts
+	ATTACK_HIT_MOD, // To figure out if use strength of dex mod due to finesse or Monk martial arts
+	PROFICIENCY,
+	WEAPON_MAGIC_BONUS
 }

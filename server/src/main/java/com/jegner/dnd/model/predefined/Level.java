@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import com.jegner.dnd.model.modify.Modify;
 import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
@@ -23,10 +24,9 @@ public class Level {
 	@GeneratedValue
 	private Long id;
 
-	private int proficiencyBonus;
-	private int level;
 	@OneToOne
-	private Classs charClass;
+	private Modify proficiencyBonus;
+	private int level;
 	@OneToMany
 	private List<Feature> features;
 	@ElementCollection

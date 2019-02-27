@@ -20,40 +20,47 @@ public class CharacterModifySystem {
 	private long id;
 
 	@OneToMany
-	List<Modify> modifies;
+	List<Modify> modifys;
 
 	public CharacterModifySystem() {
-		modifies = new ArrayList<>();
+		modifys = new ArrayList<>();
 	}
 
 	public void addModify(Modify nMod) {
+		if (modifys.contains(nMod)) {
+			return;
+		}
 		ModifyField nModField = nMod.getModifyField();
 		// If eMod modifies nMod, add eMod to nMod's list of modifiers & add nMod to
 		// eMod's list of modifieds
-		modifies.stream()
+		modifys.stream()
 				.filter(eMod -> eMod.getFieldsIModify().contains(nModField)
 						&& !nMod.getFieldsThatModifyMe().containsKey(eMod.getModifyField()))
 				.forEach(eMod -> nMod.getFieldsThatModifyMe().put(eMod.getModifyField(), Integer.MAX_VALUE));
 
-		modifies.stream()
+		modifys.stream()
 				.filter(eMod -> nMod.getFieldsThatModifyMe().containsKey(eMod.getModifyField())
 						&& !eMod.getFieldsIModify().contains(nModField))
 				.forEach(eMod -> eMod.getFieldsIModify().add(nModField));
 
 		// If nMod modifies emod, add nMod to eMod's list of modifiers & add eMod to
 		// nMod's list of modifieds
-		modifies.stream()
+		modifys.stream()
 				.filter(eMod -> eMod.getFieldsThatModifyMe().containsKey(nModField)
 						&& !nMod.getFieldsIModify().contains(eMod.getModifyField()))
 				.forEach(eMod -> nMod.getFieldsIModify().add(eMod.getModifyField()));
 
-		modifies.stream()
+		modifys.stream()
 				.filter(eMod -> nMod.getFieldsIModify().contains(eMod.getModifyField())
 						&& !eMod.getFieldsThatModifyMe().containsKey(nModField))
 				.forEach(eMod -> eMod.getFieldsThatModifyMe().put(nModField, Integer.MAX_VALUE));
 
 		// Finally, add it the the list
-		modifies.add(nMod);
+		modifys.add(nMod);
+	}
+
+	public void addModifys(List<Modify> modifys) {
+		modifys.stream().forEach(modify -> addModify(modify));
 	}
 
 	public int getCharacterAC() {
@@ -64,6 +71,10 @@ public class CharacterModifySystem {
 		return getCalculated(ModifyField.INITIATIVE, 0);
 	}
 
+	public int getCharacterAttackHit() {
+		return getCalculated(ModifyField.ATTACK_HIT, 0);
+	}
+
 	/**
 	 * Get Modify instances that modify the input field
 	 * 
@@ -71,7 +82,7 @@ public class CharacterModifySystem {
 	 * @return
 	 */
 	public List<Modify> getModifyOfModField(ModifyField modfield) {
-		return modifies.stream().filter(mod -> mod.getFieldsIModify().contains(modfield)).collect(Collectors.toList());
+		return modifys.stream().filter(mod -> mod.getFieldsIModify().contains(modfield)).collect(Collectors.toList());
 	}
 
 	/**
@@ -83,7 +94,7 @@ public class CharacterModifySystem {
 	 */
 	private int getCalculated(ModifyField fieldBeingModified, int result) {
 		// Look through all modifies
-		for (Modify modify : modifies) {
+		for (Modify modify : modifys) {
 			// if that modify modifies the field, add to result
 			if (modify.getFieldsIModify().contains(fieldBeingModified)) {
 				result += modify.getBase();

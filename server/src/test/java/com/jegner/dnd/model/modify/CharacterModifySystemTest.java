@@ -12,8 +12,11 @@ import org.testng.annotations.Test;
 import com.jegner.dnd.model.Character;
 import com.jegner.dnd.model.CharacterAbility;
 import com.jegner.dnd.model.item.Armor;
-import com.jegner.dnd.model.item.Inventory;
+import com.jegner.dnd.model.item.Weapon;
 import com.jegner.dnd.model.predefined.AbilityScore;
+import com.jegner.dnd.model.predefined.Classs;
+import com.jegner.dnd.model.predefined.Level;
+import com.jegner.dnd.model.predefined.LevelingTable;
 import com.jegner.dnd.utility.GameEntity;
 
 public class CharacterModifySystemTest {
@@ -23,8 +26,6 @@ public class CharacterModifySystemTest {
 
 		// Create Character
 		Character character = new Character();
-		Inventory inventory = new Inventory();
-		character.setInventory(inventory);
 
 		// Set AbilityScore
 		AbilityScore dex = new AbilityScore();
@@ -51,7 +52,7 @@ public class CharacterModifySystemTest {
 		Modify armorModify = new Modify();
 		armorModify.setBase(14);
 		armorModify.setModifyField(ModifyField.ARMOR_AC);
-		armorModify.setFieldsIModify(Arrays.asList(ModifyField.CHARACTER_AC));
+		armorModify.setFieldIModify(ModifyField.CHARACTER_AC);
 
 		Map<ModifyField, Integer> fieldsThatModifyMeMap = new HashMap<>();
 		fieldsThatModifyMeMap.put(ModifyField.DEXTERITY_MOD, Integer.MAX_VALUE);
@@ -69,15 +70,14 @@ public class CharacterModifySystemTest {
 
 		// Get Character AC
 		int ac = character.getAC();
-		System.out.println(ac);
 
-		assertThat(ac, is(armor.getGameEntity().getModify().getBase() + dexModAmount));
+		int base = armor.getGameEntity().getModifys().stream().mapToInt(modify -> modify.getBase()).sum();
+		assertThat(ac, is(base + dexModAmount));
 
 		int dexModLimit = 2;
 		fieldsThatModifyMeMap.put(ModifyField.DEXTERITY_MOD, dexModLimit);
 		ac = character.getAC();
-		System.out.println(ac);
-		assertThat(ac, is(armor.getGameEntity().getModify().getBase() + dexModLimit));
+		assertThat(ac, is(base + dexModLimit));
 	}
 
 	@Test
@@ -85,8 +85,6 @@ public class CharacterModifySystemTest {
 
 		// Create Character
 		Character character = new Character();
-		Inventory inventory = new Inventory();
-		character.setInventory(inventory);
 
 		// Set AbilityScore
 		AbilityScore dex = new AbilityScore();
@@ -127,7 +125,7 @@ public class CharacterModifySystemTest {
 		Modify armorModify = new Modify();
 		armorModify.setBase(14);
 		armorModify.setModifyField(ModifyField.ARMOR_AC);
-		armorModify.setFieldsIModify(Arrays.asList(ModifyField.CHARACTER_AC));
+		armorModify.setFieldIModify(ModifyField.CHARACTER_AC);
 
 		Map<ModifyField, Integer> fieldsThatModifyMeMap = new HashMap<>();
 		fieldsThatModifyMeMap.put(ModifyField.DEXTERITY_MOD, Integer.MAX_VALUE);
@@ -146,19 +144,118 @@ public class CharacterModifySystemTest {
 
 		// Get Character AC
 		int ac = character.getAC();
-		System.out.println(ac);
 
-		assertThat(ac, is(armor.getGameEntity().getModify().getBase() + dexModAmount + strengthModAmount));
+		int base = armor.getGameEntity().getModifys().stream().mapToInt(modify -> modify.getBase()).sum();
+		assertThat(ac, is(base + dexModAmount + strengthModAmount));
 
 		int dexModLimit = 2;
 		fieldsThatModifyMeMap.put(ModifyField.DEXTERITY_MOD, dexModLimit);
 		ac = character.getAC();
-		System.out.println(ac);
-		assertThat(ac, is(armor.getGameEntity().getModify().getBase() + dexModLimit + strengthModAmount));
+		assertThat(ac, is(base + dexModLimit + strengthModAmount));
 
 		armorModify.setModifyOperation(ModifyOperation.MAX);
 		ac = character.getAC();
-		System.out.println(ac);
-		assertThat(ac, is(armor.getGameEntity().getModify().getBase() + Math.max(dexModLimit, strengthModAmount)));
+		assertThat(ac, is(base + Math.max(dexModLimit, strengthModAmount)));
+	}
+
+	@Test
+	public void weaponFinesseProficiencyTest() {
+		// Create Character
+		Character character = new Character();
+
+		// Set AbilityScore
+		AbilityScore dex = new AbilityScore();
+		int dexScore = 20; // 5, want larger so finesse makes us use this one
+		int dexModAmount = CharacterAbility.calculateModifier(dexScore);
+		AbilityScore strength = new AbilityScore();
+		int strengthScore = 16; // 3
+		int strengthModAmount = CharacterAbility.calculateModifier(strengthScore);
+
+		// Dex modifier
+		Modify dexMod = new Modify();
+		dexMod.setModifyField(ModifyField.DEXTERITY_MOD);
+		dexMod.setBase(dexModAmount);
+
+		GameEntity dexGameEntity = new GameEntity();
+		dexGameEntity.setName("Dexterity");
+		dexGameEntity.setModify(dexMod);
+		dex.setGameEntity(dexGameEntity);
+
+		// Strength modifier
+		Modify strengthMod = new Modify();
+		strengthMod.setModifyField(ModifyField.STRENGTH_MOD);
+		strengthMod.setBase(strengthModAmount);
+
+		GameEntity strengthGameEntity = new GameEntity();
+		strengthGameEntity.setName("Strength");
+		strengthGameEntity.setModify(strengthMod);
+		strength.setGameEntity(strengthGameEntity);
+
+		// Give the dex to the player
+		character.addAbilityScore(dex, dexScore);
+		character.addAbilityScore(strength, strengthScore);
+
+		// Set proficiency
+		// This should normally be decided by character class -> Leveling Table -> Level
+		// -> Modify
+		int profBonus = 1;
+		Modify profBonusModify = new Modify();
+		profBonusModify.setBase(profBonus);
+		profBonusModify.setModifyField(ModifyField.PROFICIENCY);
+		profBonusModify.setFieldIModify(ModifyField.ATTACK_HIT);
+
+		Level level = new Level();
+		level.setProficiencyBonus(profBonusModify);
+		level.setLevel(1);
+
+		LevelingTable levelingTable = new LevelingTable();
+		levelingTable.setLevels(Arrays.asList(level));
+
+		Classs classs = new Classs();
+		classs.setLevelingTable(levelingTable);
+		classs.setGameEntity(new GameEntity());
+
+		character.setCharClass(classs);
+		character.setCurrentLevel(1);
+
+		// Create weapon
+		Weapon weapon = new Weapon();
+		GameEntity weaponGameEntity = new GameEntity();
+		weaponGameEntity.setName("Sword");
+		weapon.setGameEntity(weaponGameEntity);
+		weaponGameEntity.addModify(strengthMod);
+
+		// Set weapon magic
+		int weaponMagicBonus = 2;
+		Modify weaponMagicModify = new Modify();
+		weaponMagicModify.setBase(weaponMagicBonus);
+		weaponMagicModify.setFieldIModify(ModifyField.ATTACK_HIT);
+		weaponMagicModify.setModifyField(ModifyField.WEAPON_MAGIC_BONUS);
+		weaponGameEntity.addModify(weaponMagicModify);
+
+		// Set weapon finesse
+		Modify finesseModify = new Modify();
+		finesseModify.setModifyField(ModifyField.ATTACK_HIT_MOD);
+		finesseModify.addFieldThatModifyMe(ModifyField.DEXTERITY_MOD);
+		finesseModify.addFieldThatModifyMe(ModifyField.STRENGTH_MOD);
+		finesseModify.setModifyOperation(ModifyOperation.MAX);
+		weaponGameEntity.addModify(finesseModify);
+
+		// Create ATTACK_HIT_MOD Modify
+		Modify attackHitModModify = new Modify();
+		attackHitModModify.setFieldIModify(ModifyField.ATTACK_HIT);
+		attackHitModModify.setModifyField(ModifyField.ATTACK_HIT_MOD);
+		attackHitModModify.setModifyOperation(ModifyOperation.MAX);
+		weaponGameEntity.addModify(attackHitModModify);
+
+		// Actually equip weapon
+		character.addItem(weapon);
+		character.equip(weapon);
+
+		// Check ATTACK_HIT_MOD
+
+		// Check ATTACK_HIT
+		int attackHit = character.getAttackHit();
+		assertThat(attackHit, is(profBonus + weaponMagicBonus + Math.max(strengthModAmount, dexModAmount)));
 	}
 }
