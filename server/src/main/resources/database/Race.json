@@ -1,0 +1,11 @@
+[
+	{
+		"gameEntity" : {
+			"name" : "Dragonborn",
+			"description" : "You a dragon, yo",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+		},
+		"size" : "MEDIUM",
+		"startingSpeed" : "30"
+	}
+]

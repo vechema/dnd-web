@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
-import com.jegner.dnd.utility.DiceRoll;
+import com.jegner.dnd.model.Attack;
 import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
@@ -23,10 +23,7 @@ public class Weapon extends Item {
 	private Long id;
 
 	@OneToOne
-	private DiceRoll damage;
-	private DamageType damageType;
-	private int normalRange;
-	private int maxRange;
+	private Attack attack;
 	@OneToMany
 	private List<WeaponProperty> properties;
 	private EquipmentType equipmentType;

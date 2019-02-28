@@ -1,7 +1,5 @@
 package com.jegner.dnd.model.item;
 
-import java.util.Map;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;

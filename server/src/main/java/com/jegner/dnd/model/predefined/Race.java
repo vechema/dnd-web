@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import com.jegner.dnd.model.Attack;
 import com.jegner.dnd.model.Size;
 import com.jegner.dnd.utility.GameEntity;
 import com.jegner.dnd.utility.Predefined;
@@ -25,6 +26,8 @@ public class Race {
 	private Long id;
 	@OneToMany
 	private List<Trait> traits;
+	@OneToMany
+	private List<Attack> attacks;
 	private Size size;
 	private int startingSpeed;
 	@OneToMany

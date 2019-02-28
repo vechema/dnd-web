@@ -3,9 +3,9 @@ package com.jegner.dnd.database.repo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.jegner.dnd.utility.GameEntity;
+import com.jegner.dnd.model.predefined.Race;
 
 @Repository
-public interface GameEntityRepository extends JpaRepository<GameEntity, Long> {
+public interface RaceRepository extends JpaRepository<Race, Long> {
 
 }

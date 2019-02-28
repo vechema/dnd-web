@@ -16,7 +16,6 @@ import com.jegner.dnd.model.item.Item;
 import com.jegner.dnd.model.item.Money;
 import com.jegner.dnd.model.magic.CharacterSpellbook;
 import com.jegner.dnd.model.modify.CharacterModifySystem;
-import com.jegner.dnd.model.modify.Modify;
 import com.jegner.dnd.model.predefined.AbilityScore;
 import com.jegner.dnd.model.predefined.Background;
 import com.jegner.dnd.model.predefined.Classs;

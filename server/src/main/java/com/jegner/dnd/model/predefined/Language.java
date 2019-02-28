@@ -6,8 +6,10 @@ import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 import com.jegner.dnd.model.LanguageScript;
+import com.jegner.dnd.utility.GameEntity;
 import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
@@ -21,7 +23,8 @@ public class Language {
 	@GeneratedValue
 	private Long id;
 
-	private String name;
+	@OneToOne
+	private GameEntity gameEntity;
 	private boolean isStandard;
 	@ElementCollection
 	private List<Race> typicalSpeakers;

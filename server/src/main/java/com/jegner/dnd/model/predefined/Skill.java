@@ -6,17 +6,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.jegner.dnd.database.SkillDeserializer;
+import com.fasterxml.jackson.annotation.JsonSetter;
 import com.jegner.dnd.utility.GameEntity;
 import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
+import lombok.experimental.Tolerate;
 
 @Data
 @Entity
 @Predefined
-@JsonDeserialize(using = SkillDeserializer.class)
 public class Skill {
 
 	@Id
@@ -27,4 +26,10 @@ public class Skill {
 	private GameEntity gameEntity;
 	@OneToOne
 	private AbilityScore abilityModifier;
+
+	@JsonSetter
+	@Tolerate
+	public void setAbilityModifier(String abilityModifier) {
+		this.abilityModifier = AbilityScore.findAbilityScoreByName(abilityModifier);
+	}
 }

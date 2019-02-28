@@ -9,9 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import com.jegner.dnd.model.Attack;
 import com.jegner.dnd.model.item.Item;
 import com.jegner.dnd.model.predefined.AbilityScore;
-import com.jegner.dnd.utility.DiceRoll;
 import com.jegner.dnd.utility.Duration;
 import com.jegner.dnd.utility.GameEntity;
 import com.jegner.dnd.utility.Predefined;
@@ -39,7 +39,7 @@ public class Spell {
 	@OneToMany
 	private List<Item> components;
 	@OneToOne
-	private DiceRoll damage;
+	private Attack attack;
 	private SchoolOfMagic schoolOfMagic;
 	@OneToOne
 	private AbilityScore save;

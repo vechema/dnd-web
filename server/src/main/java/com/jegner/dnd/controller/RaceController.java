@@ -17,56 +17,55 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jegner.dnd.database.repo.ArmorRepository;
+import com.jegner.dnd.database.repo.RaceRepository;
 import com.jegner.dnd.exception.ResourceNotFoundException;
-import com.jegner.dnd.model.item.Armor;
+import com.jegner.dnd.model.predefined.Race;
 
-// TODO autogeneration of this controller for basic types, @RepositoryRestResource
 @RestController
-@RequestMapping("/" + ArmorController.ENTITY_PATH)
+@RequestMapping("/" + RaceController.ENTITY_PATH)
 @CrossOrigin(origins = "http://localhost:4200")
-public class ArmorController {
-	static final String ENTITY_PATH = "armor";
+public class RaceController {
+	static final String ENTITY_PATH = "race";
 
 	@Autowired
-	ArmorRepository armorRepo;
+	RaceRepository raceRepo;
 
 	@GetMapping("/{id}")
-	public Armor getArmorById(@PathVariable long id) {
-		return armorRepo.findById(id).orElseThrow(() -> new ResourceNotFoundException("Armor", "id", id));
+	public Race getRaceById(@PathVariable long id) {
+		return raceRepo.findById(id).orElseThrow(() -> new ResourceNotFoundException("Race", "id", id));
 	}
 
 	@GetMapping("")
-	public List<Armor> getAllArmors() {
-		return armorRepo.findAll();
+	public List<Race> getAllGameEntities() {
+		return raceRepo.findAll();
 	}
 
 	@PostMapping("")
-	public Armor postArmor(@Valid @RequestBody Armor armor) {
-		return armorRepo.save(armor);
+	public Race postRace(@Valid @RequestBody Race race) {
+		return raceRepo.save(race);
 	}
 
 	@PutMapping("/{id}")
-	public Armor updateArmor(@PathVariable long id, @Valid @RequestBody Armor armorDetails) {
-		Armor armor = getArmorById(id);
+	public Race updateRace(@PathVariable long id, @Valid @RequestBody Race raceDetails) {
+		Race race = getRaceById(id);
 
-		BeanUtils.copyProperties(armorDetails, armor);
+		BeanUtils.copyProperties(raceDetails, race);
 
 		// Makes it such that the put json does not have to include the id
-		armor.setId(id);
-		return armorRepo.save(armor);
+		race.setId(id);
+		return raceRepo.save(race);
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<?> deleteArmorById(@PathVariable long id) {
-		armorRepo.deleteById(id);
+	public ResponseEntity<?> deleteRaceById(@PathVariable long id) {
+		raceRepo.deleteById(id);
 
 		return ResponseEntity.ok().build();
 	}
 
 	@DeleteMapping("")
-	public ResponseEntity<?> deleteAllArmors() {
-		armorRepo.deleteAll();
+	public ResponseEntity<?> deleteAllGameEntities() {
+		raceRepo.deleteAll();
 
 		return ResponseEntity.ok().build();
 	}

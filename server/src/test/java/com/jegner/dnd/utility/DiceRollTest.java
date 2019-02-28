@@ -5,8 +5,6 @@ import java.util.Map;
 
 import org.testng.annotations.Test;
 
-import com.jegner.dnd.utility.DiceRoll;
-
 public class DiceRollTest {
 
 	@Test
