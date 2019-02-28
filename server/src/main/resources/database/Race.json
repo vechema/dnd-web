@@ -6,6 +6,19 @@
 			"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
 		},
 		"size" : "MEDIUM",
-		"startingSpeed" : "30"
+		"startingSpeed" : "30",
+		"traits" : [
+			{
+				"gameEntity" : {
+					"name" : "Draconic Ancestry",
+					"description" : "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.",
+					"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+				}
+			}
+		],
+		"abilityScoreIncreases" : {
+			"Strength" : 2,
+			"Charisma" : 1
+		}
 	}
 ]

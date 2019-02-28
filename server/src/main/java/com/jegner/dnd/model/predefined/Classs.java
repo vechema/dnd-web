@@ -1,7 +1,6 @@
 package com.jegner.dnd.model.predefined;
 
 import java.util.List;
-import java.util.Map;
 
 import javax.persistence.CascadeType;
 import javax.persistence.ElementCollection;
@@ -32,8 +31,8 @@ public class Classs {
 	@OneToOne(cascade = CascadeType.ALL)
 	private GameEntity gameEntity;
 	private int hitDice;
-	@ElementCollection
-	private Map<AbilityScore, Integer> abilityScoreIncrease;
+	@OneToMany
+	private List<AbilityScore> savingThrowAbilityScores;
 	@OneToOne
 	private Proficiency proficiencies;
 	@ElementCollection
