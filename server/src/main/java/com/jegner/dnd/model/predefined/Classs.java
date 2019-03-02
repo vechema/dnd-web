@@ -33,8 +33,8 @@ public class Classs {
 	private int hitDice;
 	@OneToMany
 	private List<AbilityScore> savingThrowAbilityScores;
-	@OneToOne
-	private Proficiency proficiencies;
+	@OneToMany
+	private List<Proficiency> proficiencies;
 	@ElementCollection
 	private List<Item> startingItems;
 	@OneToOne
