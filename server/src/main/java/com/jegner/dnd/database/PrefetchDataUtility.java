@@ -16,7 +16,9 @@ import com.jegner.dnd.database.repo.RaceRepository;
 import com.jegner.dnd.database.repo.SkillRepository;
 import com.jegner.dnd.database.repo.TraitRepository;
 import com.jegner.dnd.database.repo.WeaponPropertyRepository;
+import com.jegner.dnd.database.repo.WeaponRepository;
 import com.jegner.dnd.model.item.Armor;
+import com.jegner.dnd.model.item.Weapon;
 import com.jegner.dnd.model.item.WeaponProperty;
 import com.jegner.dnd.model.predefined.AbilityScore;
 import com.jegner.dnd.model.predefined.Language;
@@ -48,6 +50,9 @@ public class PrefetchDataUtility {
 	@Autowired
 	private LanguageRepository languageRepo;
 
+	@Autowired
+	private WeaponRepository weaponRepo;
+
 	private ObjectMapper mapper = new ObjectMapper();
 
 	private static final String PREDEFINED_JSON_PATH = "src\\main\\resources\\database\\";
@@ -62,11 +67,15 @@ public class PrefetchDataUtility {
 		List<AbilityScore> abilityScores = generatePredefineds(new File(PREDEFINED_JSON_PATH + "AbilityScore.json"),
 				AbilityScore[].class, abilityScoreRepo);
 		AbilityScore.setAbilityScores(abilityScores);
+
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Armor.json"), Armor[].class, armorRepo);
+
 		List<WeaponProperty> weaponProperties = generatePredefineds(
 				new File(PREDEFINED_JSON_PATH + "WeaponProperty.json"), WeaponProperty[].class, weaponPropRepo);
 		WeaponProperty.setWeaponProperties(weaponProperties);
+
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Trait.json"), Trait[].class, traitRepo);
+
 		List<Language> languages = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Language.json"),
 				Language[].class, languageRepo);
 		Language.setLanguages(languages);
@@ -74,6 +83,10 @@ public class PrefetchDataUtility {
 		// Depends on one
 		// Skill (ability score)
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Skill.json"), Skill[].class, skillRepo);
+		// Weapon (weapon property
+		List<Weapon> weapons = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Weapon.json"), Weapon[].class,
+				weaponRepo);
+		Weapon.setWeapons(weapons);
 
 		// Depends on many
 		// Class (Trait, Attack, Language)

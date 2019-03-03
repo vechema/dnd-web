@@ -1,0 +1,925 @@
+[
+	{
+		"gameEntity": {
+			"name": "Club",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "0.1",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "BLUDGEONING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 4,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "2",
+		"properties" : [
+			"Light"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Dagger",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "2",
+		"attack" : {
+			"normalRange" : "20",
+			"maxRange" : "60",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 4,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "2",
+		"properties" : [
+			"Finesse",
+			"Light",
+			"Thrown"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Greatclub",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "0.2",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "BLUDGEONING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "10",
+		"properties" : [
+			"Two-handed"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Handaxe",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "5",
+		"attack" : {
+			"normalRange" : "20",
+			"maxRange" : "60",
+			"damageType" : "SLASHING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "2",
+		"properties" : [
+			"Light",
+			"Thrown"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Javelin",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "0.5",
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "120",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "2",
+		"properties" : [
+			"Thrown"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Light Hammer",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "2",
+		"attack" : {
+			"normalRange" : "20",
+			"maxRange" : "60",
+			"damageType" : "BLUDGEONING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 4,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "2",
+		"properties" : [
+			"Light",
+			"Thrown"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Mace",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "5",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "BLUDGEONING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "4"
+	},
+	{
+		"gameEntity": {
+			"name": "Quarterstaff",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "0.2",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "BLUDGEONING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "4",
+		"properties" : [
+			"Versatile"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Sickle",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "1",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "SLASHING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 4,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "2",
+		"properties" : [
+			"Light"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Spear",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "1",
+		"attack" : {
+			"normalRange" : "20",
+			"maxRange" : "60",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "3",
+		"properties" : [
+			"Thrown",
+			"Versatile"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Unarmed Strike",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "0",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "BLUDGEONING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 1,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "0"
+	},
+	{
+		"gameEntity": {
+			"name": "Crossbow, light",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "false",
+		"valueInGold" : "25",
+		"attack" : {
+			"normalRange" : "80",
+			"maxRange" : "320",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "5",
+		"properties" : [
+			"Ammunition",
+			"Loading",
+			"Two-handed"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Dart",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "false",
+		"valueInGold" : "0.05",
+		"attack" : {
+			"normalRange" : "20",
+			"maxRange" : "60",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 4,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "0.25",
+		"properties" : [
+			"Finesse",
+			"Thrown"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Shortbow",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "false",
+		"valueInGold" : "25",
+		"attack" : {
+			"normalRange" : "80",
+			"maxRange" : "320",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "2",
+		"properties" : [
+			"Ammunition",
+			"Two-handed"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Sling",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "SIMPLE_WEAPON",
+		"melee" : "false",
+		"valueInGold" : "0.1",
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "120",
+			"damageType" : "BLUDGEONING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 4,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "0",
+		"properties" : [
+			"Ammunition"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Battleaxe",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "10",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "SLASHING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "4",
+		"properties" : [
+			"Versatile"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Flail",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "10",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "BLUDGEONING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "2"
+	},
+	{
+		"gameEntity": {
+			"name": "Glaive",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "20",
+		"attack" : {
+			"normalRange" : "10",
+			"maxRange" : "10",
+			"damageType" : "SLASHING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 10,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "6",
+		"properties" : [
+			"Heavy",
+			"Reach",
+			"Two-handed"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Greataxe",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "30",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "SLASHING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 12,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "7",
+		"properties" : [
+			"Heavy",
+			"Two-handed"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Greatsword",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "50",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "SLASHING",
+			"damage" : {
+				"numDie" : 2,
+				"sidesOnDie" : 6,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "6",
+		"properties" : [
+			"Heavy",
+			"Two-handed"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Halberd",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "20",
+		"attack" : {
+			"normalRange" : "10",
+			"maxRange" : "10",
+			"damageType" : "SLASHING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 10,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "6",
+		"properties" : [
+			"Heavy",
+			"Reach",
+			"Two-handed"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Lance",
+			"description": "You have disadvantage when you use a lance to attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren’t mounted. ",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "10",
+		"attack" : {
+			"normalRange" : "10",
+			"maxRange" : "10",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 12,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "6",
+		"properties" : [
+			"Reach",
+			"Special"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Longsword",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "15",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "SLASHING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "3",
+		"properties" : [
+			"Versatile"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Maul",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "10",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "BLUDGEONING",
+			"damage" : {
+				"numDie" : 2,
+				"sidesOnDie" : 6,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "6",
+		"properties" : [
+			"Heavy",
+			"Two-handed"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Morningstar",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "15",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "4"
+	},
+	{
+		"gameEntity": {
+			"name": "Pike",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "5",
+		"attack" : {
+			"normalRange" : "10",
+			"maxRange" : "10",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 10,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "18",
+		"properties" : [
+			"Heavy",
+			"Reach",
+			"Two-handed"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Rapier",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "25",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "2",
+		"properties" : [
+			"Finesse"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Scimitar",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "25",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "SLASHING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "3",
+		"properties" : [
+			"Finesse",
+			"Light"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Shortsword",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "10",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "2",
+		"properties" : [
+			"Finesse",
+			"Light"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Trident",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "5",
+		"attack" : {
+			"normalRange" : "20",
+			"maxRange" : "60",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "4",
+		"properties" : [
+			"Thrown",
+			"Versatile"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "War Pick",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "5",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "2"
+	},
+	{
+		"gameEntity": {
+			"name": "Warhammer",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "15",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "BLUDGEONING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "2",
+		"properties" : [
+			"Versatile"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Whip",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "true",
+		"valueInGold" : "2",
+		"attack" : {
+			"normalRange" : "10",
+			"maxRange" : "10",
+			"damageType" : "SLASHING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 4,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "3",
+		"properties" : [
+			"Finesse",
+			"Reach"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Blowgun",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "false",
+		"valueInGold" : "10",
+		"attack" : {
+			"normalRange" : "25",
+			"maxRange" : "100",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 1,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "1",
+		"properties" : [
+			"Ammunition",
+			"Loading"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Crossbow, hand",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "false",
+		"valueInGold" : "75",
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "120",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "3",
+		"properties" : [
+			"Ammunition",
+			"Light",
+			"Loading"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Crossbow, heavy",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "false",
+		"valueInGold" : "50",
+		"attack" : {
+			"normalRange" : "100",
+			"maxRange" : "400",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 10,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "18",
+		"properties" : [
+			"Ammunition",
+			"Heavy",
+			"Loading",
+			"Two-handed"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Longbow",
+			"description": "",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "false",
+		"valueInGold" : "50",
+		"attack" : {
+			"normalRange" : "150",
+			"maxRange" : "600",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8,
+				"bonus" : 0
+			}
+		},
+		"weightInLbs" : "2",
+		"properties" : [
+			"Ammunition",
+			"Heavy",
+			"Two-handed"
+		]
+	},
+	{
+		"gameEntity": {
+			"name": "Net",
+			"description": "A Large or smaller creature hit by a net is restrained until it is freed. A net has no effect on creatures that are formless, or creatures that are Huge or larger. A creature can use its action to make a DC 10 Strength check, freeing itself or another creature within its reach on a success.\nDealing 5 slashing damage to the net (AC 10) also frees the creature without harming it, ending the effect and destroying the net.\nWhen you use an action, bonus action, or reaction to attack with a net, you can make only one attack regardless of the number of attacks you can normally make. ",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Weapons#List_of_Weapons"
+		},
+		"equipmentType" : "MARTIAL_WEAPON",
+		"melee" : "false",
+		"valueInGold" : "1",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "15"
+		},
+		"weightInLbs" : "3",
+		"properties" : [
+			"Special",
+			"Thrown"
+		]
+	}
+]
