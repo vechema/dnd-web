@@ -34,11 +34,7 @@ public class Item {
 	@Transient
 	@Getter
 	@Setter
-	private static List<Item> items;
-
-	public Item() {
-		items = new ArrayList<>();
-	}
+	private static List<Item> items = new ArrayList<>();
 
 	public static Item findItemByName(String name) {
 		return items.stream().filter(item -> item.getGameEntity().getName().equalsIgnoreCase(name)).findFirst().get();

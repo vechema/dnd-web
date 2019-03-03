@@ -186,7 +186,14 @@
 				"gameEntity" : {
 					"name" : "Dwarven Resilience",
 					"description" : "You have advantage on saving throws against being poisoned, and you have resistance against poison damage.",
-					"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+					"referenceURL" : "https://dnd5e.fandom.com/wiki/Dwarf"
+				}
+			},
+			{
+				"gameEntity" : {
+					"name" : "Stonecunning",
+					"description" : "Whenever you make a History check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.",
+					"referenceURL" : "https://dnd5e.fandom.com/wiki/Dwarf"
 				}
 			}
 		],
@@ -197,6 +204,52 @@
 				"Light Hammer",
 				"Warhammer"
 			]
-		}
+		},
+		"choices" : [
+			{
+				"gameEntity" : {
+					"name" : "Dwarven Tool Proficiency",
+					"description" : "You gain proficiency with one of smith's tools, brewer's supplies, or mason's tools",
+					"referenceURL" : "https://dnd5e.fandom.com/wiki/Dwarf"
+				},
+				"numToPick" : 1,
+				"options" : [
+					{
+						"gameEntity" : {
+							"name" : "Smith's tools proficiency",
+							"description" : "",
+							"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+						},
+						"proficiency" : {
+							"items" : [ "Smith's supplies" ]
+						}
+					},
+					{
+						"gameEntity" : {
+							"name" : "Brewer's tools proficiency",
+							"description" : "",
+							"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+						},
+						"proficiency" : {
+							"items" : [ "Brewer's supplies" ]
+						}
+					},
+					{
+						"gameEntity" : {
+							"name" : "Mason's tools proficiency",
+							"description" : "",
+							"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+						},
+						"proficiency" : {
+							"items" : [ "Mason's supplies" ]
+						}
+					}
+				]
+			}
+		],
+		"languages" : [
+			"Common",
+			"Dwarvish"
+		]
 	}
 ]

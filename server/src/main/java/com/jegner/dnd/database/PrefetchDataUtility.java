@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jegner.dnd.database.repo.AbilityScoreRepo;
 import com.jegner.dnd.database.repo.ArmorRepository;
+import com.jegner.dnd.database.repo.ItemRepository;
 import com.jegner.dnd.database.repo.LanguageRepository;
 import com.jegner.dnd.database.repo.RaceRepository;
 import com.jegner.dnd.database.repo.SkillRepository;
@@ -54,6 +55,9 @@ public class PrefetchDataUtility {
 	@Autowired
 	private WeaponRepository weaponRepo;
 
+	@Autowired
+	private ItemRepository itemRepo;
+
 	private ObjectMapper mapper = new ObjectMapper();
 
 	private static final String PREDEFINED_JSON_PATH = "src\\main\\resources\\database\\";
@@ -69,7 +73,10 @@ public class PrefetchDataUtility {
 				AbilityScore[].class, abilityScoreRepo);
 		AbilityScore.setAbilityScores(abilityScores);
 
-		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Armor.json"), Armor[].class, armorRepo);
+		List<Armor> armors = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Armor.json"), Armor[].class,
+				armorRepo);
+		Armor.setArmors(armors);
+		Item.addItems(armors);
 
 		List<WeaponProperty> weaponProperties = generatePredefineds(
 				new File(PREDEFINED_JSON_PATH + "WeaponProperty.json"), WeaponProperty[].class, weaponPropRepo);
@@ -82,6 +89,9 @@ public class PrefetchDataUtility {
 		List<Language> languages = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Language.json"),
 				Language[].class, languageRepo);
 		Language.setLanguages(languages);
+
+		List<Item> items = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Item.json"), Item[].class, itemRepo);
+		Item.addItems(items);
 
 		// Depends on one
 		// Skill (ability score)

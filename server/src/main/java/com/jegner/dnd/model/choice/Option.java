@@ -36,7 +36,7 @@ public class Option {
 	private Attack attack;
 	@OneToOne(cascade = CascadeType.ALL)
 	private Spell spell;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Proficiency proficiency;
 	@OneToOne
 	private Skill skill;

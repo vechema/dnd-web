@@ -39,7 +39,7 @@ public class Race {
 	private List<Attack> attacks;
 	private Size size;
 	private int startingSpeed;
-	@OneToMany
+	@ManyToMany
 	private List<Language> languages;
 	@OneToOne(cascade = CascadeType.ALL)
 	private GameEntity gameEntity;

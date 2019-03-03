@@ -1,0 +1,335 @@
+[
+	{
+		"gameEntity" : {
+			"name" : "Alchemist's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "50",
+		"weightInLbs" : "8"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Brewer's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "20",
+		"weightInLbs" : "9"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Calligrapher's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "10",
+		"weightInLbs" : "5"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Carpenter's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "8",
+		"weightInLbs" : "6"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Cartographer's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "15",
+		"weightInLbs" : "6"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Cobbler's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "5",
+		"weightInLbs" : "5"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Cook's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "1",
+		"weightInLbs" : "8"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Glassblower's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "30",
+		"weightInLbs" : "5"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Jeweler's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "25",
+		"weightInLbs" : "2"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Leatherworker's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "5",
+		"weightInLbs" : "5"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Mason's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "10",
+		"weightInLbs" : "8"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Painter's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "10",
+		"weightInLbs" : "5"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Potter's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "10",
+		"weightInLbs" : "3"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Smith's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "20",
+		"weightInLbs" : "8"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Tinker's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "50",
+		"weightInLbs" : "10"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Weaver's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "1",
+		"weightInLbs" : "5"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Woodcarver's supplies",
+			"description" : "Artisan's tools. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "1",
+		"weightInLbs" : "5"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Disguise kit",
+			"description" : "This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance.\nProficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "25",
+		"weightInLbs" : "3"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Forgery kit",
+			"description" : "This small box contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other supplies necessary to create convincing forgeries of physical documents.\nProficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a physical forgery of a document.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "25",
+		"weightInLbs" : "3"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Dice set",
+			"description" : "Gaming Set. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "0.1",
+		"weightInLbs" : "0"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Dragonchess set",
+			"description" : "Gaming Set. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "1",
+		"weightInLbs" : "0.5"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Playing card set",
+			"description" : "Gaming Set. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "0.5",
+		"weightInLbs" : "0"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Three-Dragon Ante set",
+			"description" : "Gaming Set. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "1",
+		"weightInLbs" : "0"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Herbalism",
+			"description" : "This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions.\nProficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs.\nAlso, proficiency with this kit is required to create antitoxin and potions of healing",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "5",
+		"weightInLbs" : "3"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Bagpipes",
+			"description" : "Musical Instrument. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument.\nA bard can use a musical instrument as a spellcasting focus",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "30",
+		"weightInLbs" : "6"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Drum",
+			"description" : "Musical Instrument. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument.\nA bard can use a musical instrument as a spellcasting focus",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "6",
+		"weightInLbs" : "3"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Dulcimer",
+			"description" : "Musical Instrument. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument.\nA bard can use a musical instrument as a spellcasting focus",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "25",
+		"weightInLbs" : "10"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Flute",
+			"description" : "Musical Instrument. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument.\nA bard can use a musical instrument as a spellcasting focus",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "2",
+		"weightInLbs" : "1"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Lute",
+			"description" : "Musical Instrument. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument.\nA bard can use a musical instrument as a spellcasting focus",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "35",
+		"weightInLbs" : "2"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Lyre",
+			"description" : "Musical Instrument. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument.\nA bard can use a musical instrument as a spellcasting focus",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "30",
+		"weightInLbs" : "2"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Horn",
+			"description" : "Musical Instrument. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument.\nA bard can use a musical instrument as a spellcasting focus",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "3",
+		"weightInLbs" : "2"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Pan flute",
+			"description" : "Musical Instrument. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument.\nA bard can use a musical instrument as a spellcasting focus",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "12",
+		"weightInLbs" : "2"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Shawm",
+			"description" : "Musical Instrument. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument.\nA bard can use a musical instrument as a spellcasting focus",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "2",
+		"weightInLbs" : "1"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Viol",
+			"description" : "Musical Instrument. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument.\nA bard can use a musical instrument as a spellcasting focus",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "30",
+		"weightInLbs" : "1"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Navigator's tools",
+			"description" : "Musical Instrument. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument.\nA bard can use a musical instrument as a spellcasting focus",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "25",
+		"weightInLbs" : "2"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Poisoner's kit",
+			"description" : "Musical Instrument. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument.\nA bard can use a musical instrument as a spellcasting focus",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "50",
+		"weightInLbs" : "2"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Thieves' tools",
+			"description" : "Musical Instrument. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument.\nA bard can use a musical instrument as a spellcasting focus",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Tools"
+		},
+		"valueInGold" : "25",
+		"weightInLbs" : "1"
+	}
+]
