@@ -1,5 +1,6 @@
 package com.jegner.dnd.model.predefined;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -50,15 +51,20 @@ public class Race {
 
 	public Race() {
 		abilityScoreIncreases = new HashMap<>();
+		languages = new ArrayList<>();
 	}
 
 	@JsonSetter("abilityScoreIncreases")
 	public void setAbilityScoreIncreasesFromString(Map<String, Integer> abilityScoreMap) {
-
 		for (Entry<String, Integer> entry : abilityScoreMap.entrySet()) {
 			AbilityScore abilityIncrease = AbilityScore.findAbilityScoreByName(entry.getKey());
 			int amount = entry.getValue();
 			this.getAbilityScoreIncreases().put(abilityIncrease, amount);
 		}
+	}
+
+	@JsonSetter("languages")
+	public void setLanguagesFromString(List<String> languagesString) {
+		languagesString.stream().forEach(languageString -> languages.add(Language.findLanguageByName(languageString)));
 	}
 }

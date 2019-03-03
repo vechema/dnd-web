@@ -20,7 +20,6 @@ public class DiceRoll {
 	private int bonus;
 
 	public int getDamage() {
-
 		return IntStream.range(0, this.numDie).map(i -> (int) (Math.random() * this.sidesOnDie) + 1 + this.bonus).sum();
 	}
 

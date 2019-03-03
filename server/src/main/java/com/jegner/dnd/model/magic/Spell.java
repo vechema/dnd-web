@@ -33,6 +33,7 @@ public class Spell {
 	private GameEntity gameEntity;
 	@OneToMany(cascade = CascadeType.ALL)
 	private Map<Integer, SpellLevel> spellLevels;
+	private int defaultSpellLevel;
 
 	// Doesn't change with levels
 	private SchoolOfMagic schoolOfMagic;

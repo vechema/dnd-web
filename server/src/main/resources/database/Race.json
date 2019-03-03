@@ -20,6 +20,10 @@
 			"Strength" : 2,
 			"Charisma" : 1
 		},
+		"languages" : [
+			"Draconic",
+			"Common"
+		],
 		"choices" : [
 			{
 				"gameEntity" : {
@@ -53,6 +57,7 @@
 								"timeUnit" : "ACTION"
 							},
 							"save" : "Dexterity",
+							"defaultSpellLevel" : 1,
 							"spellLevels" : {
 								"1" : {
 									"duration" : {
@@ -67,6 +72,27 @@
 										"damage" : {
 											"numDie" : 2,
 											"sidesOnDie" : 6
+										}
+									}
+								},
+								"6" : {
+									"attack" : {
+										"damage" : {
+											"numDie" : 3
+										}
+									}
+								},
+								"11" : {
+									"attack" : {
+										"damage" : {
+											"numDie" : 4
+										}
+									}
+								},
+								"16" : {
+									"attack" : {
+										"damage" : {
+											"numDie" : 5
 										}
 									}
 								}

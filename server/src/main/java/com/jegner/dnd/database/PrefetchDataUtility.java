@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jegner.dnd.database.repo.AbilityScoreRepo;
 import com.jegner.dnd.database.repo.ArmorRepository;
+import com.jegner.dnd.database.repo.LanguageRepository;
 import com.jegner.dnd.database.repo.RaceRepository;
 import com.jegner.dnd.database.repo.SkillRepository;
 import com.jegner.dnd.database.repo.TraitRepository;
@@ -18,6 +19,7 @@ import com.jegner.dnd.database.repo.WeaponPropertyRepository;
 import com.jegner.dnd.model.item.Armor;
 import com.jegner.dnd.model.item.WeaponProperty;
 import com.jegner.dnd.model.predefined.AbilityScore;
+import com.jegner.dnd.model.predefined.Language;
 import com.jegner.dnd.model.predefined.Race;
 import com.jegner.dnd.model.predefined.Skill;
 import com.jegner.dnd.model.predefined.Trait;
@@ -43,6 +45,9 @@ public class PrefetchDataUtility {
 	@Autowired
 	private RaceRepository raceRepo;
 
+	@Autowired
+	private LanguageRepository languageRepo;
+
 	private ObjectMapper mapper = new ObjectMapper();
 
 	private static final String PREDEFINED_JSON_PATH = "src\\main\\resources\\database\\";
@@ -53,7 +58,7 @@ public class PrefetchDataUtility {
 		// through. Will have to consider order due to dependencies
 
 		// Depends on no one - Feat, Feature, Trait, Armor, Container, Item,
-		// WeaponProperty
+		// WeaponProperty, Language
 		List<AbilityScore> abilityScores = generatePredefineds(new File(PREDEFINED_JSON_PATH + "AbilityScore.json"),
 				AbilityScore[].class, abilityScoreRepo);
 		AbilityScore.setAbilityScores(abilityScores);
@@ -61,6 +66,9 @@ public class PrefetchDataUtility {
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "WeaponProperty.json"), WeaponProperty[].class,
 				weaponPropRepo);
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Trait.json"), Trait[].class, traitRepo);
+		List<Language> languages = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Language.json"),
+				Language[].class, languageRepo);
+		Language.setLanguages(languages);
 
 		// Depends on one
 		// Skill (ability score)
