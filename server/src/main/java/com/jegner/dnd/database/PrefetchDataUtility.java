@@ -18,6 +18,7 @@ import com.jegner.dnd.database.repo.TraitRepository;
 import com.jegner.dnd.database.repo.WeaponPropertyRepository;
 import com.jegner.dnd.database.repo.WeaponRepository;
 import com.jegner.dnd.model.item.Armor;
+import com.jegner.dnd.model.item.Item;
 import com.jegner.dnd.model.item.Weapon;
 import com.jegner.dnd.model.item.WeaponProperty;
 import com.jegner.dnd.model.predefined.AbilityScore;
@@ -74,7 +75,9 @@ public class PrefetchDataUtility {
 				new File(PREDEFINED_JSON_PATH + "WeaponProperty.json"), WeaponProperty[].class, weaponPropRepo);
 		WeaponProperty.setWeaponProperties(weaponProperties);
 
-		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Trait.json"), Trait[].class, traitRepo);
+		List<Trait> commonTraits = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Trait.json"), Trait[].class,
+				traitRepo);
+		Trait.setCommonTraits(commonTraits);
 
 		List<Language> languages = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Language.json"),
 				Language[].class, languageRepo);
@@ -87,6 +90,7 @@ public class PrefetchDataUtility {
 		List<Weapon> weapons = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Weapon.json"), Weapon[].class,
 				weaponRepo);
 		Weapon.setWeapons(weapons);
+		Item.addItems(weapons);
 
 		// Depends on many
 		// Class (Trait, Attack, Language)

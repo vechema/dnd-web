@@ -11,6 +11,7 @@ import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -32,7 +33,7 @@ public class Race {
 	@Id
 	@GeneratedValue
 	private Long id;
-	@OneToMany(cascade = CascadeType.ALL)
+	@ManyToMany(cascade = CascadeType.MERGE)
 	private List<Trait> traits;
 	@OneToMany
 	private List<Attack> attacks;
@@ -44,14 +45,15 @@ public class Race {
 	private GameEntity gameEntity;
 	@ElementCollection
 	private Map<AbilityScore, Integer> abilityScoreIncreases;
-	@OneToMany
-	private List<Proficiency> proficiencies;
+	@OneToOne(cascade = CascadeType.ALL)
+	private Proficiency proficiency;
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Choice> choices;
 
 	public Race() {
 		abilityScoreIncreases = new HashMap<>();
 		languages = new ArrayList<>();
+		traits = new ArrayList<>();
 	}
 
 	@JsonSetter("abilityScoreIncreases")
@@ -60,6 +62,17 @@ public class Race {
 			AbilityScore abilityIncrease = AbilityScore.findAbilityScoreByName(entry.getKey());
 			int amount = entry.getValue();
 			this.getAbilityScoreIncreases().put(abilityIncrease, amount);
+		}
+	}
+
+	@JsonSetter("traits")
+	public void setTraits(List<Object> traits) {
+		for (Object trait : traits) {
+			if (trait instanceof String) {
+				this.traits.add(Trait.findCommonTraitByName((String) trait));
+			} else if (trait instanceof Trait) {
+				this.traits.add((Trait) trait);
+			}
 		}
 	}
 

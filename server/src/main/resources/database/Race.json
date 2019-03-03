@@ -41,15 +41,15 @@
 						},
 						"trait" : {
 							"gameEntity" : {
-								"name" : "Damage Resistance",
+								"name" : "Acid Damage Resistance",
 								"description" : "You have resistance to acid damage",
 								"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
 							}
 						},
 						"spell" : {
 							"gameEntity" : {
-								"name" : "Breath Weapon",
-								"description" : "You can use your action to exhale destructive energy. Shape: 5 by 30 ft. line. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw.\nThe DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes damage based on level for a failed save, and half as much damage on a successful one.\nAfter you use your breath weapon, you can’t use it again until you complete a short or long rest.",
+								"name" : "Acid Breath Weapon",
+								"description" : "You can use your action to exhale destructive energy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw.\nThe DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes damage based on level for a failed save, and half as much damage on a successful one.\nAfter you use your breath weapon, you can’t use it again until you complete a short or long rest.",
 								"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
 							},
 							"castingTime" :  {
@@ -98,6 +98,72 @@
 								}
 							}
 						}
+					},
+					{
+						"gameEntity" : {
+							"name" : "Blue Lightning Draconic Ancestry",
+							"description" : "",
+							"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+						},
+						"trait" : {
+							"gameEntity" : {
+								"name" : "Lightning Damage Resistance",
+								"description" : "You have resistance to lightning damage",
+								"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+							}
+						},
+						"spell" : {
+							"gameEntity" : {
+								"name" : "Lightning Breath Weapon",
+								"description" : "You can use your action to exhale destructive energy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw.\nThe DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes damage based on level for a failed save, and half as much damage on a successful one.\nAfter you use your breath weapon, you can’t use it again until you complete a short or long rest.",
+								"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+							},
+							"castingTime" :  {
+								"amount" : 1,
+								"timeUnit" : "ACTION"
+							},
+							"save" : "Dexterity",
+							"defaultSpellLevel" : 1,
+							"spellLevels" : {
+								"1" : {
+									"duration" : {
+										"amount" : 1,
+										"timeUnit" : "INSTANTANEOUS"
+									},
+									"areaOfEffect" : "5 by 30 ft line",
+									"attack" : {
+										"normalRange" : "30",
+										"maxRange" : "30",
+										"damageType" : "LIGHTNING",
+										"damage" : {
+											"numDie" : 2,
+											"sidesOnDie" : 6
+										}
+									}
+								},
+								"6" : {
+									"attack" : {
+										"damage" : {
+											"numDie" : 3
+										}
+									}
+								},
+								"11" : {
+									"attack" : {
+										"damage" : {
+											"numDie" : 4
+										}
+									}
+								},
+								"16" : {
+									"attack" : {
+										"damage" : {
+											"numDie" : 5
+										}
+									}
+								}
+							}
+						}
 					}
 				]
 			}
@@ -115,6 +181,7 @@
 			"Constitution" : 2
 		},
 		"traits" : [
+			"Darkvision",
 			{
 				"gameEntity" : {
 					"name" : "Dwarven Resilience",
@@ -122,6 +189,14 @@
 					"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
 				}
 			}
-		]
+		],
+		"proficiency" : {
+			"items" : [
+				"Battleaxe",
+				"Handaxe",
+				"Light Hammer",
+				"Warhammer"
+			]
+		}
 	}
 ]
