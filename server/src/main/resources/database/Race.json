@@ -10,8 +10,8 @@
 		"traits" : [
 			{
 				"gameEntity" : {
-					"name" : "Draconic Ancestry",
-					"description" : "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.",
+					"name" : "Age",
+					"description" : "Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.",
 					"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
 				}
 			}
@@ -19,6 +19,62 @@
 		"abilityScoreIncreases" : {
 			"Strength" : 2,
 			"Charisma" : 1
-		}
+		},
+		"choices" : [
+			{
+				"gameEntity" : {
+					"name" : "Draconic Ancestry",
+					"description" : "Your breath weapon and damage resistance are determined by your dragon type",
+					"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+				},
+				"numToPick" : 1,
+				"options" : [
+					{
+						"gameEntity" : {
+							"name" : "Black Acid Draconic Ancestry",
+							"description" : "",
+							"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+						},
+						"trait" : {
+							"gameEntity" : {
+								"name" : "Damage Resistance",
+								"description" : "You have resistance to acid damage",
+								"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+							}
+						},
+						"spell" : {
+							"gameEntity" : {
+								"name" : "Breath Weapon",
+								"description" : "You can use your action to exhale destructive energy. Shape: 5 by 30 ft. line. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw.\nThe DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes damage based on level for a failed save, and half as much damage on a successful one.\nAfter you use your breath weapon, you can’t use it again until you complete a short or long rest.",
+								"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+							},
+							"castingTime" :  {
+								"amount" : 1,
+								"timeUnit" : "ACTION"
+							},
+							"save" : "Dexterity",
+							"spellLevels" : {
+								"1" : {
+									"duration" : {
+										"amount" : 1,
+										"timeUnit" : "INSTANTANEOUS"
+									},
+									"areaOfEffect" : "5 by 30 ft line",
+									"attack" : {
+										"normalRange" : "30",
+										"maxRange" : "30",
+										"damageType" : "ACID",
+										"damage" : {
+											"numDie" : 2,
+											"sidesOnDie" : 6
+										}
+									}
+								}
+							}
+						}
+					}
+				]
+			}
+		]
 	}
 ]

@@ -1,4 +1,4 @@
-package com.jegner.dnd.model;
+package com.jegner.dnd.model.magic;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -6,9 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-import com.jegner.dnd.model.item.DamageType;
-import com.jegner.dnd.utility.DiceRoll;
-import com.jegner.dnd.utility.GameEntity;
+import com.jegner.dnd.model.Attack;
+import com.jegner.dnd.utility.Duration;
 import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
@@ -16,18 +15,16 @@ import lombok.Data;
 @Entity
 @Data
 @Predefined
-public class Attack {
+public class SpellLevel {
 
-	@Id
 	@GeneratedValue
+	@Id
 	private Long id;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	private GameEntity gameEntity;
-
+	private Duration duration;
+	private String areaOfEffect;
 	@OneToOne(cascade = CascadeType.ALL)
-	private DiceRoll damage;
-	private DamageType damageType;
-	private int normalRange;
-	private int maxRange;
+	private Attack attack;
+	private String description;
 }

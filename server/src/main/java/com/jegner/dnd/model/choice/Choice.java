@@ -1,22 +1,23 @@
-package com.jegner.dnd.model;
+package com.jegner.dnd.model.choice;
+
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
-import com.jegner.dnd.model.item.DamageType;
-import com.jegner.dnd.utility.DiceRoll;
 import com.jegner.dnd.utility.GameEntity;
 import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
 
-@Entity
 @Data
+@Entity
 @Predefined
-public class Attack {
+public class Choice {
 
 	@Id
 	@GeneratedValue
@@ -25,9 +26,7 @@ public class Attack {
 	@OneToOne(cascade = CascadeType.ALL)
 	private GameEntity gameEntity;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	private DiceRoll damage;
-	private DamageType damageType;
-	private int normalRange;
-	private int maxRange;
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<Option> options;
+	private int numToPick;
 }

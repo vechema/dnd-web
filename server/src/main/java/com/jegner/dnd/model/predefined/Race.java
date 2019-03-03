@@ -17,6 +17,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 import com.jegner.dnd.model.Attack;
 import com.jegner.dnd.model.Proficiency;
 import com.jegner.dnd.model.Size;
+import com.jegner.dnd.model.choice.Choice;
 import com.jegner.dnd.utility.GameEntity;
 import com.jegner.dnd.utility.Predefined;
 
@@ -44,8 +45,8 @@ public class Race {
 	private Map<AbilityScore, Integer> abilityScoreIncreases;
 	@OneToMany
 	private List<Proficiency> proficiencies;
-	@OneToMany
-	private List<SubRace> subRaces;
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<Choice> choices;
 
 	public Race() {
 		abilityScoreIncreases = new HashMap<>();
