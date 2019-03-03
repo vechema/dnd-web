@@ -63,8 +63,9 @@ public class PrefetchDataUtility {
 				AbilityScore[].class, abilityScoreRepo);
 		AbilityScore.setAbilityScores(abilityScores);
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Armor.json"), Armor[].class, armorRepo);
-		generatePredefineds(new File(PREDEFINED_JSON_PATH + "WeaponProperty.json"), WeaponProperty[].class,
-				weaponPropRepo);
+		List<WeaponProperty> weaponProperties = generatePredefineds(
+				new File(PREDEFINED_JSON_PATH + "WeaponProperty.json"), WeaponProperty[].class, weaponPropRepo);
+		WeaponProperty.setWeaponProperties(weaponProperties);
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Trait.json"), Trait[].class, traitRepo);
 		List<Language> languages = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Language.json"),
 				Language[].class, languageRepo);

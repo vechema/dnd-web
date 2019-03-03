@@ -23,7 +23,7 @@ public class Proficiency {
 	@GeneratedValue
 	private long id;
 	@OneToMany
-	private List<Item> items; // tools
+	private List<Item> items; // tools, weapon
 	@OneToMany
 	private List<AbilityScore> abilityScores;
 	@OneToMany

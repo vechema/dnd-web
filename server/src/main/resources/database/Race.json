@@ -102,5 +102,26 @@
 				]
 			}
 		]
+	},
+	{
+		"gameEntity" : {
+			"name" : "Dwarf",
+			"description" : "You a dwarf",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Dwarf"
+		},
+		"size" : "MEDIUM",
+		"startingSpeed" : "25",
+		"abilityScoreIncreases" : {
+			"Constitution" : 2
+		},
+		"traits" : [
+			{
+				"gameEntity" : {
+					"name" : "Dwarven Resilience",
+					"description" : "You have advantage on saving throws against being poisoned, and you have resistance against poison damage.",
+					"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+				}
+			}
+		]
 	}
 ]
