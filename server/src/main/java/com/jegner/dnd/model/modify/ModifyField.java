@@ -2,6 +2,8 @@ package com.jegner.dnd.model.modify;
 
 public enum ModifyField {
 	HP,
+	HP_MOD,
+	LEVEL,
 	CHARACTER_AC,
 	ARMOR_AC,
 	ABILITY_SCORE,

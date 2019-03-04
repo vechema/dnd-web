@@ -42,6 +42,6 @@ public class Option {
 	private Skill skill;
 	@OneToOne
 	private Language language;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private SubRace subRace;
 }
