@@ -35,10 +35,16 @@ public class Proficiency {
 
 	public Proficiency() {
 		items = new ArrayList<>();
+		skills = new ArrayList<>();
 	}
 
 	@JsonSetter("items")
 	public void setItemsFromString(List<String> itemStrings) {
 		itemStrings.stream().forEach(itemString -> items.add(Item.findItemByName(itemString)));
+	}
+
+	@JsonSetter("skills")
+	public void setSkillsFromString(List<String> skillsString) {
+		skillsString.stream().forEach(skillString -> skills.add(Skill.findSkillByName(skillString)));
 	}
 }

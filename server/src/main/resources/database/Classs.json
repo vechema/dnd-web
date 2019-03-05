@@ -4,6 +4,224 @@
 			"name" : "Barbarian",
 			"description" : "A fierce warrior of a primitive background who can enter a battle rage",
 			"referenceURL" : "https://dnd5e.fandom.com/wiki/Barbarian"
-		}
+		},
+		"hitDice" : "12",
+		"savingThrowAbilityScores" : [
+			"Strength",
+			"Constitution"
+		],
+		"proficiency" : {
+			"combatProficiencies" : [
+				"LIGHT_ARMOR",
+				"MEDIUM_ARMOR",
+				"SHIELD",
+				"SIMPLE_WEAPON",
+				"MARTIAL_WEAPON"
+			]
+		},
+		"choices" : [
+			{
+				"gameEntity" : {
+					"name" : "Choose two skills",
+					"description" : "",
+					"referenceURL" : "https://dnd5e.fandom.com/wiki/Barbarian"
+				},
+				"numToPick" : "2",
+				"options" : [
+					{
+						"proficiency" : {
+							"skills" : [
+								"Animal Handling"
+							]
+						}
+					},
+					{
+						"proficiency" : {
+							"skills" : [
+								"Athletics"
+							]
+						}
+					},
+					{
+						"proficiency" : {
+							"skills" : [
+								"Intimidation"
+							]
+						}
+					},
+					{
+						"proficiency" : {
+							"skills" : [
+								"Nature"
+							]
+						}
+					},
+					{
+						"proficiency" : {
+							"skills" : [
+								"Perception"
+							]
+						}
+					},
+					{
+						"proficiency" : {
+							"skills" : [
+								"Survival"
+							]
+						}
+					}
+				]
+			},
+			{
+				"gameEntity" : {
+					"name" : "Starting equipment: items or gold",
+					"description" : "",
+					"referenceURL" : "https://dnd5e.fandom.com/wiki/Barbarian"
+				},
+				"numToPick" : "1",
+				"options" : [
+					{
+						"gameEntity" : {
+							"name" : "Starting equipment : items"
+						},
+						"choices" : [
+							{
+								"gameEntity" : {
+									"name" : "Starting equipment: items - martial melee weapon"
+								},
+								"numToPick" : "1",
+								"options" : [
+									{
+										"items" : ["Greataxe"]
+									},
+									{
+										"items" : ["Battleaxe"]
+									},
+									{
+										"items" : ["Flail"]
+									},
+									{
+										"items" : ["Glaive"]
+									},
+									{
+										"items" : ["Greatsword"]
+									},
+									{
+										"items" : ["Halberd"]
+									},
+									{
+										"items" : ["Lance"]
+									},
+									{
+										"items" : ["Longsword"]
+									},
+									{
+										"items" : ["Maul"]
+									},
+									{
+										"items" : ["Morningstar"]
+									},
+									{
+										"items" : ["Pike"]
+									},
+									{
+										"items" : ["Rapier"]
+									},
+									{
+										"items" : ["Scimitar"]
+									},
+									{
+										"items" : ["Shortsword"]
+									},
+									{
+										"items" : ["Trident"]
+									},
+									{
+										"items" : ["War Pick"]
+									},
+									{
+										"items" : ["Warhammer"]
+									},
+									{
+										"items" : ["Whip"]
+									}
+								]
+							},
+							{
+								"gameEntity" : {
+									"name" : "Starting equipment: items - any simple weapon"
+								},
+								"numToPick" : "1",
+								"options" : [
+									{
+										"items" : ["Handaxe", "Handaxe"]
+									},
+									{
+										"items" : ["Club"]
+									},
+									{
+										"items" : ["Dagger"]
+									},
+									{
+										"items" : ["Greatclub"]
+									},
+									{
+										"items" : ["Javelin"]
+									},
+									{
+										"items" : ["Light Hammer"]
+									},
+									{
+										"items" : ["Mace"]
+									},
+									{
+										"items" : ["Quarterstaff"]
+									},
+									{
+										"items" : ["Sickle"]
+									},
+									{
+										"items" : ["Spear"]
+									},
+									{
+										"items" : ["Crossbow, light"]
+									},
+									{
+										"items" : ["Dart"]
+									},
+									{
+										"items" : ["Shortbow"]
+									},
+									{
+										"items" : ["Sling"]
+									}
+								]
+							},
+							{
+								"gameEntity" : {
+									"name" : "Starting equipment: items - explorer's pack and four javelins. Not really an option"
+								},
+								"numToPick" : "1",
+								"options" : [
+									{
+										"items" : ["Javelin", "Javelin","Javelin","Javelin"]
+									}
+								]
+							}
+						]
+					},
+					{
+						"gameEntity" : {
+							"name" : "Starting equipment : gold"
+						},
+						"startingGold" : {
+							"numDie" : "2",
+							"sidesOnDie" : "4",
+							"multiplier" : "10"
+						}
+					}
+				]
+			}
+		]
 	}
 ]

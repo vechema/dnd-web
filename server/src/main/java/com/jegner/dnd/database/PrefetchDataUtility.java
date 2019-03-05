@@ -100,7 +100,10 @@ public class PrefetchDataUtility {
 
 		// Depends on one
 		// Skill (ability score)
-		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Skill.json"), Skill[].class, skillRepo);
+		List<Skill> skills = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Skill.json"), Skill[].class,
+				skillRepo);
+		Skill.setSkills(skills);
+
 		// Weapon (weapon property
 		List<Weapon> weapons = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Weapon.json"), Weapon[].class,
 				weaponRepo);

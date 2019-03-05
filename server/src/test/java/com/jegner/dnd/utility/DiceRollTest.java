@@ -17,7 +17,7 @@ public class DiceRollTest {
 		Map<Integer, Integer> frequency = new HashMap<>();
 
 		for (int i = 0; i < 500; i++) {
-			int rollResult = roll.getDamage();
+			int rollResult = roll.getRoll();
 			Integer previous = frequency.get(rollResult);
 			if (previous == null) {
 				frequency.put(rollResult, 1);
