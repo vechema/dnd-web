@@ -258,4 +258,49 @@ public class CharacterModifySystemTest {
 		int attackHit = character.getAttackHit();
 		assertThat(attackHit, is(profBonus + weaponMagicBonus + Math.max(strengthModAmount, dexModAmount)));
 	}
+
+	@Test
+	public void modifyByLevelTest() {
+		// Create Character, level already set
+		Character character = new Character();
+
+		// Create class and stuff to not get null pointer exception when calling
+		// setCurrentLevel
+		Modify profBonusModify1 = new Modify();
+		profBonusModify1.setBase(1);
+		Level level1 = new Level();
+		level1.setProficiencyBonus(profBonusModify1);
+		level1.setLevel(1);
+
+		Modify profBonusModify4 = new Modify();
+		profBonusModify4.setBase(4);
+		Level level4 = new Level();
+		level4.setProficiencyBonus(profBonusModify4);
+		level4.setLevel(4);
+
+		LevelingTable levelingTable = new LevelingTable();
+		levelingTable.setLevels(Arrays.asList(level1, level4));
+
+		Classs classs = new Classs();
+		classs.setLevelingTable(levelingTable);
+		classs.setGameEntity(new GameEntity());
+
+		character.setCharClass(classs);
+
+		// Create modify based on level
+		Modify hillDwarfModify = new Modify();
+		hillDwarfModify.setBase(0);
+		hillDwarfModify.setModifyField(ModifyField.HP_MOD);
+		hillDwarfModify.addFieldThatModifyMe(ModifyField.LEVEL);
+
+		character.addModify(hillDwarfModify);
+
+		int hp = character.getHP();
+		assertThat(hp, is(1));
+
+		// change character level and test hp again
+		character.setCurrentLevel(4);
+		hp = character.getHP();
+		assertThat(hp, is(4));
+	}
 }

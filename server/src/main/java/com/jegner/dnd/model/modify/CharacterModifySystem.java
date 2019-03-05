@@ -75,6 +75,10 @@ public class CharacterModifySystem {
 		return getCalculated(ModifyField.ATTACK_HIT, 0);
 	}
 
+	public int getCharacterHP() {
+		return getCalculated(ModifyField.HP, 0);
+	}
+
 	/**
 	 * Get Modify instances that modify the input field
 	 * 

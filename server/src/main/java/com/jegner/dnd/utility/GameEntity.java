@@ -35,12 +35,12 @@ public class GameEntity {
 		modifys = new ArrayList<>();
 	}
 
-	public void setModify(Modify dexMod) {
-		modifys = new ArrayList<>(Arrays.asList(dexMod));
+	public void setModify(Modify modify) {
+		modifys = new ArrayList<>(Arrays.asList(modify));
 	}
 
-	public void addModify(Modify weaponMagicModify) {
-		modifys.add(weaponMagicModify);
+	public void addModify(Modify modify) {
+		modifys.add(modify);
 	}
 
 }

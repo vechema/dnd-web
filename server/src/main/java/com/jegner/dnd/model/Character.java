@@ -16,6 +16,8 @@ import com.jegner.dnd.model.item.Item;
 import com.jegner.dnd.model.item.Money;
 import com.jegner.dnd.model.magic.CharacterSpellbook;
 import com.jegner.dnd.model.modify.CharacterModifySystem;
+import com.jegner.dnd.model.modify.Modify;
+import com.jegner.dnd.model.modify.ModifyField;
 import com.jegner.dnd.model.predefined.AbilityScore;
 import com.jegner.dnd.model.predefined.Background;
 import com.jegner.dnd.model.predefined.Classs;
@@ -80,6 +82,29 @@ public class Character {
 		modSys = new CharacterModifySystem();
 		charAbility = new CharacterAbility();
 		inventory = new Inventory();
+		gameEntity = new GameEntity();
+		initLevel(1);
+		initHP();
+	}
+
+	private void initLevel(int level) {
+		currentLevel = level;
+		Modify levelModify = new Modify();
+		levelModify.setBase(level);
+		levelModify.setModifyField(ModifyField.LEVEL);
+		this.gameEntity.addModify(levelModify);
+		modSys.addModify(levelModify);
+
+	}
+
+	// Changed later to use Race
+	private void initHP() {
+		Modify hpModify = new Modify();
+		hpModify.setBase(0);
+		hpModify.setModifyField(ModifyField.HP);
+		hpModify.addFieldThatModifyMe(ModifyField.HP_MOD);
+		this.gameEntity.addModify(hpModify);
+		modSys.addModify(hpModify);
 	}
 
 	public int getAC() {
@@ -92,6 +117,10 @@ public class Character {
 
 	public int getAttackHit() {
 		return modSys.getCharacterAttackHit();
+	}
+
+	public int getHP() {
+		return modSys.getCharacterHP();
 	}
 
 	public void addItem(Item item) {
@@ -108,8 +137,15 @@ public class Character {
 		modSys.addModifys(abilityScore.getGameEntity().getModifys());
 	}
 
+	public void addModify(Modify modify) {
+		modSys.addModify(modify);
+	}
+
 	public void setCurrentLevel(int level) {
 		this.currentLevel = level;
+		this.gameEntity.getModifys().stream().filter(modify -> modify.getModifyField().equals(ModifyField.LEVEL))
+				.findFirst().get().setBase(level);
+
 		// TODO Need to remove old level modifys
 		modSys.addModify(this.charClass.getLevelingTable().getLevel(currentLevel).getProficiencyBonus());
 	}
