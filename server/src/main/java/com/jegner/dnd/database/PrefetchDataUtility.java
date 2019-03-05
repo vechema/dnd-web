@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jegner.dnd.database.repo.AbilityScoreRepo;
 import com.jegner.dnd.database.repo.ArmorRepository;
+import com.jegner.dnd.database.repo.ClasssRepository;
 import com.jegner.dnd.database.repo.ItemRepository;
 import com.jegner.dnd.database.repo.LanguageRepository;
 import com.jegner.dnd.database.repo.RaceRepository;
@@ -23,6 +24,7 @@ import com.jegner.dnd.model.item.Item;
 import com.jegner.dnd.model.item.Weapon;
 import com.jegner.dnd.model.item.WeaponProperty;
 import com.jegner.dnd.model.predefined.AbilityScore;
+import com.jegner.dnd.model.predefined.Classs;
 import com.jegner.dnd.model.predefined.Language;
 import com.jegner.dnd.model.predefined.Race;
 import com.jegner.dnd.model.predefined.Skill;
@@ -57,6 +59,9 @@ public class PrefetchDataUtility {
 
 	@Autowired
 	private ItemRepository itemRepo;
+
+	@Autowired
+	private ClasssRepository classsRepo;
 
 	private ObjectMapper mapper = new ObjectMapper();
 
@@ -103,8 +108,10 @@ public class PrefetchDataUtility {
 		Item.addItems(weapons);
 
 		// Depends on many
-		// Class (Trait, Attack, Language)
+		// Race (Trait, Attack, Language)
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Race.json"), Race[].class, raceRepo);
+		// Classs
+		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Classs.json"), Classs[].class, classsRepo);
 
 	}
 
