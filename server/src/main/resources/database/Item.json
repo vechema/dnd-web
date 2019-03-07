@@ -973,7 +973,7 @@
 	},
 	{
 		"gameEntity" : {
-			"name" : "Rope, hempon (50 feet)",
+			"name" : "Rope, hempen (50 feet)",
 			"description" : "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.",
 			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
 		},
@@ -1105,5 +1105,86 @@
 		},
 		"valueInGold" : "0.01",
 		"weightInLbs" : "1"
+	},
+	{
+		"gameEntity" : {
+			"name" : "String (10 feet)",
+			"description" : "I just made this up for the burglar's pack",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "0.01",
+		"weightInLbs" : "0"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Wooden Stake",
+			"description" : "I just made this up for the monster hunter's pack",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "0.1",
+		"weightInLbs" : "0.5"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Mirror, Silver",
+			"description" : "I just made this up for the monster hunter's pack",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "30",
+		"weightInLbs" : "7"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Alms Box",
+			"description" : "I just made this up for the priest's pack",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "1",
+		"weightInLbs" : "1"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Block of Incense",
+			"description" : "I just made this up for the priest's pack",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "0.5",
+		"weightInLbs" : "0"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Censer",
+			"description" : "I just made this up for the priest's pack",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "4",
+		"weightInLbs" : "1"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Vestments",
+			"description" : "I just made this up for the priest's pack",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "7",
+		"weightInLbs" : "3"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Bag of Sand",
+			"description" : "I just made this up for the scholar's pack",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "1",
+		"weightInLbs" : "0.5"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Small Knife",
+			"description" : "I just made this up for the scholar's pack",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "2",
+		"weightInLbs" : "2"
 	}
 ]

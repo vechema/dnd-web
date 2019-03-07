@@ -1,0 +1,132 @@
+[
+	{
+		"gameEntity" : {
+			"name" : "Backpack",
+			"description" : "You can also strap items, such as a bedroll or a coil of rope, to the outside of a backpack. ",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "2",
+		"weightInLbs" : "5",
+		"capacity" : "1 cubic foot/30 pounds of gear"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Barrel",
+			"description" : "",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "2",
+		"weightInLbs" : "70",
+		"capacity" : "40 gallons liquid, 4 cubic feet solid"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Basket",
+			"description" : "",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "0.4",
+		"weightInLbs" : "2",
+		"capacity" : "2 cubic feet/40 pounds of gear"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Bottle",
+			"description" : "",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "2",
+		"weightInLbs" : "2",
+		"capacity" : "1 1/2 pints liquid"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Bucket",
+			"description" : "",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "0.05",
+		"weightInLbs" : "2",
+		"capacity" : "3 gallons liquid, 1/2 cubic foot solid"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Chest",
+			"description" : "",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "5",
+		"weightInLbs" : "25",
+		"capacity" : "12 cubic feet/300 pounds of gear"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Flask or tankard",
+			"description" : "",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "0.02",
+		"weightInLbs" : "1",
+		"capacity" : "1 pint liquid"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Jug or pitcher",
+			"description" : "",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "0.02",
+		"weightInLbs" : "4",
+		"capacity" : "1 gallon liquid"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Pot, iron",
+			"description" : "",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "2",
+		"weightInLbs" : "10",
+		"capacity" : "1 gallon liquid"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Pouch",
+			"description" : "",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "0.5",
+		"weightInLbs" : "1",
+		"capacity" : "1/5 cubic foot/6 pounds of gear"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Sack",
+			"description" : "",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "0.01",
+		"weightInLbs" : "0.5",
+		"capacity" : "1 cubic foot/30 pounds of gear"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Vial",
+			"description" : "",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "1",
+		"weightInLbs" : "0",
+		"capacity" : "4 ounces liquid"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Waterskin",
+			"description" : "",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Adventuring_Gear"
+		},
+		"valueInGold" : "0.2",
+		"weightInLbs" : "5",
+		"capacity" : "4 pints liquid"
+	}
+]

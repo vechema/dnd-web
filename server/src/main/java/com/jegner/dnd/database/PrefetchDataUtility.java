@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jegner.dnd.database.repo.AbilityScoreRepo;
 import com.jegner.dnd.database.repo.ArmorRepository;
 import com.jegner.dnd.database.repo.ClasssRepository;
+import com.jegner.dnd.database.repo.ContainerRepository;
+import com.jegner.dnd.database.repo.EquipmentPackRepository;
 import com.jegner.dnd.database.repo.ItemRepository;
 import com.jegner.dnd.database.repo.LanguageRepository;
 import com.jegner.dnd.database.repo.RaceRepository;
@@ -20,6 +22,8 @@ import com.jegner.dnd.database.repo.TraitRepository;
 import com.jegner.dnd.database.repo.WeaponPropertyRepository;
 import com.jegner.dnd.database.repo.WeaponRepository;
 import com.jegner.dnd.model.item.Armor;
+import com.jegner.dnd.model.item.Container;
+import com.jegner.dnd.model.item.EquipmentPack;
 import com.jegner.dnd.model.item.Item;
 import com.jegner.dnd.model.item.Weapon;
 import com.jegner.dnd.model.item.WeaponProperty;
@@ -63,6 +67,12 @@ public class PrefetchDataUtility {
 	@Autowired
 	private ClasssRepository classsRepo;
 
+	@Autowired
+	private ContainerRepository containerRepo;
+
+	@Autowired
+	private EquipmentPackRepository equipmentPackRepo;
+
 	private ObjectMapper mapper = new ObjectMapper();
 
 	private static final String PREDEFINED_JSON_PATH = "src\\main\\resources\\database\\";
@@ -98,13 +108,22 @@ public class PrefetchDataUtility {
 		List<Item> items = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Item.json"), Item[].class, itemRepo);
 		Item.addItems(items);
 
+		List<Container> containers = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Container.json"),
+				Container[].class, containerRepo);
+		Container.setContainers(containers);
+		Item.addItems(containers);
+
+		List<EquipmentPack> equipmentPack = generatePredefineds(new File(PREDEFINED_JSON_PATH + "EquipmentPack.json"),
+				EquipmentPack[].class, equipmentPackRepo);
+		Item.addItems(equipmentPack);
+
 		// Depends on one
 		// Skill (ability score)
 		List<Skill> skills = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Skill.json"), Skill[].class,
 				skillRepo);
 		Skill.setSkills(skills);
 
-		// Weapon (weapon property
+		// Weapon (weapon property)
 		List<Weapon> weapons = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Weapon.json"), Weapon[].class,
 				weaponRepo);
 		Weapon.setWeapons(weapons);

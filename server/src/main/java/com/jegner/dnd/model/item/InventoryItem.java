@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonSetter;
+
 import lombok.Data;
 
 @Data
@@ -19,4 +21,9 @@ public class InventoryItem {
 	private int quantity;
 	private String notes;
 	private boolean isEquipped;
+
+	@JsonSetter("item")
+	public void setItemFromString(String itemStrings) {
+		item = Item.findItemByName(itemStrings);
+	}
 }
