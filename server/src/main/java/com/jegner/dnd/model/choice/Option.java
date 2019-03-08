@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.jegner.dnd.model.Attack;
 import com.jegner.dnd.model.Proficiency;
-import com.jegner.dnd.model.item.Item;
+import com.jegner.dnd.model.item.InventoryItem;
 import com.jegner.dnd.model.magic.Spell;
 import com.jegner.dnd.model.predefined.Language;
 import com.jegner.dnd.model.predefined.SubRace;
@@ -49,8 +49,8 @@ public class Option {
 	private Language language;
 	@OneToOne(cascade = CascadeType.ALL)
 	private SubRace subRace;
-	@ManyToMany
-	private List<Item> items;
+	@ManyToMany(cascade = CascadeType.ALL)
+	private List<InventoryItem> items;
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Choice> choices;
 	@OneToOne(cascade = CascadeType.ALL)
@@ -62,6 +62,10 @@ public class Option {
 
 	@JsonSetter("items")
 	public void setItemsFromString(List<String> itemsString) {
-		itemsString.stream().forEach(itemString -> items.add(Item.findItemByName(itemString)));
+		itemsString.stream().forEach(itemString -> {
+			InventoryItem invItem = new InventoryItem();
+			invItem.setItemFromString(itemString);
+			items.add(invItem);
+		});
 	}
 }
