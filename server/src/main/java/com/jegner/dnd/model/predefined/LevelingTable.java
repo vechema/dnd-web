@@ -2,6 +2,7 @@ package com.jegner.dnd.model.predefined;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,7 +20,7 @@ public class LevelingTable {
 	@Id
 	@GeneratedValue
 	private Long id;
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<Level> levels;
 
 	public Level getLevel(int level) {

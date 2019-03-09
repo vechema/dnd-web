@@ -222,6 +222,26 @@
 					}
 				]
 			}
-		]
+		],
+		"levelingTable" : {
+			"levels" : [
+				{
+					"level" : "1",
+					"proficiencyBonus" : {
+						"base" : "2",
+						"modifyField" : "PROFICIENCY"
+					},
+					"features" : [
+						{
+							"gameEntity" : {
+								"name" : "Rage",
+								"description" : "",
+								"referenceURL" : "https://dnd5e.fandom.com/wiki/Barbarian"
+							}
+						}
+					]
+				}
+			]
+		}
 	}
 ]

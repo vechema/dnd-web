@@ -3,6 +3,7 @@ package com.jegner.dnd.model.predefined;
 import java.util.List;
 import java.util.Map;
 
+import javax.persistence.CascadeType;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,11 +25,14 @@ public class Level {
 	@GeneratedValue
 	private Long id;
 
-	@OneToOne
-	private Modify proficiencyBonus;
 	private int level;
-	@OneToMany
+	@OneToOne(cascade = CascadeType.ALL)
+	private Modify proficiencyBonus;
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<Feature> features;
 	@ElementCollection
 	private Map<Integer, Integer> spellLevelToSlots;
+	@ElementCollection
+	// Used for things not common across all classes like rage, ki, sneak attack
+	private Map<String, String> extraLevelColumn;
 }
