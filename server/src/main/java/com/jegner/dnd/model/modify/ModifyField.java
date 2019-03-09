@@ -23,5 +23,9 @@ public enum ModifyField {
 	ATTACK_HIT, // For proficiency, magic, and attack_hit_mod
 	ATTACK_HIT_MOD, // To figure out if use strength of dex mod due to finesse or Monk martial arts
 	PROFICIENCY,
-	WEAPON_MAGIC_BONUS
+	WEAPON_MAGIC_BONUS,
+	DAMAGE,
+	RAGE_DAMAGE,
+	RAGE_DAMAGE_MOD,
+	RAGE_POOL
 }

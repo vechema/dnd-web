@@ -63,6 +63,14 @@ public class CharacterModifySystem {
 		modifys.stream().forEach(modify -> addModify(modify));
 	}
 
+	public void removeModify(Modify modify) {
+		modifys.remove(modify);
+	}
+
+	public void removeModifys(List<Modify> modifys) {
+		modifys.stream().forEach(modify -> removeModify(modify));
+	}
+
 	public int getCharacterAC() {
 		return getCalculated(ModifyField.CHARACTER_AC, 0);
 	}
@@ -77,6 +85,10 @@ public class CharacterModifySystem {
 
 	public int getCharacterHP() {
 		return getCalculated(ModifyField.HP, 0);
+	}
+
+	public int getCharacterDamage() {
+		return getCalculated(ModifyField.DAMAGE, 0);
 	}
 
 	/**

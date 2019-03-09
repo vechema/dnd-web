@@ -3,8 +3,10 @@ package com.jegner.dnd.model.modify;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.testng.annotations.Test;
@@ -15,6 +17,7 @@ import com.jegner.dnd.model.item.Armor;
 import com.jegner.dnd.model.item.Weapon;
 import com.jegner.dnd.model.predefined.AbilityScore;
 import com.jegner.dnd.model.predefined.Classs;
+import com.jegner.dnd.model.predefined.Feature;
 import com.jegner.dnd.model.predefined.Level;
 import com.jegner.dnd.model.predefined.LevelingTable;
 import com.jegner.dnd.utility.GameEntity;
@@ -215,7 +218,7 @@ public class CharacterModifySystemTest {
 		classs.setLevelingTable(levelingTable);
 		classs.setGameEntity(new GameEntity());
 
-		character.setCharClass(classs);
+		character.setClasss(classs);
 		character.setCurrentLevel(1);
 
 		// Create weapon
@@ -266,16 +269,12 @@ public class CharacterModifySystemTest {
 
 		// Create class and stuff to not get null pointer exception when calling
 		// setCurrentLevel
-		Modify profBonusModify1 = new Modify();
-		profBonusModify1.setBase(1);
 		Level level1 = new Level();
-		level1.setProficiencyBonus(profBonusModify1);
+		level1.setProficiencyBonus(1);
 		level1.setLevel(1);
 
-		Modify profBonusModify4 = new Modify();
-		profBonusModify4.setBase(4);
 		Level level4 = new Level();
-		level4.setProficiencyBonus(profBonusModify4);
+		level4.setProficiencyBonus(4);
 		level4.setLevel(4);
 
 		LevelingTable levelingTable = new LevelingTable();
@@ -285,7 +284,7 @@ public class CharacterModifySystemTest {
 		classs.setLevelingTable(levelingTable);
 		classs.setGameEntity(new GameEntity());
 
-		character.setCharClass(classs);
+		character.setClasss(classs);
 
 		// Create modify based on level
 		Modify hillDwarfModify = new Modify();
@@ -302,5 +301,96 @@ public class CharacterModifySystemTest {
 		character.setCurrentLevel(4);
 		hp = character.getHP();
 		assertThat(hp, is(4));
+	}
+
+	@Test
+	public void testRage() {
+		// Create character
+		Character character = new Character();
+
+		// RAGE
+		Modify rageModify = new Modify();
+		rageModify.setModifyField(ModifyField.RAGE_DAMAGE);
+		rageModify.setFieldsIModify(Arrays.asList(ModifyField.DAMAGE));
+
+		String rage = "rage";
+		GameEntity rageGameEntity = new GameEntity();
+		rageGameEntity.setName(rage);
+		rageGameEntity.setModify(rageModify);
+
+		Feature rageFeature = new Feature();
+		rageFeature.setGameEntity(rageGameEntity);
+		String ragePool = "rages";
+		rageFeature.setResourcePool(ragePool);
+
+		// Those extra columns
+		int rageAmount = 2;
+		Modify ragePoolModify = new Modify();
+		ragePoolModify.setBase(rageAmount);
+		ragePoolModify.setModifyField(ModifyField.RAGE_POOL);
+		GameEntity ragePoolGameEntity = new GameEntity();
+		ragePoolGameEntity.setName(ragePool);
+		ragePoolGameEntity.setModify(ragePoolModify);
+
+		int rageDamage = 2;
+		Modify rageDamageModify = new Modify();
+		rageDamageModify.setBase(rageDamage);
+		rageDamageModify.setModifyField(ModifyField.RAGE_DAMAGE_MOD);
+		rageDamageModify.setFieldIModify(ModifyField.RAGE_DAMAGE);
+		GameEntity rageDamageGameEntity = new GameEntity();
+		rageDamageGameEntity.setModify(rageDamageModify);
+
+		List<GameEntity> extraLevelColumn = new ArrayList<>();
+		extraLevelColumn.add(ragePoolGameEntity);
+		extraLevelColumn.add(rageDamageGameEntity);
+
+		// Level & leveling table
+		Level level1 = new Level();
+		level1.setLevel(1);
+		level1.setFeatures(Arrays.asList(rageFeature));
+		level1.setProficiencyBonus(2);
+		level1.setExtraLevelColumns(extraLevelColumn);
+
+		LevelingTable levelingTable = new LevelingTable();
+		levelingTable.setLevels(Arrays.asList(level1));
+
+		// Create classs with leveling table that has level that has RAGE feature
+		Classs classs = new Classs();
+		classs.setLevelingTable(levelingTable);
+
+		// Set Classs
+		character.setClasss(classs);
+
+		// See how many rages we got
+		int ragesLeft = character.getFeatureUsesLeft(rageFeature);
+		assertThat(ragesLeft, is(rageAmount));
+
+		// Use a rage, get damage mod
+		boolean useRage = character.useFeature(rageFeature);
+		assertThat(useRage, is(true));
+		int damage = character.getDamage();
+		assertThat(damage, is(rageDamage));
+
+		// finish rage, see how many rages we got
+		boolean endRage = character.turnOffFeature(rageFeature);
+		assertThat(endRage, is(true));
+		ragesLeft = character.getFeatureUsesLeft(rageFeature);
+		assertThat(ragesLeft, is(rageAmount - 1));
+		damage = character.getDamage();
+		assertThat(damage, is(0));
+
+		useRage = character.useFeature(rageFeature);
+		assertThat(useRage, is(true));
+		ragesLeft = character.getFeatureUsesLeft(rageFeature);
+		assertThat(ragesLeft, is(rageAmount - 2));
+		damage = character.getDamage();
+		assertThat(damage, is(rageDamage));
+
+		endRage = character.turnOffFeature(rageFeature);
+		assertThat(endRage, is(true));
+		useRage = character.useFeature(rageFeature);
+		assertThat(useRage, is(false));
+		damage = character.getDamage();
+		assertThat(damage, is(0));
 	}
 }
