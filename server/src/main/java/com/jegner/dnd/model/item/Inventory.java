@@ -41,4 +41,8 @@ public class Inventory {
 		return items.stream().filter(inventoryItem -> inventoryItem.getItem().getGameEntity().getName()
 				.equalsIgnoreCase(item.getGameEntity().getName())).findFirst().get();
 	}
+
+	public boolean isArmorEquipped() {
+		return items.stream().anyMatch(item -> item.getItem() instanceof Armor && item.isEquipped());
+	}
 }

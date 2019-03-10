@@ -96,6 +96,7 @@ public class Character {
 		featurePoolToAmount = new HashMap<>();
 		initLevel(1);
 		initHP();
+		initAttack();
 	}
 
 	private void initLevel(int level) {
@@ -118,8 +119,22 @@ public class Character {
 		modSys.addModify(hpModify);
 	}
 
+	private void initAttack() {
+		Modify attackHitModify = new Modify();
+		attackHitModify.setModifyField(ModifyField.ATTACK_HIT);
+		modSys.addModify(attackHitModify);
+
+		Modify damageModify = new Modify();
+		damageModify.setModifyField(ModifyField.DAMAGE);
+		modSys.addModify(damageModify);
+	}
+
 	public int getAC() {
-		return modSys.getCharacterAC();
+		if (inventory.isArmorEquipped()) {
+			return modSys.getArmorAC();
+		} else {
+			return modSys.getUnarmoredAC();
+		}
 	}
 
 	public int getInitiative() {

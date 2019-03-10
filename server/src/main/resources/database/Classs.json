@@ -243,6 +243,24 @@
 							},
 							"resourcePool" : "rages",
 							"passive" : "false"
+						},
+						{
+							"gameEntity" : {
+								"name" : "Unarmored Defense",
+								"description" : "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.",
+								"modifys" : [
+									{
+										"base" : "10",
+										"modifyField" : "UNARMORED_AC",
+										"fieldsIModify" : ["CHARACTER_AC"],
+										"fieldsThatModifyMe" : {
+											"DEXTERITY_MOD": "1000",
+											"CONSTITUTION_MOD": "1000"
+										},
+										"modifyOperation" : "SUM"
+									}
+								]
+							}
 						}
 					],
 					"extraLevelColumns" : [

@@ -238,7 +238,8 @@ public class CharacterModifySystemTest {
 
 		// Set weapon finesse
 		Modify finesseModify = new Modify();
-		finesseModify.setModifyField(ModifyField.ATTACK_HIT_MOD);
+		finesseModify.setModifyField(ModifyField.FINESSE);
+		finesseModify.setFieldIModify(ModifyField.ATTACK_HIT_MOD);
 		finesseModify.addFieldThatModifyMe(ModifyField.DEXTERITY_MOD);
 		finesseModify.addFieldThatModifyMe(ModifyField.STRENGTH_MOD);
 		finesseModify.setModifyOperation(ModifyOperation.MAX);
@@ -246,8 +247,8 @@ public class CharacterModifySystemTest {
 
 		// Create ATTACK_HIT_MOD Modify
 		Modify attackHitModModify = new Modify();
-		attackHitModModify.setFieldIModify(ModifyField.ATTACK_HIT);
 		attackHitModModify.setModifyField(ModifyField.ATTACK_HIT_MOD);
+		attackHitModModify.setFieldIModify(ModifyField.ATTACK_HIT);
 		attackHitModModify.setModifyOperation(ModifyOperation.MAX);
 		weaponGameEntity.addModify(attackHitModModify);
 

@@ -1,7 +1,10 @@
 package com.jegner.dnd.model.modify;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import javax.persistence.Entity;
@@ -71,24 +74,28 @@ public class CharacterModifySystem {
 		modifys.stream().forEach(modify -> removeModify(modify));
 	}
 
-	public int getCharacterAC() {
-		return getCalculated(ModifyField.CHARACTER_AC, 0);
+	public int getArmorAC() {
+		return getCalculated(ModifyField.ARMOR_AC);
+	}
+
+	public int getUnarmoredAC() {
+		return getCalculated(ModifyField.UNARMORED_AC);
 	}
 
 	public int getCharacterInitiative() {
-		return getCalculated(ModifyField.INITIATIVE, 0);
+		return getCalculated(ModifyField.INITIATIVE);
 	}
 
 	public int getCharacterAttackHit() {
-		return getCalculated(ModifyField.ATTACK_HIT, 0);
+		return getCalculated(ModifyField.ATTACK_HIT);
 	}
 
 	public int getCharacterHP() {
-		return getCalculated(ModifyField.HP, 0);
+		return getCalculated(ModifyField.HP);
 	}
 
 	public int getCharacterDamage() {
-		return getCalculated(ModifyField.DAMAGE, 0);
+		return getCalculated(ModifyField.DAMAGE);
 	}
 
 	/**
@@ -97,28 +104,50 @@ public class CharacterModifySystem {
 	 * @param modfield
 	 * @return
 	 */
-	public List<Modify> getModifyOfModField(ModifyField modfield) {
+	public List<Modify> getModifysOfModField(ModifyField modfield) {
 		return modifys.stream().filter(mod -> mod.getFieldsIModify().contains(modfield)).collect(Collectors.toList());
+	}
+
+	/**
+	 * Gets modifys whose modify field is the input
+	 * 
+	 * @param unarmoredAc
+	 * @return
+	 */
+	private Collection<Modify> getModifysForModField(ModifyField modfield) {
+		return modifys.stream().filter(mod -> mod.getModifyField().equals(modfield)).collect(Collectors.toList());
+	}
+
+	private int getBase(ModifyField modifyField) {
+		return getModifysForModField(modifyField).stream().mapToInt(modify -> modify.getBase()).sum();
+	}
+
+	private int getCalculated(ModifyField fieldBeingCalculated) {
+		return getCalculated(fieldBeingCalculated, getBase(fieldBeingCalculated));
 	}
 
 	/**
 	 * for the field being modified, find all things that modify it and add their
 	 * mod amount
 	 * 
-	 * @param fieldBeingModified
+	 * @param fieldBeingCalculated
 	 * @return
 	 */
-	private int getCalculated(ModifyField fieldBeingModified, int result) {
-		// Look through all modifies
-		for (Modify modify : modifys) {
-			// if that modify modifies the field, add to result
-			if (modify.getFieldsIModify().contains(fieldBeingModified)) {
-				result += modify.getBase();
-				// If that modify has something that modifies IT, need to look for it
-				result += modify.getFieldThatModifiesMeAmount(getModifyOfModField(modify.getModifyField()));
+	private int getCalculated(ModifyField fieldBeingCalculated, int result) {
+		// get all modifys that modify the field being calculated, ex: HP
+		for (Modify modify : getModifysForModField(fieldBeingCalculated)) {
+			// figure out the amount that the modify is modified by, ex: Amount HP_mod adds
+			result += modify.getFieldThatModifiesMeAmount(getModifysOfModField(modify.getModifyField()));
+			for (ModifyField modField : modify.getFieldsThatModifyMe().keySet()) {
+				//for (Modify modifyMe : getModifysForModField(modField)) {
+					//result += getCalculated(modifyMe.getModifyField(), result);
+				//}
+				result += getCalculated(modField,0);
 			}
 		}
 		return result;
 	}
+	
+	
 
 }
