@@ -394,4 +394,80 @@ public class CharacterModifySystemTest {
 		damage = character.getDamage();
 		assertThat(damage, is(0));
 	}
+
+	@Test
+	public void testUnarmoredAC() {
+		Character character = new Character();
+
+		int ac = character.getAC();
+		assertThat(ac, is(10));
+
+		// Set AbilityScore
+		AbilityScore dex = new AbilityScore();
+		int dexScore = 20; // 5, want larger so finesse makes us use this one
+		int dexModAmount = CharacterAbility.calculateModifier(dexScore);
+
+		// Dex modifier
+		Modify dexMod = new Modify();
+		dexMod.setModifyField(ModifyField.DEXTERITY_MOD);
+		dexMod.setBase(dexModAmount);
+
+		GameEntity dexGameEntity = new GameEntity();
+		dexGameEntity.setName("Dexterity");
+		dexGameEntity.setModify(dexMod);
+		dex.setGameEntity(dexGameEntity);
+
+		// Give the dex to the player
+		character.addAbilityScore(dex, dexScore);
+
+		ac = character.getAC();
+		assertThat(ac, is(10 + dexModAmount));
+	}
+
+	@Test
+	public void testUnarmoredDefenseFeature() {
+		Character character = new Character();
+
+		// Set AbilityScore - Constitution
+		AbilityScore constitution = new AbilityScore();
+		int constScore = 20; // 5, want larger so finesse makes us use this one
+		int constModAmount = CharacterAbility.calculateModifier(constScore);
+
+		// Constitution modifier
+		Modify constMod = new Modify();
+		constMod.setModifyField(ModifyField.CONSTITUTION_MOD);
+		constMod.setBase(constModAmount);
+
+		GameEntity constGameEntity = new GameEntity();
+		constGameEntity.setName("Constitution");
+		constGameEntity.setModify(constMod);
+		constitution.setGameEntity(constGameEntity);
+
+		// Set AbilityScore - Dexterity
+		AbilityScore dex = new AbilityScore();
+		int dexScore = 20; // 5, want larger so finesse makes us use this one
+		int dexModAmount = CharacterAbility.calculateModifier(dexScore);
+
+		// Dex modifier
+		Modify dexMod = new Modify();
+		dexMod.setModifyField(ModifyField.DEXTERITY_MOD);
+		dexMod.setBase(dexModAmount);
+
+		GameEntity dexGameEntity = new GameEntity();
+		dexGameEntity.setName("Dexterity");
+		dexGameEntity.setModify(dexMod);
+		dex.setGameEntity(dexGameEntity);
+
+		// Give the dex and constitution to the player
+		character.addAbilityScore(dex, dexScore);
+		character.addAbilityScore(constitution, constScore);
+
+		// Unarmored defense
+		Modify unarmoredDefMod = new Modify();
+		unarmoredDefMod.setBase(10);
+		unarmoredDefMod.setModifyField(ModifyField.UNARMORED_DEF);
+		unarmoredDefMod.addFieldThatModifyMe(ModifyField.DEXTERITY_MOD);
+		unarmoredDefMod.addFieldThatModifyMe(ModifyField.CONSTITUTION_MOD);
+
+	}
 }

@@ -63,24 +63,24 @@ public class Modify {
 		setFieldsIModify(Arrays.asList(modifyField));
 	}
 
-	public int getFieldThatModifiesMeAmount(List<Modify> modifiesMe) {
+	public int getFieldThatModifiesMeAmount(CharacterModifySystem characterModifySystem) {
 		int result = 0;
-		for (Modify modify : modifiesMe) {
+		for (Modify modify : characterModifySystem.getModifys()) {
 			if (fieldsThatModifyMe.containsKey(modify.getModifyField())) {
+				int limit = fieldsThatModifyMe.get(modify.getModifyField());
+				int recursiveBase = modify.getFieldThatModifiesMeAmount(characterModifySystem);
 				switch (modifyOperation) {
 					case MAX:
-						result = Math.max(result,
-								Math.min(fieldsThatModifyMe.get(modify.getModifyField()), modify.getBase()));
+						result = Math.max(result, Math.min(limit, recursiveBase));
 						break;
 					case SUM:
-						result += Math.min(fieldsThatModifyMe.get(modify.getModifyField()), modify.getBase());
+						result += Math.min(limit, recursiveBase);
 						break;
 					default:
 						break;
-
 				}
 			}
 		}
-		return result;
+		return result + base;
 	}
 }

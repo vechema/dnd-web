@@ -21,6 +21,7 @@ import com.jegner.dnd.model.magic.CharacterSpellbook;
 import com.jegner.dnd.model.modify.CharacterModifySystem;
 import com.jegner.dnd.model.modify.Modify;
 import com.jegner.dnd.model.modify.ModifyField;
+import com.jegner.dnd.model.modify.ModifyOperation;
 import com.jegner.dnd.model.predefined.AbilityScore;
 import com.jegner.dnd.model.predefined.Background;
 import com.jegner.dnd.model.predefined.Classs;
@@ -96,7 +97,7 @@ public class Character {
 		featurePoolToAmount = new HashMap<>();
 		initLevel(1);
 		initHP();
-		initAttack();
+		initAttackAndDefense();
 	}
 
 	private void initLevel(int level) {
@@ -119,7 +120,7 @@ public class Character {
 		modSys.addModify(hpModify);
 	}
 
-	private void initAttack() {
+	private void initAttackAndDefense() {
 		Modify attackHitModify = new Modify();
 		attackHitModify.setModifyField(ModifyField.ATTACK_HIT);
 		modSys.addModify(attackHitModify);
@@ -127,14 +128,22 @@ public class Character {
 		Modify damageModify = new Modify();
 		damageModify.setModifyField(ModifyField.DAMAGE);
 		modSys.addModify(damageModify);
+
+		Modify unarmoredACModify = new Modify();
+		unarmoredACModify.setModifyField(ModifyField.UNARMORED_AC);
+		unarmoredACModify.setFieldIModify(ModifyField.CHARACTER_AC);
+		unarmoredACModify.setBase(10);
+		unarmoredACModify.addFieldThatModifyMe(ModifyField.DEXTERITY_MOD);
+		modSys.addModify(unarmoredACModify);
+
+		Modify characterACModify = new Modify();
+		characterACModify.setModifyField(ModifyField.CHARACTER_AC);
+		characterACModify.setModifyOperation(ModifyOperation.MAX);
+		modSys.addModify(characterACModify);
 	}
 
 	public int getAC() {
-		if (inventory.isArmorEquipped()) {
-			return modSys.getArmorAC();
-		} else {
-			return modSys.getUnarmoredAC();
-		}
+		return modSys.getCharacterAC();
 	}
 
 	public int getInitiative() {

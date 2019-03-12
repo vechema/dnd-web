@@ -7,6 +7,7 @@ public enum ModifyField {
 	CHARACTER_AC,
 	ARMOR_AC,
 	UNARMORED_AC,
+	UNARMORED_DEF,
 	ABILITY_SCORE,
 	INITIATIVE,
 	STRENGTH,
@@ -29,5 +30,5 @@ public enum ModifyField {
 	RAGE_DAMAGE,
 	RAGE_DAMAGE_MOD,
 	RAGE_POOL,
-	FINESSE
+	FINESSE,
 }
