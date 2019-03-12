@@ -430,7 +430,7 @@ public class CharacterModifySystemTest {
 
 		// Set AbilityScore - Constitution
 		AbilityScore constitution = new AbilityScore();
-		int constScore = 20; // 5, want larger so finesse makes us use this one
+		int constScore = 18; // 4
 		int constModAmount = CharacterAbility.calculateModifier(constScore);
 
 		// Constitution modifier
@@ -445,7 +445,7 @@ public class CharacterModifySystemTest {
 
 		// Set AbilityScore - Dexterity
 		AbilityScore dex = new AbilityScore();
-		int dexScore = 20; // 5, want larger so finesse makes us use this one
+		int dexScore = 20; // 5
 		int dexModAmount = CharacterAbility.calculateModifier(dexScore);
 
 		// Dex modifier
@@ -462,12 +462,34 @@ public class CharacterModifySystemTest {
 		character.addAbilityScore(dex, dexScore);
 		character.addAbilityScore(constitution, constScore);
 
-		// Unarmored defense
+		// Unarmored defense mod
 		Modify unarmoredDefMod = new Modify();
 		unarmoredDefMod.setBase(10);
 		unarmoredDefMod.setModifyField(ModifyField.UNARMORED_DEF);
 		unarmoredDefMod.addFieldThatModifyMe(ModifyField.DEXTERITY_MOD);
 		unarmoredDefMod.addFieldThatModifyMe(ModifyField.CONSTITUTION_MOD);
+		unarmoredDefMod.setFieldIModify(ModifyField.CHARACTER_AC);
+
+		// Wire into a game entity -> feature -> level -> leveling table -> class
+		GameEntity unarmoredDefGameEntity = new GameEntity();
+		unarmoredDefGameEntity.setModify(unarmoredDefMod);
+		Feature unarmoredDefFeature = new Feature();
+		unarmoredDefFeature.setGameEntity(unarmoredDefGameEntity);
+		unarmoredDefFeature.setPassive(true);
+		Level level1 = new Level();
+		level1.setProficiencyBonus(2);
+		level1.setLevel(1);
+		level1.setFeatures(Arrays.asList(unarmoredDefFeature));
+		LevelingTable levelingTable = new LevelingTable();
+		levelingTable.setLevels(Arrays.asList(level1));
+		Classs classs = new Classs();
+		classs.setLevelingTable(levelingTable);
+
+		// Give classs to character
+		character.setClasss(classs);
+
+		int ac = character.getAC();
+		assertThat(ac, is(10 + dexModAmount + constModAmount));
 
 	}
 }
