@@ -11,6 +11,16 @@ import javax.persistence.OneToMany;
 
 import lombok.Data;
 
+/**
+ * This class used for all of the crazy calculations that a character must do to
+ * figure out verious stats like HP, hit, damage, ac, etc
+ * 
+ * It works by the Character class adding and removing Modify instances as the
+ * character uses or stops using certain items, features, spells, etc
+ * 
+ * @author Jo
+ *
+ */
 @Data
 @Entity
 public class CharacterModifySystem {
@@ -94,7 +104,7 @@ public class CharacterModifySystem {
 	/**
 	 * Gets modifys whose modify field is the input
 	 * 
-	 * @param unarmoredAc
+	 * @param modfield
 	 * @return
 	 */
 	private List<Modify> getModifysForModField(ModifyField modfield) {

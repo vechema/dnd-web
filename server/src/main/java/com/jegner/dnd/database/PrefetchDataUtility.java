@@ -80,39 +80,51 @@ public class PrefetchDataUtility {
 	public void initializeAllData() throws Exception {
 
 		// TODO consider some sort of self registration, common interface, and iterate
-		// through. Will have to consider order due to dependencies
+		// through which each json is read and saved. Will have to consider order due to
+		// dependencies
 
 		// Depends on no one - Feat, Feature, Trait, Armor, Container, Item,
 		// WeaponProperty, Language
+
+		// Ability score
 		List<AbilityScore> abilityScores = generatePredefineds(new File(PREDEFINED_JSON_PATH + "AbilityScore.json"),
 				AbilityScore[].class, abilityScoreRepo);
 		AbilityScore.setAbilityScores(abilityScores);
 
+		// Armor
 		List<Armor> armors = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Armor.json"), Armor[].class,
 				armorRepo);
 		Armor.setArmors(armors);
 		Item.addItems(armors);
 
+		// Weapon Property
 		List<WeaponProperty> weaponProperties = generatePredefineds(
 				new File(PREDEFINED_JSON_PATH + "WeaponProperty.json"), WeaponProperty[].class, weaponPropRepo);
 		WeaponProperty.setWeaponProperties(weaponProperties);
 
+		// Traits, ones common between classes/races like Darkvision
+		// Ones unique to classes/races will be defined in that class/race
 		List<Trait> commonTraits = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Trait.json"), Trait[].class,
 				traitRepo);
 		Trait.setCommonTraits(commonTraits);
 
+		// Language
 		List<Language> languages = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Language.json"),
 				Language[].class, languageRepo);
 		Language.setLanguages(languages);
 
+		// Items - adventuring gear that is not armor, weapon, container, or equipment
+		// pack
 		List<Item> items = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Item.json"), Item[].class, itemRepo);
 		Item.addItems(items);
 
+		// Container
 		List<Container> containers = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Container.json"),
 				Container[].class, containerRepo);
 		Container.setContainers(containers);
 		Item.addItems(containers);
 
+		// Equipment Pack
 		List<EquipmentPack> equipmentPack = generatePredefineds(new File(PREDEFINED_JSON_PATH + "EquipmentPack.json"),
 				EquipmentPack[].class, equipmentPackRepo);
 		Item.addItems(equipmentPack);
@@ -130,9 +142,9 @@ public class PrefetchDataUtility {
 		Item.addItems(weapons);
 
 		// Depends on many
-		// Race (Trait, Attack, Language)
+		// Race (Trait, Weapon, Language, Ability Score)
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Race.json"), Race[].class, raceRepo);
-		// Classs
+		// Classs (Ability Score, Skill, Weapon, Item)
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Classs.json"), Classs[].class, classsRepo);
 
 	}
