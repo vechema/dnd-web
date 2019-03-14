@@ -37,6 +37,11 @@ public class Inventory {
 		invItem.setEquipped(true);
 	}
 
+	public void unequip(Item item) {
+		InventoryItem invItem = findInventoryItem(item);
+		invItem.setEquipped(false);
+	}
+
 	public InventoryItem findInventoryItem(Item item) {
 		return items.stream().filter(inventoryItem -> inventoryItem.getItem().getGameEntity().getName()
 				.equalsIgnoreCase(item.getGameEntity().getName())).findFirst().get();

@@ -490,6 +490,54 @@ public class CharacterModifySystemTest {
 
 		int ac = character.getAC();
 		assertThat(ac, is(10 + dexModAmount + constModAmount));
+	}
 
+	@Test
+	public void testEquipAndUnequipArmor() {
+		// Make character
+		Character character = new Character();
+
+		// Make armor - Plate
+		int plateArmorBase = 18;
+		Modify plateArmorModify = new Modify();
+		plateArmorModify.setBase(plateArmorBase);
+		plateArmorModify.setModifyField(ModifyField.ARMOR_AC);
+		plateArmorModify.setFieldIModify(ModifyField.CHARACTER_AC);
+		GameEntity plateArmorGameEntity = new GameEntity();
+		plateArmorGameEntity.setModify(plateArmorModify);
+		plateArmorGameEntity.setName("Plate");
+		Armor plateArmor = new Armor();
+		plateArmor.setGameEntity(plateArmorGameEntity);
+
+		// Make armor - Splint
+		int splintArmorBase = 17;
+		Modify splintArmorModify = new Modify();
+		splintArmorModify.setBase(splintArmorBase);
+		splintArmorModify.setModifyField(ModifyField.ARMOR_AC);
+		splintArmorModify.setFieldIModify(ModifyField.CHARACTER_AC);
+		GameEntity splintArmorGameEntity = new GameEntity();
+		splintArmorGameEntity.setModify(splintArmorModify);
+		splintArmorGameEntity.setName("Splint");
+		Armor splintArmor = new Armor();
+		splintArmor.setGameEntity(splintArmorGameEntity);
+
+		// Add armor to inventory
+		character.addItem(splintArmor);
+		character.addItem(plateArmor);
+
+		// Put on armor and test AC
+		character.equip(plateArmor);
+		int ac = character.getAC();
+		assertThat(ac, is(plateArmorBase));
+
+		// Take off armor and test AC
+		character.unequip(plateArmor);
+		ac = character.getAC();
+		assertThat(ac, is(10));
+
+		// Put on different armor and test AC
+		character.equip(splintArmor);
+		ac = character.getAC();
+		assertThat(ac, is(splintArmorBase));
 	}
 }

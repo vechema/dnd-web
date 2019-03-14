@@ -175,6 +175,11 @@ public class Character {
 		modSys.addModifys(item.getGameEntity().getModifys());
 	}
 
+	public void unequip(Item item) {
+		inventory.unequip(item);
+		modSys.removeModifys(item.getGameEntity().getModifys());
+	}
+
 	public void addAbilityScore(AbilityScore abilityScore, int value) {
 		charAbility.getAbilityScores().put(abilityScore, value);
 		modSys.addModifys(abilityScore.getGameEntity().getModifys());

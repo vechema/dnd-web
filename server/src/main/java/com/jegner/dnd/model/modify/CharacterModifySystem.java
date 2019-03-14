@@ -13,7 +13,7 @@ import lombok.Data;
 
 /**
  * This class used for all of the crazy calculations that a character must do to
- * figure out verious stats like HP, hit, damage, ac, etc
+ * figure out various stats like HP, hit, damage, ac, etc
  * 
  * It works by the Character class adding and removing Modify instances as the
  * character uses or stops using certain items, features, spells, etc
