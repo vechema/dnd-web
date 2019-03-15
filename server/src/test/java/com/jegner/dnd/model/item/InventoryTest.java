@@ -37,4 +37,32 @@ public class InventoryTest {
 		armorEquipped = character.isArmorEquipped();
 		assertThat(armorEquipped, is(false));
 	}
+
+	@Test
+	public void testWeaponEquiped() {
+		// Create character
+		Character character = new Character();
+
+		// Check no armor equipped
+		boolean weaponEquipped = character.isWeaponEquipped();
+		assertThat(weaponEquipped, is(false));
+
+		// Create armor
+		GameEntity clubGameEntity = new GameEntity();
+		clubGameEntity.setName("Club");
+		Weapon club = new Weapon();
+		club.setGameEntity(clubGameEntity);
+
+		// Equip armor
+		character.addItem(club);
+		character.equip(club);
+
+		weaponEquipped = character.isWeaponEquipped();
+		assertThat(weaponEquipped, is(true));
+
+		// Unequip Armor
+		character.unequip(club);
+		weaponEquipped = character.isWeaponEquipped();
+		assertThat(weaponEquipped, is(false));
+	}
 }

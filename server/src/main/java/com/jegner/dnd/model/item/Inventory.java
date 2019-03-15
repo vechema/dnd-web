@@ -50,4 +50,8 @@ public class Inventory {
 	public boolean isArmorEquipped() {
 		return items.stream().anyMatch(item -> item.getItem() instanceof Armor && item.isEquipped());
 	}
+
+	public boolean isWeaponEquipped() {
+		return items.stream().anyMatch(item -> item.getItem() instanceof Weapon && item.isEquipped());
+	}
 }

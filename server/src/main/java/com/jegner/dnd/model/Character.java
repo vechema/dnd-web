@@ -184,6 +184,10 @@ public class Character {
 		return inventory.isArmorEquipped();
 	}
 
+	public boolean isWeaponEquipped() {
+		return inventory.isWeaponEquipped();
+	}
+
 	public void addAbilityScore(AbilityScore abilityScore, int value) {
 		charAbility.getAbilityScores().put(abilityScore, value);
 		modSys.addModifys(abilityScore.getGameEntity().getModifys());
