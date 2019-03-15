@@ -180,6 +180,10 @@ public class Character {
 		modSys.removeModifys(item.getGameEntity().getModifys());
 	}
 
+	public boolean isArmorEquipped() {
+		return inventory.isArmorEquipped();
+	}
+
 	public void addAbilityScore(AbilityScore abilityScore, int value) {
 		charAbility.getAbilityScores().put(abilityScore, value);
 		modSys.addModifys(abilityScore.getGameEntity().getModifys());
