@@ -184,8 +184,16 @@ public class Character {
 		return inventory.isArmorEquipped();
 	}
 
+	public Object getArmor() {
+		return inventory.getEquippedArmor();
+	}
+
 	public boolean isWeaponEquipped() {
 		return inventory.isWeaponEquipped();
+	}
+
+	public Object getWeapon() {
+		return inventory.getEquippedWeapon();
 	}
 
 	public void addAbilityScore(AbilityScore abilityScore, int value) {

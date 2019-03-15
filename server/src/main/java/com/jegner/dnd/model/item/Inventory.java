@@ -33,6 +33,15 @@ public class Inventory {
 	}
 
 	public void equip(Item item) {
+		if (item instanceof Armor) {
+			if (isArmorEquipped()) {
+				unequip(getEquippedArmor());
+			}
+		} else if (item instanceof Weapon) {
+			if (isWeaponEquipped()) {
+				unequip(getEquippedWeapon());
+			}
+		}
 		InventoryItem invItem = findInventoryItem(item);
 		invItem.setEquipped(true);
 	}
@@ -51,7 +60,17 @@ public class Inventory {
 		return items.stream().anyMatch(item -> item.getItem() instanceof Armor && item.isEquipped());
 	}
 
+	public Armor getEquippedArmor() {
+		return (Armor) items.stream().filter(item -> item.getItem() instanceof Armor && item.isEquipped()).findFirst()
+				.get().getItem();
+	}
+
 	public boolean isWeaponEquipped() {
 		return items.stream().anyMatch(item -> item.getItem() instanceof Weapon && item.isEquipped());
+	}
+
+	public Weapon getEquippedWeapon() {
+		return (Weapon) items.stream().filter(item -> item.getItem() instanceof Weapon && item.isEquipped()).findFirst()
+				.get().getItem();
 	}
 }
