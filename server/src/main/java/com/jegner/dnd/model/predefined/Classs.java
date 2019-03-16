@@ -43,6 +43,8 @@ public class Classs {
 	private List<Spell> classSpells;
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Choice> choices;
+	@OneToOne(cascade = CascadeType.ALL)
+	private ClassSpecialty classSpecialty;
 
 	public Classs() {
 		savingThrowAbilityScores = new ArrayList<>();

@@ -286,6 +286,77 @@
 							]
 						}
 					]
+				},
+				{
+					"level" : 2,
+					"proficiencyBonus" : "2",
+					"features" : [
+						{
+							"gameEntity" : {
+								"name" : "Reckless Attack",
+								"description" : "Starting at 2nd level, when you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on all melee weapon attack rolls using Strength during that turn, but attack rolls against you are rolled with advantage until the beginning of your next turn. ",
+								"referenceURL" : "https://dnd5e.fandom.com/wiki/Barbarian"
+							},
+							"passive" : "false"
+						},
+						{
+							"gameEntity" : {
+								"name" : "Danger Sense",
+								"description" : "At 2nd level, you have advantage on Dexterity saving throws against effects that you can see, such as traps or spells. You do not gain this benefit if you are blinded, deafened, or incapacitated.",
+								"referenceURL" : "https://dnd5e.fandom.com/wiki/Barbarian"
+							}
+						}
+					],
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 2
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "2"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 3,
+					"proficiencyBonus" : "2",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 3
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "2"
+								}
+							]
+						}
+					]
 				}
 			]
 		}
