@@ -357,6 +357,465 @@
 							]
 						}
 					]
+				},
+				{
+					"level" : 4,
+					"proficiencyBonus" : "2",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 3
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "2"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 5,
+					"proficiencyBonus" : "3",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 3
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "2"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 6,
+					"proficiencyBonus" : "3",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 4
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "2"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 7,
+					"proficiencyBonus" : "3",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 4
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "2"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 8,
+					"proficiencyBonus" : "3",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 4
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "2"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 9,
+					"proficiencyBonus" : "4",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 4
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "3"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 10,
+					"proficiencyBonus" : "4",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 4
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "3"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 11,
+					"proficiencyBonus" : "4",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 4
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "3"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 12,
+					"proficiencyBonus" : "4",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 5
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "3"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 13,
+					"proficiencyBonus" : "5",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 5
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "3"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 14,
+					"proficiencyBonus" : "5",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 5
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "3"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 15,
+					"proficiencyBonus" : "5",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 5
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "3"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 16,
+					"proficiencyBonus" : "5",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 5
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "4"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 17,
+					"proficiencyBonus" : "6",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 6
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "4"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 18,
+					"proficiencyBonus" : "6",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 6
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "4"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 19,
+					"proficiencyBonus" : "6",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 6
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "4"
+								}
+							]
+						}
+					]
+				},
+				{
+					"level" : 20,
+					"proficiencyBonus" : "6",
+					"extraLevelColumns" : [
+						{
+							"name" : "rages",
+							"description" : "The number of rages that can be done between long rests",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_POOL",
+									"base" : 9999
+								}
+							]
+						},
+						{
+							"name" : "rage damage",
+							"description" : "Bonus to damage when raged",
+							"modifys" : [
+								{
+									"modifyField" : "RAGE_DAMAGE_MOD",
+									"fieldsIModify" : ["RAGE_DAMAGE"],
+									"base" : "4"
+								}
+							]
+						}
+					]
 				}
 			]
 		}
