@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -45,6 +46,13 @@ public class Classs {
 	private List<Choice> choices;
 	@OneToOne(cascade = CascadeType.ALL)
 	private ClassSpecialty classSpecialty;
+	/**
+	 * The levels at which you can increase one ability score of your choice by 2,
+	 * or you can increase two ability scores of your choice by 1. You can't
+	 * increase an ability score above 20 using this feature.
+	 */
+	@ElementCollection
+	private List<Integer> levelsOfImprovement;
 
 	public Classs() {
 		savingThrowAbilityScores = new ArrayList<>();

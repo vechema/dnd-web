@@ -19,6 +19,7 @@
 				"MARTIAL_WEAPON"
 			]
 		},
+		"levelsOfImprovement" : [4,8,12,16,19],
 		"choices" : [
 			{
 				"gameEntity" : {
