@@ -389,6 +389,31 @@
 				{
 					"level" : 5,
 					"proficiencyBonus" : "3",
+					"features" : [
+						{
+							"gameEntity" : {
+								"name" : "Extra Attack",
+								"description" : "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+								"referenceURL" : "https://dnd5e.fandom.com/wiki/Barbarian"
+							},
+							"passive" : "false"
+						},
+						{
+							"gameEntity" : {
+								"name" : "Fast Movement",
+								"description" : "Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor.",
+								"referenceURL" : "https://dnd5e.fandom.com/wiki/Barbarian",
+								"modifys" : [
+									{
+										"modifyField" : "SPEED_MOD",
+										"fieldsIModify" : ["SPEED"],
+										"base" : "10"
+									}
+								]
+							},
+							"passive" : "true"
+						}
+					],
 					"extraLevelColumns" : [
 						{
 							"name" : "rages",

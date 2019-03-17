@@ -31,4 +31,6 @@ public enum ModifyField {
 	RAGE_DAMAGE_MOD,
 	RAGE_POOL,
 	FINESSE,
+	SPEED,
+	SPEED_MOD
 }
