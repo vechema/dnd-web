@@ -44,8 +44,14 @@ public class Classs {
 	private List<Spell> classSpells;
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Choice> choices;
-	@OneToOne(cascade = CascadeType.ALL)
-	private ClassSpecialty classSpecialty;
+	/**
+	 * This list represents Primal Path, Ranger Archetype, Divine Domain, etc. For
+	 * Barbarian, it would be Primal Path and the list would consistent of the
+	 * different paths. Sadly, I have not figured out where to put the name "Primal
+	 * Path"
+	 */
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<ClassSpecialty> classSpecialtys;
 	/**
 	 * The levels at which you can increase one ability score of your choice by 2,
 	 * or you can increase two ability scores of your choice by 1. You can't

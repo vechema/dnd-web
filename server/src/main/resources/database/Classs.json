@@ -2,7 +2,7 @@
 	{
 		"gameEntity" : {
 			"name" : "Barbarian",
-			"description" : "A fierce warrior of a primitive background who can enter a battle rage",
+			"description" : "A fierce warrior of a primitive background who can enter a battle rage. Has Primal Path class specialty",
 			"referenceURL" : "https://dnd5e.fandom.com/wiki/Barbarian"
 		},
 		"hitDice" : "12",
@@ -20,6 +20,45 @@
 			]
 		},
 		"levelsOfImprovement" : [4,8,12,16,19],
+		"classSpecialtys" : [
+			{
+				"gameEntity" : {
+					"name" : "Path of the Ancestral Guardian",
+					"description" : "At 3rd level, you choose a path that shapes the nature of your rage. Your choice grants you features at 3rd level, and again at 6th, 10th, and 14th levels.",
+					"referenceURL" : "https://dnd5e.fandom.com/wiki/Barbarian"
+				},
+				"classSpecialtyLevels" : [
+					{
+						"levelGranted" : "3",
+						"gameEntity" : {
+							"name" : "Ancestral Protectors",
+							"description" : "At 3rd level, while you're raging, the first creature you hit with an attack on your turn becomes the target of spiritual warriors, which hinder its attacks. Until the start of your next turn, that target has disadvantage on any attack roll that isn't against you, and when the target hits a creature other than you with an attack, that creature has resistance to the damage dealt by the attack. The effect on the target ends early if your rage ends."
+						}
+					},
+					{
+						"levelGranted" : "6",
+						"gameEntity" : {
+							"name" : "Spirit Shield",
+							"description" : "Beginning at 6th level, if you are raging and another creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by 2d6.\nWhen you reach certain levels in this class, you can reduce the damage by more: by 3d6 at 10th level and by 4d6 at 14th level. "
+						}
+					},
+					{
+						"levelGranted" : "10",
+						"gameEntity" : {
+							"name" : "Consult the Spirits",
+							"description" : "At 10th level, you cast the Augury or Clairvoyance spell, without using a spell slot or material components. Rather than creating a spherical sensor, it invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for these spells.\nAfter you cast either spell in this way, you can't use this feature again until you finish a short or long rest. "
+						}
+					},
+					{
+						"levelGranted" : "14",
+						"gameEntity" : {
+							"name" : "Vengeful Ancestors",
+							"description" : "At 14th level, when you use your Spirit Shield to reduce the damage of an attack, the attacker takes an amount of force damage equal to the damage that your Spirit Shield prevents."
+						}
+					}
+				]
+			}
+		],
 		"choices" : [
 			{
 				"gameEntity" : {
@@ -596,6 +635,16 @@
 				{
 					"level" : 11,
 					"proficiencyBonus" : "4",
+					"features" : [
+						{
+							"gameEntity" : {
+								"name" : "Relentless Rage",
+								"description" : "Starting at 11th level, if you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.\nEach time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10. ",
+								"referenceURL" : "https://dnd5e.fandom.com/wiki/Barbarian"
+							},
+							"passive" : "true"
+						}
+					],
 					"extraLevelColumns" : [
 						{
 							"name" : "rages",
@@ -703,6 +752,16 @@
 				},
 				{
 					"level" : 15,
+					"features" : [
+						{
+							"gameEntity" : {
+								"name" : "Persistent Rage",
+								"description" : "Beginning at 15th level, your rage ends early only if you fall unconscious or if you choose to end it.",
+								"referenceURL" : "https://dnd5e.fandom.com/wiki/Barbarian"
+							},
+							"passive" : "true"
+						}
+					],
 					"proficiencyBonus" : "5",
 					"extraLevelColumns" : [
 						{
@@ -785,6 +844,16 @@
 				{
 					"level" : 18,
 					"proficiencyBonus" : "6",
+					"features" : [
+						{
+							"gameEntity" : {
+								"name" : "Indomitable Might",
+								"description" : "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.",
+								"referenceURL" : "https://dnd5e.fandom.com/wiki/Barbarian"
+							},
+							"passive" : "true"
+						}
+					],
 					"extraLevelColumns" : [
 						{
 							"name" : "rages",
@@ -839,6 +908,16 @@
 				{
 					"level" : 20,
 					"proficiencyBonus" : "6",
+					"features" : [
+						{
+							"gameEntity" : {
+								"name" : "Primal Champion",
+								"description" : "At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24.",
+								"referenceURL" : "https://dnd5e.fandom.com/wiki/Barbarian"
+							},
+							"passive" : "true"
+						}
+					],
 					"extraLevelColumns" : [
 						{
 							"name" : "rages",

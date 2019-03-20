@@ -32,7 +32,6 @@ public class ClassSpecialty {
 
 	@OneToOne(cascade = CascadeType.ALL)
 	private GameEntity gameEntity;
-	private int levelGranted;
 	@OneToMany(cascade = CascadeType.ALL)
-	private List<ClassSpecialtyLevel> classSpecialtyLevel;
+	private List<ClassSpecialtyLevel> classSpecialtyLevels;
 }
