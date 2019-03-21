@@ -32,5 +32,6 @@ public enum ModifyField {
 	RAGE_POOL,
 	FINESSE,
 	SPEED,
-	SPEED_MOD
+	SPEED_MOD,
+	AURA_SAVE
 }
