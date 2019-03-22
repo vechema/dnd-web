@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.persistence.CascadeType;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -35,20 +36,23 @@ public class Spell {
 
 	@OneToOne(cascade = CascadeType.ALL)
 	private GameEntity gameEntity;
-	@OneToMany(cascade = CascadeType.ALL)
-	private Map<Integer, SpellLevel> spellLevels;
-	private int defaultSpellLevel;
 
 	// Doesn't change with levels
 	private SchoolOfMagic schoolOfMagic;
-	private boolean isRitual;
-	private boolean requiresConcentration;
+	@ElementCollection
+	private List<SpellComponent> spellComponents;
 	@OneToMany
 	private List<Item> components;
+	private boolean isRitual;
+	private boolean requiresConcentration;
 	@OneToOne(cascade = CascadeType.ALL)
 	private Duration castingTime;
 	@OneToOne
 	private AbilityScore save;
+
+	@OneToMany(cascade = CascadeType.ALL)
+	private Map<Integer, SpellLevel> spellLevels;
+	private int defaultSpellLevel;
 
 	@Transient
 	@Getter
@@ -64,5 +68,10 @@ public class Spell {
 	@Tolerate
 	public void setSave(String save) {
 		this.save = AbilityScore.findAbilityScoreByName(save);
+	}
+
+	@JsonSetter("components")
+	public void setComponentsFromString(List<String> itemsString) {
+		itemsString.stream().forEach(itemString -> components.add(Item.findItemByName(itemString)));
 	}
 }

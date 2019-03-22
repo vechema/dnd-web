@@ -310,5 +310,40 @@
 				}
 			}
 		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Acid Splash",
+			"description" : "You throw a bubble of acid at a creature you can see, or at two creatures within 5 feet of each other, and force them to pass a Dexterity save or take 1d6 acid damage",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Acid_Splash"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 0,
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "5 ft",
+				"attack" : {
+					"normalRange" : "60",
+					"maxRange" : "60",
+					"damageType" : "ACID",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 6
+					}
+				}
+			}
+		}
 	}
 ]
