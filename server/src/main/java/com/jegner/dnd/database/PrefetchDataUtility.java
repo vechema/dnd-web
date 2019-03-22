@@ -18,6 +18,7 @@ import com.jegner.dnd.database.repo.ItemRepository;
 import com.jegner.dnd.database.repo.LanguageRepository;
 import com.jegner.dnd.database.repo.RaceRepository;
 import com.jegner.dnd.database.repo.SkillRepository;
+import com.jegner.dnd.database.repo.SpellRepository;
 import com.jegner.dnd.database.repo.TraitRepository;
 import com.jegner.dnd.database.repo.WeaponPropertyRepository;
 import com.jegner.dnd.database.repo.WeaponRepository;
@@ -27,6 +28,7 @@ import com.jegner.dnd.model.item.EquipmentPack;
 import com.jegner.dnd.model.item.Item;
 import com.jegner.dnd.model.item.Weapon;
 import com.jegner.dnd.model.item.WeaponProperty;
+import com.jegner.dnd.model.magic.Spell;
 import com.jegner.dnd.model.predefined.AbilityScore;
 import com.jegner.dnd.model.predefined.Classs;
 import com.jegner.dnd.model.predefined.Language;
@@ -72,6 +74,9 @@ public class PrefetchDataUtility {
 
 	@Autowired
 	private EquipmentPackRepository equipmentPackRepo;
+
+	@Autowired
+	private SpellRepository spellRepo;
 
 	private ObjectMapper mapper = new ObjectMapper();
 
@@ -142,6 +147,10 @@ public class PrefetchDataUtility {
 		Item.addItems(weapons);
 
 		// Depends on many
+		// Spell (Item, Ability Score)
+		List<Spell> spells = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Spell.json"), Spell[].class,
+				spellRepo);
+		Spell.setSpells(spells);
 		// Race (Trait, Weapon, Language, Ability Score)
 		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Race.json"), Race[].class, raceRepo);
 		// Classs (Ability Score, Skill, Weapon, Item)

@@ -41,7 +41,7 @@ public class Option {
 	private Trait trait;
 	@OneToOne(cascade = CascadeType.ALL)
 	private Attack attack;
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.MERGE)
 	private Spell spell;
 	@OneToOne(cascade = CascadeType.ALL)
 	private Proficiency proficiency;
@@ -67,5 +67,10 @@ public class Option {
 			invItem.setItemFromString(itemString);
 			items.add(invItem);
 		});
+	}
+
+	@JsonSetter("spell")
+	public void setSpellsFromString(String spellString) {
+		spell = Spell.findSpellByName(spellString);
 	}
 }

@@ -1,0 +1,314 @@
+[
+	{
+		"gameEntity" : {
+			"name" : "Acid Breath Weapon - line",
+			"description" : "You can use your action to exhale destructive energy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw.\nThe DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes damage based on level for a failed save, and half as much damage on a successful one.\nAfter you use your breath weapon, you can’t use it again until you complete a short or long rest.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+		},
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 1,
+		"spellLevels" : {
+			"1" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "5 by 30 ft line",
+				"attack" : {
+					"normalRange" : "30",
+					"maxRange" : "30",
+					"damageType" : "ACID",
+					"damage" : {
+						"numDie" : 2,
+						"sidesOnDie" : 6
+					}
+				}
+			},
+			"6" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 3
+					}
+				}
+			},
+			"11" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 4
+					}
+				}
+			},
+			"16" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 5
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Lightning Breath Weapon - line",
+			"description" : "You can use your action to exhale destructive energy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw.\nThe DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes damage based on level for a failed save, and half as much damage on a successful one.\nAfter you use your breath weapon, you can’t use it again until you complete a short or long rest.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+		},
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 1,
+		"spellLevels" : {
+			"1" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "5 by 30 ft line",
+				"attack" : {
+					"normalRange" : "30",
+					"maxRange" : "30",
+					"damageType" : "LIGHTNING",
+					"damage" : {
+						"numDie" : 2,
+						"sidesOnDie" : 6
+					}
+				}
+			},
+			"6" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 3
+					}
+				}
+			},
+			"11" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 4
+					}
+				}
+			},
+			"16" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 5
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Fire Breath Weapon - line",
+			"description" : "You can use your action to exhale destructive energy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw.\nThe DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes damage based on level for a failed save, and half as much damage on a successful one.\nAfter you use your breath weapon, you can’t use it again until you complete a short or long rest.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+		},
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 1,
+		"spellLevels" : {
+			"1" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "5 by 30 ft line",
+				"attack" : {
+					"normalRange" : "30",
+					"maxRange" : "30",
+					"damageType" : "FIRE",
+					"damage" : {
+						"numDie" : 2,
+						"sidesOnDie" : 6
+					}
+				}
+			},
+			"6" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 3
+					}
+				}
+			},
+			"11" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 4
+					}
+				}
+			},
+			"16" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 5
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Fire Breath Weapon - cone",
+			"description" : "You can use your action to exhale destructive energy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw.\nThe DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes damage based on level for a failed save, and half as much damage on a successful one.\nAfter you use your breath weapon, you can’t use it again until you complete a short or long rest.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+		},
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 1,
+		"spellLevels" : {
+			"1" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "15ft. cone",
+				"attack" : {
+					"normalRange" : "15",
+					"maxRange" : "15",
+					"damageType" : "FIRE",
+					"damage" : {
+						"numDie" : 2,
+						"sidesOnDie" : 6
+					}
+				}
+			},
+			"6" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 3
+					}
+				}
+			},
+			"11" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 4
+					}
+				}
+			},
+			"16" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 5
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Poison Breath Weapon - cone",
+			"description" : "You can use your action to exhale destructive energy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw.\nThe DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes damage based on level for a failed save, and half as much damage on a successful one.\nAfter you use your breath weapon, you can’t use it again until you complete a short or long rest.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+		},
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Constitution",
+		"defaultSpellLevel" : 1,
+		"spellLevels" : {
+			"1" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "15ft. cone",
+				"attack" : {
+					"normalRange" : "15",
+					"maxRange" : "15",
+					"damageType" : "POISON",
+					"damage" : {
+						"numDie" : 2,
+						"sidesOnDie" : 6
+					}
+				}
+			},
+			"6" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 3
+					}
+				}
+			},
+			"11" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 4
+					}
+				}
+			},
+			"16" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 5
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Cold Breath Weapon - cone",
+			"description" : "You can use your action to exhale destructive energy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw.\nThe DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes damage based on level for a failed save, and half as much damage on a successful one.\nAfter you use your breath weapon, you can’t use it again until you complete a short or long rest.",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Dragonborn"
+		},
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Constitution",
+		"defaultSpellLevel" : 1,
+		"spellLevels" : {
+			"1" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "15ft. cone",
+				"attack" : {
+					"normalRange" : "15",
+					"maxRange" : "15",
+					"damageType" : "COLD",
+					"damage" : {
+						"numDie" : 2,
+						"sidesOnDie" : 6
+					}
+				}
+			},
+			"6" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 3
+					}
+				}
+			},
+			"11" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 4
+					}
+				}
+			},
+			"16" : {
+				"attack" : {
+					"damage" : {
+						"numDie" : 5
+					}
+				}
+			}
+		}
+	}
+]

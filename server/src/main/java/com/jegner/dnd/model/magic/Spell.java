@@ -1,5 +1,6 @@
 package com.jegner.dnd.model.magic;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -9,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.jegner.dnd.model.item.Item;
@@ -18,6 +20,8 @@ import com.jegner.dnd.utility.GameEntity;
 import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.experimental.Tolerate;
 
 @Entity
@@ -45,6 +49,16 @@ public class Spell {
 	private Duration castingTime;
 	@OneToOne
 	private AbilityScore save;
+
+	@Transient
+	@Getter
+	@Setter
+	private static List<Spell> spells = new ArrayList<>();
+
+	public static Spell findSpellByName(String name) {
+		return spells.stream().filter(spell -> spell.getGameEntity().getName().equalsIgnoreCase(name)).findFirst()
+				.get();
+	}
 
 	@JsonSetter
 	@Tolerate
