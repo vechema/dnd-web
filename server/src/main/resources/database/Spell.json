@@ -327,6 +327,7 @@
 		},
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
 		"spellLevels" : {
 			"0" : {
 				"duration" : {

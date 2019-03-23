@@ -54,6 +54,12 @@ public class Spell {
 	private Map<Integer, SpellLevel> spellLevels;
 	private int defaultSpellLevel;
 
+	/**
+	 * Some cantrips level when player hits levels 5, 11, 17. This means the damage
+	 * increases by 1dX at each of those player levels
+	 */
+	private boolean doesLevelWithPlayer;
+
 	@Transient
 	@Getter
 	@Setter
