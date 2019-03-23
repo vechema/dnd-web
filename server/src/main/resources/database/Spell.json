@@ -530,5 +530,572 @@
 				}
 			}
 		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Druidcraft",
+			"description" : "Whispering to the spirits of nature, you create one of the following effects within range:\n• You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb  for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 round.\n• You instantly make a flower blossom, a seed pod open, or a leaf bud bloom.\n• You create an instantaneous, harmless sensory effect, such as falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk. The effect  must fit in a 5-foot cube.\n• You instantly light or snuff out a candle, a torch, or a small campfire. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/druidcraft"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "false",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "5 ft",
+				"attack" : {
+					"normalRange" : "30",
+					"maxRange" : "30"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Eldritch Blast",
+			"description" : " A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage. \nAt higher level\nThe spell creates more than one beam when you reach higher levels:\nTwo beams at 5th level\nThree beams at 11th level\nFour beams at 17th level.\nYou can direct the beams at the same target or at different ones. Make a separate attack roll for each beam. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/eldritch-blast"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "false",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"attack" : {
+					"normalRange" : "120",
+					"maxRange" : "120",
+					"damageType" : "FORCE",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 10
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Fire Bolt",
+			"description" : "You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn’t being worn or carried.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/fire-bolt"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"attack" : {
+					"normalRange" : "120",
+					"maxRange" : "120",
+					"damageType" : "FIRE",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 10
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Friends",
+			"description" : "For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn’t hostile toward you. When the spell ends, the creature realizes that you used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM’s discretion), depending on the nature of your interaction with it. Requires a small amount of makeup applied to the face as this spell is cast",
+			"referenceURL" : "https://www.dnd-spells.com/spell/friends"
+		},
+		"schoolOfMagic" : "ENCHANTMENT",
+		"spellComponents" : ["SOMATIC", "MATERIAL"],
+		"components" : ["makeup"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "false",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "MINUTE"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Frostbite",
+			"description" : "You cause numbing frost to form on one creature that you can see within range. The target must make a Constitution saving throw. On a failed save, the target takes 1d6 cold damage, and it has disadvantage on the next weapon attack roll it makes before the end of its next turn.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/frostbite"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Constitution",
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"attack" : {
+					"normalRange" : "60",
+					"maxRange" : "60",
+					"damageType" : "COLD",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 6
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Green-Flame Blade",
+			"description" : " As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and green fire leaps from the target to a different creature of your choice that you can see within 5 feet of it. The second creature takes fire damage equal to your spellcasting ability modifier. This spell's damage increases when you reach higher levels.\nAt higher level\nAt 5th level, the melee attack deals an extra 1d8 fire damage to the target, and the fire damage to the second creature increases to 1d8 + your spellcasting ability modifier. Both damage rolls increase by 1d8 at 11th level and 17th level. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/green-flame-blade"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"attack" : {
+					"normalRange" : "5",
+					"maxRange" : "5",
+					"damageType" : "FIRE",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 8
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Guidance",
+			"description" : "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/guidance"
+		},
+		"schoolOfMagic" : "DIVINATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "false",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "MINUTE"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Gust",
+			"description" : "You seize the air and compel it to create one of the following effects at a point you can see within range:\n• One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you.\n• You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you. It isn’t pushed with enough force to cause damage.\n• You create a harmless sensory affect using air, such as causing leaves to rustle, wind to slam shutters shut, or your clothing to ripple in a breeze.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/gust"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "false",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Infestation",
+			"description" : "You cause a cloud of mites, fleas, and other parasites to appear momentarily on one creature you can see within range. The target must succeed on a Constitution saving throw, or it takes 1d6 poison damage and moves 5 feet in a random direction if it can move and its speed is at least 5 feet. Roll a d4 for the direction: 1., north; 2, south; 3, east; or 4, west. This movement doesn’t provoke opportunity attacks, and if the direction rolled is blocked, the target doesn't move.\nThe spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6). ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/infestation"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"components" : ["flea"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Constitution",
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"attack" : {
+					"normalRange" : "30",
+					"maxRange" : "30",
+					"damageType" : "POISON",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 6
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Acid Splash",
+			"description" : "You throw a bubble of acid at a creature you can see, or at two creatures within 5 feet of each other, and force them to pass a Dexterity save or take 1d6 acid damage",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Acid_Splash"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "5 ft",
+				"attack" : {
+					"normalRange" : "60",
+					"maxRange" : "60",
+					"damageType" : "ACID",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 6
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Acid Splash",
+			"description" : "You throw a bubble of acid at a creature you can see, or at two creatures within 5 feet of each other, and force them to pass a Dexterity save or take 1d6 acid damage",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Acid_Splash"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "5 ft",
+				"attack" : {
+					"normalRange" : "60",
+					"maxRange" : "60",
+					"damageType" : "ACID",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 6
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Acid Splash",
+			"description" : "You throw a bubble of acid at a creature you can see, or at two creatures within 5 feet of each other, and force them to pass a Dexterity save or take 1d6 acid damage",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Acid_Splash"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "5 ft",
+				"attack" : {
+					"normalRange" : "60",
+					"maxRange" : "60",
+					"damageType" : "ACID",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 6
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Acid Splash",
+			"description" : "You throw a bubble of acid at a creature you can see, or at two creatures within 5 feet of each other, and force them to pass a Dexterity save or take 1d6 acid damage",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Acid_Splash"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "5 ft",
+				"attack" : {
+					"normalRange" : "60",
+					"maxRange" : "60",
+					"damageType" : "ACID",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 6
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Acid Splash",
+			"description" : "You throw a bubble of acid at a creature you can see, or at two creatures within 5 feet of each other, and force them to pass a Dexterity save or take 1d6 acid damage",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Acid_Splash"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "5 ft",
+				"attack" : {
+					"normalRange" : "60",
+					"maxRange" : "60",
+					"damageType" : "ACID",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 6
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Acid Splash",
+			"description" : "You throw a bubble of acid at a creature you can see, or at two creatures within 5 feet of each other, and force them to pass a Dexterity save or take 1d6 acid damage",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Acid_Splash"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "5 ft",
+				"attack" : {
+					"normalRange" : "60",
+					"maxRange" : "60",
+					"damageType" : "ACID",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 6
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Acid Splash",
+			"description" : "You throw a bubble of acid at a creature you can see, or at two creatures within 5 feet of each other, and force them to pass a Dexterity save or take 1d6 acid damage",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Acid_Splash"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "5 ft",
+				"attack" : {
+					"normalRange" : "60",
+					"maxRange" : "60",
+					"damageType" : "ACID",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 6
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Acid Splash",
+			"description" : "You throw a bubble of acid at a creature you can see, or at two creatures within 5 feet of each other, and force them to pass a Dexterity save or take 1d6 acid damage",
+			"referenceURL" : "https://dnd5e.fandom.com/wiki/Acid_Splash"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "5 ft",
+				"attack" : {
+					"normalRange" : "60",
+					"maxRange" : "60",
+					"damageType" : "ACID",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 6
+					}
+				}
+			}
+		}
 	}
 ]

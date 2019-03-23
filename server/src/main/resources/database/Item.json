@@ -1207,5 +1207,19 @@
 			"description" : "I just made this up for the cantrip Dancing Lights",
 			"referenceURL" : "https://www.dnd-spells.com/spell/dancing-lights"
 		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Makeup",
+			"description" : "I just made this up for the cantrip Friends",
+			"referenceURL" : "https://www.dnd-spells.com/spell/friends"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Flea",
+			"description" : "I just made this up for the cantrip Infestation",
+			"referenceURL" : "https://www.dnd-spells.com/spell/infestation"
+		}
 	}
 ]
