@@ -1186,5 +1186,26 @@
 		},
 		"valueInGold" : "2",
 		"weightInLbs" : "2"
+	},
+	{
+		"gameEntity" : {
+			"name" : "Phosphorus",
+			"description" : "I just made this up for the cantrip Dancing Lights",
+			"referenceURL" : "https://www.dnd-spells.com/spell/dancing-lights"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Wychwood",
+			"description" : "I just made this up for the cantrip Dancing Lights",
+			"referenceURL" : "https://www.dnd-spells.com/spell/dancing-lights"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Glowworm",
+			"description" : "I just made this up for the cantrip Dancing Lights",
+			"referenceURL" : "https://www.dnd-spells.com/spell/dancing-lights"
+		}
 	}
 ]

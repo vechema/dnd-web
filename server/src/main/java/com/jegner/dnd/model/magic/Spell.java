@@ -60,6 +60,10 @@ public class Spell {
 	 */
 	private boolean doesLevelWithPlayer;
 
+	public Spell() {
+		components = new ArrayList<>();
+	}
+
 	@Transient
 	@Getter
 	@Setter
