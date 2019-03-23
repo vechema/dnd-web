@@ -346,5 +346,123 @@
 				}
 			}
 		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Blade Ward",
+			"description" : "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/blade-ward"
+		},
+		"schoolOfMagic" : "ABJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "false",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "ROUND"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Booming Blade",
+			"description" : "As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails.\nOn a hit, the target suffers the attack's normal effects, and it becomes sheathed in booming energy until the start of your next turn. If the target willingly moves be- fore then, it immediately takes 1d8 thunder damage, and the spell ends.\nThis spell's damage increases when you reach higher levels.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/booming-blade"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "ROUND"
+				},
+				"attack" : {
+					"normalRange" : "5",
+					"maxRange" : "5",
+					"damageType" : "THUNDER",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 8
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Chill Touch",
+			"description" : "You create a ghostly, skeletal hand in the space of a creature within range.\nMake a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d8 necrotic damage, and it can’t regain hit points until the start of your next turn. Until then, the hand clings to the target. If you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/chill-touch"
+		},
+		"schoolOfMagic" : "NECROMANCY",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "ROUND"
+				},
+				"attack" : {
+					"normalRange" : "120",
+					"maxRange" : "120",
+					"damageType" : "NECROTIC",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 8
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Control Flames",
+			"description" : "You choose a nonmagical flame that you can see within range and that fits within a 5-foot cube. You affect it in one of the following ways:\n- You instantaneously expand the flame 5 feet in one direction, provided that wood or other fuel is present in the new location.\n- You instantaneously extinguish the flames within the cube.\n- You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour.\n- You cause simple shapes — such as the vague form of a creature, an inanimate object, or a location — to appear within the flames and animate as you like. The shapes last for 1 hour.\nIf you cast this spell multiple times, you can have up to three non-instantaneous",
+			"referenceURL" : "https://www.dnd-spells.com/spell/control-flames"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "false",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				}
+			}
+		}
 	}
 ]
