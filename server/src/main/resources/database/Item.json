@@ -1221,5 +1221,33 @@
 			"description" : "I just made this up for the cantrip Infestation",
 			"referenceURL" : "https://www.dnd-spells.com/spell/infestation"
 		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Firefly",
+			"description" : "I just made this up for the cantrip Light",
+			"referenceURL" : "https://www.dnd-spells.com/spell/light"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Phosphorescent moss",
+			"description" : "I just made this up for the cantrip Light",
+			"referenceURL" : "https://www.dnd-spells.com/spell/light"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Lodestone",
+			"description" : "I just made this up for the cantrip Mending",
+			"referenceURL" : "https://www.dnd-spells.com/spell/mending"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Copper Wire",
+			"description" : "I just made this up for the cantrip Message",
+			"referenceURL" : "https://www.dnd-spells.com/spell/message"
+		}
 	}
 ]

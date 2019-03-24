@@ -461,6 +461,10 @@
 				"duration" : {
 					"amount" : 1,
 					"timeUnit" : "INSTANTANEOUS"
+				},
+				"attack" : {
+					"normalRange" : "60",
+					"maxRange" : "60"
 				}
 			}
 		}
@@ -745,6 +749,10 @@
 				"duration" : {
 					"amount" : 1,
 					"timeUnit" : "MINUTE"
+				},
+				"attack" : {
+					"normalRange" : "0",
+					"maxRange" : "0"
 				}
 			}
 		}
@@ -770,6 +778,10 @@
 				"duration" : {
 					"amount" : 1,
 					"timeUnit" : "INSTANTANEOUS"
+				},
+				"attack" : {
+					"normalRange" : "30",
+					"maxRange" : "30"
 				}
 			}
 		}
@@ -812,9 +824,76 @@
 	},
 	{
 		"gameEntity" : {
-			"name" : "Acid Splash",
-			"description" : "You throw a bubble of acid at a creature you can see, or at two creatures within 5 feet of each other, and force them to pass a Dexterity save or take 1d6 acid damage",
-			"referenceURL" : "https://dnd5e.fandom.com/wiki/Acid_Splash"
+			"name" : "Light",
+			"description" : "You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action. Requires a firefly or phosphorescent moss.\nIf you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/light"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL", "MATERIAL"],
+		"components" : ["firefly", "phosphorescent moss"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "false",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "HOUR"
+				},
+				"areaOfEffect" : "40 ft radius",
+				"attack" : {
+					"normalRange" : "0",
+					"maxRange" : "0"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Lightning Lure",
+			"description" : "You create a lash of lightning energy that strikes at one creature of your choice that you can see within range.\nThe target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take 1d8 lightning damage if it is within 5 feet of you.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/lightning-lure"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Strength",
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"attack" : {
+					"normalRange" : "15",
+					"maxRange" : "15",
+					"damageType" : "LIGHTNING",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 8
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Mage Hand",
+			"description" : "A spectral, floating hand appears at a point you choose within range.\nThe hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again.\nYou can use your action to control the hand. You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. You can move the hand up to 30 feet each time you use it.\nThe hand can’t attack, activate magical items, or carry more than 10 pounds.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/mage-hand"
 		},
 		"schoolOfMagic" : "CONJURATION",
 		"spellComponents" : ["VERBAL", "SOMATIC"],
@@ -824,20 +903,47 @@
 			"amount" : 1,
 			"timeUnit" : "ACTION"
 		},
-		"save" : "Dexterity",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"doesLevelWithPlayer" : "false",
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
 					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
+					"timeUnit" : "MINUTE"
 				},
-				"areaOfEffect" : "5 ft",
 				"attack" : {
-					"normalRange" : "60",
-					"maxRange" : "60",
-					"damageType" : "ACID",
+					"normalRange" : "30",
+					"maxRange" : "30"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Magic Stone",
+			"description" : "You touch one to three pebbles and imbue them with magic. You or someone else can make a ranged spell attack with one of the pebbles by throwing it or hurling it with a sling. If thrown, a pebble has a range of 60 feet. If someone else attacks with a pebble, that attacker adds your spellcasting ability modifier, not the attacker’s, to the attack roll. On a hit, the target takes bludgeoning damage equal to 1d6 + your spellcasting ability modifier. Whether the attack hits or misses, the spell then ends on the stone.\nIf you cast this spell again, the spell ends on any pebbles still affected by your previous casting.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/magic-stone"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "BONUS_ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "false",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "MINUTE"
+				},
+				"attack" : {
+					"normalRange" : "0",
+					"maxRange" : "0",
+					"damageType" : "BLUDGEONING",
 					"damage" : {
 						"numDie" : 1,
 						"sidesOnDie" : 6
@@ -848,12 +954,99 @@
 	},
 	{
 		"gameEntity" : {
-			"name" : "Acid Splash",
-			"description" : "You throw a bubble of acid at a creature you can see, or at two creatures within 5 feet of each other, and force them to pass a Dexterity save or take 1d6 acid damage",
-			"referenceURL" : "https://dnd5e.fandom.com/wiki/Acid_Splash"
+			"name" : "Mending",
+			"description" : "This spell repairs a single break or tear in an object you touch, such as broken chain link, two halves of a broken key, a torn cloack, or a leaking wineskin./nAs long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.\nThis spell can physically repair a magic item or construct, but the spell can’t restore magic to such an object. Requires two lodestones",
+			"referenceURL" : "https://www.dnd-spells.com/spell/mending"
 		},
-		"schoolOfMagic" : "CONJURATION",
-		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"components" : ["lodestone"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "false",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"attack" : {
+					"normalRange" : "0",
+					"maxRange" : "0"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Message",
+			"description" : "You point your finger toward a creature within range and whisper a message.\nThe target (and only the target) hears the message and can reply in a whisper that only you can hear.\nYou can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks the spell. The spell doesn’t have to follow a straight line and can travel freely around corners or through openings. Requires a short piece of copper wire",
+			"referenceURL" : "https://www.dnd-spells.com/spell/message"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"components" : ["copper wire"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "ROUND"
+				},
+				"attack" : {
+					"normalRange" : "120",
+					"maxRange" : "120"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Minor Illusion",
+			"description" : "You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action or cast this spell again.\nIf you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else’s voice, a lion’s roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.\nIf you create an image of an object such as a chair, muddy footprints, or a small chest it must be no larger than a 5-foot cube. The image can’t create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it.\nIf a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/minor-illusion"
+		},
+		"schoolOfMagic" : "ILLUSION",
+		"spellComponents" : ["SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "MINUTE"
+				},
+				"attack" : {
+					"normalRange" : "30",
+					"maxRange" : "30"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Mold earth",
+			"description" : "You choose a portion of dirt or stone that you can see within range and that fits within a 5-foot cube. You manipulate it in one of the following ways:\n• If you target an area of loose earth, you can instantaneously excavate it, move it along the ground, and deposit it up to 5 feet away. This movement doesn’t have enough force to cause damage.\n• You cause shapes, colors, or both to appear on the dirt or stone, spelling out words, creating images, or shaping patterns. The changes last for 1 hour.\n• If the dirt or stone you target is on the ground, you cause it to become difficult terrain. Alternatively, you can cause the ground to become normal terrain if it is already difficult terrain. This change lasts for 1 hour. If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/mold-earth"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["SOMATIC"],
 		"ritual" : "false",
 		"requiresConcentration" : "false",
 		"castingTime" :  {
@@ -869,14 +1062,144 @@
 					"amount" : 1,
 					"timeUnit" : "INSTANTANEOUS"
 				},
-				"areaOfEffect" : "5 ft",
+				"areaOfEffect" : "5 ft cube",
 				"attack" : {
-					"normalRange" : "60",
-					"maxRange" : "60",
+					"normalRange" : "30",
+					"maxRange" : "30",
+					"damageType" : "ACID"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Poison Spray",
+			"description" : "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a Constitution saving throw or take 1d12 poison damage.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/poison-spray"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Constitution",
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"attack" : {
+					"normalRange" : "10",
+					"maxRange" : "10",
+					"damageType" : "POISON",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 12
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Prestidigitation",
+			"description" : "This spell is a minor magical trick that novice spellcasters use for practice. You create one of the following magical effects within range:\n -You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor.\n-You instantaneously light or snuff out a candle, a torch, or a small campfire.\n-You instantaneously clean or soil an object no larger than 1 cubic foot.\n-You chill, warm, or flavor up to 1 cubic foot of nonliving material for 1 hour.\n-You make a color, a small mark, or a symbol appear on an object or a surface for 1 hour.\n-You create a nonmagical trinket or an illusory image that can fit in your hand and that lasts until the end of your next turn.\nIf you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/prestidigitation"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "false",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "HOUR"
+				},
+				"attack" : {
+					"normalRange" : "10",
+					"maxRange" : "10"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Primal Savagery",
+			"description" : "You channel primal magic to cause your teeth or fingernails to sharpen, ready to deliver a corrosive attack. Make a melee spell attack against one creature within 5 feet of you. On a hit, the target takes 1d10 acid damage. After you make the attack, your teeth or fingernails return to normal. The spell’s damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
+			"referenceURL" : "https://www.dnd-spells.com/spell/primal-savagery"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "Self",
+				"attack" : {
+					"normalRange" : "5",
+					"maxRange" : "5",
 					"damageType" : "ACID",
 					"damage" : {
 						"numDie" : 1,
-						"sidesOnDie" : 6
+						"sidesOnDie" : 10
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Produce Flame",
+			"description" : "A flickering flame appears in your hand.\nThe flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.\nYou can also attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell attack. On a hit, the target takes 1d8 fire damage.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/produce-flame"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 0,
+		"doesLevelWithPlayer" : "true",
+		"spellLevels" : {
+			"0" : {
+				"duration" : {
+					"amount" : 10,
+					"timeUnit" : "MINUTE"
+				},
+				"areaOfEffect" : "20 ft radius",
+				"attack" : {
+					"normalRange" : "30",
+					"maxRange" : "30",
+					"damageType" : "FIRE",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 8
 					}
 				}
 			}
