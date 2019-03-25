@@ -1249,5 +1249,26 @@
 			"description" : "I just made this up for the cantrip Message",
 			"referenceURL" : "https://www.dnd-spells.com/spell/message"
 		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Miniature Cloak",
+			"description" : "I just made this up for the cantrip Resistance",
+			"referenceURL" : "https://www.dnd-spells.com/spell/resistance"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Mistletoe",
+			"description" : "I just made this up for the cantrip Shillelagh",
+			"referenceURL" : "https://www.dnd-spells.com/spell/shillelagh"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Shamrock",
+			"description" : "I just made this up for the cantrip Shillelagh",
+			"referenceURL" : "https://www.dnd-spells.com/spell/shillelagh"
+		}
 	}
 ]
