@@ -248,7 +248,8 @@
 				"duration" : {
 					"amount" : 1,
 					"timeUnit" : "ROUND"
-				}
+				},
+				"areaOfEffect" : "Self"
 			}
 		}
 	},
@@ -535,7 +536,8 @@
 				"duration" : {
 					"amount" : 1,
 					"timeUnit" : "MINUTE"
-				}
+				},
+				"areaOfEffect" : "Self"
 			}
 		}
 	},
@@ -630,6 +632,7 @@
 					"amount" : 1,
 					"timeUnit" : "MINUTE"
 				},
+				"areaOfEffect" : "Touch",
 				"attack" : {
 					"normalRange" : "0",
 					"maxRange" : "0"
@@ -820,6 +823,7 @@
 					"amount" : 1,
 					"timeUnit" : "MINUTE"
 				},
+				"areaOfEffect" : "Touch",
 				"attack" : {
 					"normalRange" : "0",
 					"maxRange" : "0",
@@ -855,6 +859,7 @@
 					"amount" : 1,
 					"timeUnit" : "INSTANTANEOUS"
 				},
+				"areaOfEffect" : "Touch",
 				"attack" : {
 					"normalRange" : "0",
 					"maxRange" : "0"
@@ -1142,7 +1147,7 @@
 					"amount" : 1,
 					"timeUnit" : "MINUTE"
 				},
-				"areaOfEffect" : "5 ft",
+				"areaOfEffect" : "Touch",
 				"attack" : {
 					"normalRange" : "0",
 					"maxRange" : "0"
@@ -1238,7 +1243,7 @@
 					"amount" : 1,
 					"timeUnit" : "MINUTE"
 				},
-				"areaOfEffect" : "5 ft",
+				"areaOfEffect" : "Touch",
 				"attack" : {
 					"normalRange" : "0",
 					"maxRange" : "0",
@@ -1272,6 +1277,7 @@
 					"amount" : 1,
 					"timeUnit" : "INSTANTANEOUS"
 				},
+				"areaOfEffect" : "Touch",
 				"attack" : {
 					"normalRange" : "0",
 					"maxRange" : "0",
@@ -1305,6 +1311,7 @@
 					"amount" : 1,
 					"timeUnit" : "INSTANTANEOUS"
 				},
+				"areaOfEffect" : "Touch",
 				"attack" : {
 					"normalRange" : "0",
 					"maxRange" : "0"
@@ -1667,6 +1674,166 @@
 				"duration" : {
 					"amount" : 24,
 					"timeUnit" : "HOUR"
+				},
+				"attack" : {
+					"normalRange" : "30",
+					"maxRange" : "30"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Armor of Agathys",
+			"description" : " A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear.\nYou gain 5 temporary hit points for the duration. If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage. Requires a cup of water\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, both the temporary hit points and the cold damage increase by 5 for each slot ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/armor-of-agathys"
+		},
+		"schoolOfMagic" : "ABJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"spellLevels" : {
+			"1" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "HOUR"
+				},
+				"areaOfEffect" : "Self",
+				"attack" : {
+					"normalRange" : "0",
+					"maxRange" : "0",
+					"damageType" : "COLD",
+					"damage" : {
+						"bonus" : "5"
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Arms of Hadar",
+			"description" : " You invoke the power of Hadar, the Dark Hunger.\nTendrils of dark energy erupt from you and batter all creatures within 10 feet of you. Each creature in that area must make a Strength saving throw. On a failed save, a target takes 2d6 necrotic damage and can’t take reactions until its next turn. On a successful save, the creature takes half damage, but suffers no other effect.\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/arms-of-hadar"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Strength",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"spellLevels" : {
+			"1" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "INSTANTANEOUS"
+				},
+				"areaOfEffect" : "10 foot radius around you",
+				"attack" : {
+					"normalRange" : "0",
+					"maxRange" : "0",
+					"damageType" : "NECROTIC",
+					"damage" : {
+						"numDie" : 2,
+						"sidesOnDie" : 6
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Bane",
+			"description" : " Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw. Requires a drop of blood\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, you can target one aditional creature for each slot level above 1st.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/bane"
+		},
+		"schoolOfMagic" : "ENCHANTMENT",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Charisma",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"spellLevels" : {
+			"1" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "MINUTE"
+				},
+				"attack" : {
+					"normalRange" : "30",
+					"maxRange" : "30"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Beast Bond",
+			"description" : "You establish a telepathic link with one beast you touch that is friendly to you or charmed by you. The spell fails if the beast’s Intelligence is 4 or higher. Until the spell ends, the link is active while you and the beast are within line of sight of each other. Through the link, the beast can understand your telepathic messages to it, and it can telepathically communicate simple emotions and concepts back to you. While the link is active, the beast gains advantage on attack rolls against any creature within 5 feet of you that you can see. Requires a bit of fur wrapped in a cloth",
+			"referenceURL" : "https://www.dnd-spells.com/spell/beast-bond"
+		},
+		"schoolOfMagic" : "DIVINATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"spellLevels" : {
+			"1" : {
+				"duration" : {
+					"amount" : 10,
+					"timeUnit" : "MINUTE"
+				},
+				"areaOfEffect" : "Touch",
+				"attack" : {
+					"normalRange" : "0",
+					"maxRange" : "0"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Bless",
+			"description" : " You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw. Requires a sprinkling of holy water.\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/bless"
+		},
+		"schoolOfMagic" : "ENCHANTMENT",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"components" : ["Holy water (flask)"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"spellLevels" : {
+			"1" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "MINUTE"
 				},
 				"attack" : {
 					"normalRange" : "30",
