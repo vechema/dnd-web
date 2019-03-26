@@ -14,6 +14,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonSetter;
+import com.jegner.dnd.model.Attack;
 import com.jegner.dnd.model.item.Item;
 import com.jegner.dnd.model.predefined.AbilityScore;
 import com.jegner.dnd.utility.Duration;
@@ -49,10 +50,14 @@ public class Spell {
 	private Duration castingTime;
 	@OneToOne
 	private AbilityScore save;
-
-	@OneToMany(cascade = CascadeType.ALL)
-	private Map<Integer, SpellLevel> spellLevels;
 	private int defaultSpellLevel;
+
+	// Might change with spell level used
+	@OneToOne(cascade = CascadeType.ALL)
+	private Duration duration;
+	private String areaOfEffect;
+	@OneToOne(cascade = CascadeType.ALL)
+	private Attack attack;
 
 	/**
 	 * Some cantrips level when player hits levels 5, 11, 17. This means the damage
@@ -61,6 +66,7 @@ public class Spell {
 	 */
 	@ElementCollection
 	private List<Integer> levelsWithPlayer;
+	private boolean canBeUsedAtHigherSpellSlot;
 
 	public Spell() {
 		components = new ArrayList<>();

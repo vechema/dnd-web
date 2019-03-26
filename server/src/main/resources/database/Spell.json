@@ -12,22 +12,19 @@
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 1,
 		"levelsWithPlayer" : ["6","11","16"],
-		"spellLevels" : {
-			"1" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "5 by 30 ft line",
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30",
-					"damageType" : "ACID",
-					"damage" : {
-						"numDie" : 2,
-						"sidesOnDie" : 6
-					}
-				}
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "5 by 30 ft line",
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30",
+			"damageType" : "ACID",
+			"damage" : {
+				"numDie" : 2,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -44,22 +41,19 @@
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 1,
 		"levelsWithPlayer" : ["6","11","16"],
-		"spellLevels" : {
-			"1" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "5 by 30 ft line",
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30",
-					"damageType" : "LIGHTNING",
-					"damage" : {
-						"numDie" : 2,
-						"sidesOnDie" : 6
-					}
-				}
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "5 by 30 ft line",
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30",
+			"damageType" : "LIGHTNING",
+			"damage" : {
+				"numDie" : 2,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -76,22 +70,19 @@
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 1,
 		"levelsWithPlayer" : ["6","11","16"],
-		"spellLevels" : {
-			"1" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "5 by 30 ft line",
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30",
-					"damageType" : "FIRE",
-					"damage" : {
-						"numDie" : 2,
-						"sidesOnDie" : 6
-					}
-				}
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "5 by 30 ft line",
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30",
+			"damageType" : "FIRE",
+			"damage" : {
+				"numDie" : 2,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -108,22 +99,19 @@
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 1,
 		"levelsWithPlayer" : ["6","11","16"],
-		"spellLevels" : {
-			"1" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "15ft. cone",
-				"attack" : {
-					"normalRange" : "15",
-					"maxRange" : "15",
-					"damageType" : "FIRE",
-					"damage" : {
-						"numDie" : 2,
-						"sidesOnDie" : 6
-					}
-				}
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "15ft. cone",
+		"attack" : {
+			"normalRange" : "15",
+			"maxRange" : "15",
+			"damageType" : "FIRE",
+			"damage" : {
+				"numDie" : 2,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -140,22 +128,19 @@
 		"save" : "Constitution",
 		"defaultSpellLevel" : 1,
 		"levelsWithPlayer" : ["6","11","16"],
-		"spellLevels" : {
-			"1" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "15ft. cone",
-				"attack" : {
-					"normalRange" : "15",
-					"maxRange" : "15",
-					"damageType" : "POISON",
-					"damage" : {
-						"numDie" : 2,
-						"sidesOnDie" : 6
-					}
-				}
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "15ft. cone",
+		"attack" : {
+			"normalRange" : "15",
+			"maxRange" : "15",
+			"damageType" : "POISON",
+			"damage" : {
+				"numDie" : 2,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -172,22 +157,19 @@
 		"save" : "Constitution",
 		"defaultSpellLevel" : 1,
 		"levelsWithPlayer" : ["6","11","16"],
-		"spellLevels" : {
-			"1" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "15ft. cone",
-				"attack" : {
-					"normalRange" : "15",
-					"maxRange" : "15",
-					"damageType" : "COLD",
-					"damage" : {
-						"numDie" : 2,
-						"sidesOnDie" : 6
-					}
-				}
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "15ft. cone",
+		"attack" : {
+			"normalRange" : "15",
+			"maxRange" : "15",
+			"damageType" : "COLD",
+			"damage" : {
+				"numDie" : 2,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -208,22 +190,18 @@
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "5 ft",
-				"attack" : {
-					"normalRange" : "60",
-					"maxRange" : "60",
-					"damageType" : "ACID",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 6
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "5 ft",
+		"attack" : {
+			"normalRange" : "60",
+			"maxRange" : "60",
+			"damageType" : "ACID",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -243,15 +221,11 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "ROUND"
-				},
-				"areaOfEffect" : "Self"
-			}
-		}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "ROUND"
+		},
+		"areaOfEffect" : "Self"
 	},
 	{
 		"gameEntity" : {
@@ -269,21 +243,17 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "ROUND"
-				},
-				"attack" : {
-					"normalRange" : "5",
-					"maxRange" : "5",
-					"damageType" : "THUNDER",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 8
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "ROUND"
+		},
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "THUNDER",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8
 			}
 		}
 	},
@@ -303,21 +273,17 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "ROUND"
-				},
-				"attack" : {
-					"normalRange" : "120",
-					"maxRange" : "120",
-					"damageType" : "NECROTIC",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 8
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "ROUND"
+		},
+		"attack" : {
+			"normalRange" : "120",
+			"maxRange" : "120",
+			"damageType" : "NECROTIC",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8
 			}
 		}
 	},
@@ -337,17 +303,13 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "60",
-					"maxRange" : "60"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "60",
+			"maxRange" : "60"
 		}
 	},
 	{
@@ -367,22 +329,18 @@
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "MINUTE"
-				},
-				"areaOfEffect" : "5 ft cube",
-				"attack" : {
-					"normalRange" : "60",
-					"maxRange" : "60",
-					"damageType" : "FIRE",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 8
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "5 ft cube",
+		"attack" : {
+			"normalRange" : "60",
+			"maxRange" : "60",
+			"damageType" : "FIRE",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8
 			}
 		}
 	},
@@ -402,18 +360,14 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "10 ft radius per light",
-				"attack" : {
-					"normalRange" : "120",
-					"maxRange" : "120"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "10 ft radius per light",
+		"attack" : {
+			"normalRange" : "120",
+			"maxRange" : "120"
 		}
 	},
 	{
@@ -432,18 +386,14 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "5 ft",
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "5 ft",
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30"
 		}
 	},
 	{
@@ -462,21 +412,17 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "120",
-					"maxRange" : "120",
-					"damageType" : "FORCE",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 10
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "120",
+			"maxRange" : "120",
+			"damageType" : "FORCE",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 10
 			}
 		}
 	},
@@ -496,21 +442,17 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "120",
-					"maxRange" : "120",
-					"damageType" : "FIRE",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 10
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "120",
+			"maxRange" : "120",
+			"damageType" : "FIRE",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 10
 			}
 		}
 	},
@@ -531,15 +473,11 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "MINUTE"
-				},
-				"areaOfEffect" : "Self"
-			}
-		}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Self"
 	},
 	{
 		"gameEntity" : {
@@ -558,21 +496,17 @@
 		"save" : "Constitution",
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "60",
-					"maxRange" : "60",
-					"damageType" : "COLD",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 6
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "60",
+			"maxRange" : "60",
+			"damageType" : "COLD",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -592,21 +526,17 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "5",
-					"maxRange" : "5",
-					"damageType" : "FIRE",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 8
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "FIRE",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8
 			}
 		}
 	},
@@ -626,18 +556,14 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "MINUTE"
-				},
-				"areaOfEffect" : "Touch",
-				"attack" : {
-					"normalRange" : "0",
-					"maxRange" : "0"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
 		}
 	},
 	{
@@ -656,17 +582,13 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30"
 		}
 	},
 	{
@@ -687,21 +609,17 @@
 		"save" : "Constitution",
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30",
-					"damageType" : "POISON",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 6
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30",
+			"damageType" : "POISON",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -723,18 +641,14 @@
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "HOUR"
-				},
-				"areaOfEffect" : "40 ft radius",
-				"attack" : {
-					"normalRange" : "0",
-					"maxRange" : "0"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "HOUR"
+		},
+		"areaOfEffect" : "40 ft radius",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
 		}
 	},
 	{
@@ -754,21 +668,17 @@
 		"save" : "Strength",
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "15",
-					"maxRange" : "15",
-					"damageType" : "LIGHTNING",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 8
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "15",
+			"maxRange" : "15",
+			"damageType" : "LIGHTNING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8
 			}
 		}
 	},
@@ -788,17 +698,13 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "MINUTE"
-				},
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30"
 		}
 	},
 	{
@@ -817,22 +723,18 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "MINUTE"
-				},
-				"areaOfEffect" : "Touch",
-				"attack" : {
-					"normalRange" : "0",
-					"maxRange" : "0",
-					"damageType" : "BLUDGEONING",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 6
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damageType" : "BLUDGEONING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -853,18 +755,14 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "Touch",
-				"attack" : {
-					"normalRange" : "0",
-					"maxRange" : "0"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
 		}
 	},
 	{
@@ -883,17 +781,13 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "ROUND"
-				},
-				"attack" : {
-					"normalRange" : "120",
-					"maxRange" : "120"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "ROUND"
+		},
+		"attack" : {
+			"normalRange" : "120",
+			"maxRange" : "120"
 		}
 	},
 	{
@@ -911,17 +805,13 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "MINUTE"
-				},
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30"
 		}
 	},
 	{
@@ -941,19 +831,15 @@
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "5 ft cube",
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30",
-					"damageType" : "ACID"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "5 ft cube",
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30",
+			"damageType" : "ACID"
 		}
 	},
 	{
@@ -973,21 +859,17 @@
 		"save" : "Constitution",
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "10",
-					"maxRange" : "10",
-					"damageType" : "POISON",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 12
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "10",
+			"maxRange" : "10",
+			"damageType" : "POISON",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 12
 			}
 		}
 	},
@@ -1007,17 +889,13 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "HOUR"
-				},
-				"attack" : {
-					"normalRange" : "10",
-					"maxRange" : "10"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "HOUR"
+		},
+		"attack" : {
+			"normalRange" : "10",
+			"maxRange" : "10"
 		}
 	},
 	{
@@ -1036,22 +914,18 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "Self",
-				"attack" : {
-					"normalRange" : "5",
-					"maxRange" : "5",
-					"damageType" : "ACID",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 10
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "Self",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "ACID",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 10
 			}
 		}
 	},
@@ -1071,22 +945,18 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 10,
-					"timeUnit" : "MINUTE"
-				},
-				"areaOfEffect" : "20 ft radius",
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30",
-					"damageType" : "FIRE",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 8
-					}
-				}
+		"duration" : {
+			"amount" : 10,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "20 ft radius",
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30",
+			"damageType" : "FIRE",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8
 			}
 		}
 	},
@@ -1106,21 +976,17 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "60",
-					"maxRange" : "60",
-					"damageType" : "COLD",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 8
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "60",
+			"maxRange" : "60",
+			"damageType" : "COLD",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8
 			}
 		}
 	},
@@ -1141,18 +1007,14 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "MINUTE"
-				},
-				"areaOfEffect" : "Touch",
-				"attack" : {
-					"normalRange" : "0",
-					"maxRange" : "0"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
 		}
 	},
 	{
@@ -1172,21 +1034,17 @@
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "60",
-					"maxRange" : "60",
-					"damageType" : "RADIANT",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 8
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "60",
+			"maxRange" : "60",
+			"damageType" : "RADIANT",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8
 			}
 		}
 	},
@@ -1206,18 +1064,14 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "5 ft cube",
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "5 ft cube",
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30"
 		}
 	},
 	{
@@ -1237,21 +1091,17 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "MINUTE"
-				},
-				"areaOfEffect" : "Touch",
-				"attack" : {
-					"normalRange" : "0",
-					"maxRange" : "0",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 8
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8
 			}
 		}
 	},
@@ -1271,22 +1121,18 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "Touch",
-				"attack" : {
-					"normalRange" : "0",
-					"maxRange" : "0",
-					"damageType" : "LIGHTNING",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 8
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damageType" : "LIGHTNING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8
 			}
 		}
 	},
@@ -1305,18 +1151,14 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "Touch",
-				"attack" : {
-					"normalRange" : "0",
-					"maxRange" : "0"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
 		}
 	},
 	{
@@ -1336,22 +1178,18 @@
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "5 ft",
-				"attack" : {
-					"normalRange" : "5",
-					"maxRange" : "5",
-					"damageType" : "FORCE",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 6
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "5 ft",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "FORCE",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -1371,17 +1209,13 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "MINUTE"
-				},
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30"
 		}
 	},
 	{
@@ -1400,21 +1234,17 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30",
-					"damageType" : "PIERCING",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 6
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -1435,22 +1265,18 @@
 		"save" : "Constitution",
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "5 ft",
-				"attack" : {
-					"normalRange" : "5",
-					"maxRange" : "5",
-					"damageType" : "THUNDER",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 6
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "5 ft",
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "THUNDER",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -1471,21 +1297,17 @@
 		"save" : "Wisdom",
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "60",
-					"maxRange" : "60",
-					"damageType" : "NECROTIC",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 8
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "60",
+			"maxRange" : "60",
+			"damageType" : "NECROTIC",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8
 			}
 		}
 	},
@@ -1505,17 +1327,13 @@
 		},
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "ROUND"
-				},
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30"
-				}
-			}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "ROUND"
+		},
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30"
 		}
 	},
 	{
@@ -1535,21 +1353,17 @@
 		"save" : "Wisdom",
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "60",
-					"maxRange" : "60",
-					"damageType" : "PSYCHIC",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 4
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "60",
+			"maxRange" : "60",
+			"damageType" : "PSYCHIC",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 4
 			}
 		}
 	},
@@ -1570,21 +1384,17 @@
 		"save" : "Constitution",
 		"defaultSpellLevel" : 0,
 		"levelsWithPlayer" : ["5","11","17"],
-		"spellLevels" : {
-			"0" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"attack" : {
-					"normalRange" : "5",
-					"maxRange" : "5",
-					"damageType" : "RADIANT",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 6
-					}
-				}
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "5",
+			"maxRange" : "5",
+			"damageType" : "RADIANT",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -1603,21 +1413,18 @@
 			"timeUnit" : "REACTION"
 		},
 		"defaultSpellLevel" : 1,
-		"spellLevels" : {
-			"1" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "ROUND"
-				},
-				"areaOfEffect" : "Self",
-				"attack" : {
-					"normalRange" : "0",
-					"maxRange" : "0",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 6
-					}
-				}
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "ROUND"
+		},
+		"areaOfEffect" : "Self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -1638,18 +1445,14 @@
 		},
 		"defaultSpellLevel" : 1,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"1" : {
-				"duration" : {
-					"amount" : 8,
-					"timeUnit" : "HOUR"
-				},
-				"areaOfEffect" : "20 ft cube",
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30"
-				}
-			}
+		"duration" : {
+			"amount" : 8,
+			"timeUnit" : "HOUR"
+		},
+		"areaOfEffect" : "20 ft cube",
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30"
 		}
 	},
 	{
@@ -1669,17 +1472,14 @@
 		"save" : "Wisdom",
 		"defaultSpellLevel" : 1,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"1" : {
-				"duration" : {
-					"amount" : 24,
-					"timeUnit" : "HOUR"
-				},
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30"
-				}
-			}
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 24,
+			"timeUnit" : "HOUR"
+		},
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30"
 		}
 	},
 	{
@@ -1698,21 +1498,18 @@
 		},
 		"defaultSpellLevel" : 1,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"1" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "HOUR"
-				},
-				"areaOfEffect" : "Self",
-				"attack" : {
-					"normalRange" : "0",
-					"maxRange" : "0",
-					"damageType" : "COLD",
-					"damage" : {
-						"bonus" : "5"
-					}
-				}
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "HOUR"
+		},
+		"areaOfEffect" : "Self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damageType" : "COLD",
+			"damage" : {
+				"bonus" : "5"
 			}
 		}
 	},
@@ -1733,22 +1530,19 @@
 		"save" : "Strength",
 		"defaultSpellLevel" : 1,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"1" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
-				},
-				"areaOfEffect" : "10 foot radius around you",
-				"attack" : {
-					"normalRange" : "0",
-					"maxRange" : "0",
-					"damageType" : "NECROTIC",
-					"damage" : {
-						"numDie" : 2,
-						"sidesOnDie" : 6
-					}
-				}
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "10 foot radius around you",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damageType" : "NECROTIC",
+			"damage" : {
+				"numDie" : 2,
+				"sidesOnDie" : 6
 			}
 		}
 	},
@@ -1769,17 +1563,14 @@
 		"save" : "Charisma",
 		"defaultSpellLevel" : 1,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"1" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "MINUTE"
-				},
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30"
-				}
-			}
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30"
 		}
 	},
 	{
@@ -1798,18 +1589,14 @@
 		},
 		"defaultSpellLevel" : 1,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"1" : {
-				"duration" : {
-					"amount" : 10,
-					"timeUnit" : "MINUTE"
-				},
-				"areaOfEffect" : "Touch",
-				"attack" : {
-					"normalRange" : "0",
-					"maxRange" : "0"
-				}
-			}
+		"duration" : {
+			"amount" : 10,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
 		}
 	},
 	{
@@ -1829,17 +1616,14 @@
 		},
 		"defaultSpellLevel" : 1,
 		"levelsWithPlayer" : [],
-		"spellLevels" : {
-			"1" : {
-				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "MINUTE"
-				},
-				"attack" : {
-					"normalRange" : "30",
-					"maxRange" : "30"
-				}
-			}
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30"
 		}
 	}
 ]
