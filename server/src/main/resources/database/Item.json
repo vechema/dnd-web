@@ -1270,5 +1270,12 @@
 			"description" : "I just made this up for the cantrip Shillelagh",
 			"referenceURL" : "https://www.dnd-spells.com/spell/shillelagh"
 		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Silver Wire",
+			"description" : "I just made this up for the level 1 spell Alarm",
+			"referenceURL" : "https://www.dnd-spells.com/spell/alarm-ritual"
+		}
 	}
 ]

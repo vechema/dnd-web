@@ -56,9 +56,11 @@ public class Spell {
 
 	/**
 	 * Some cantrips level when player hits levels 5, 11, 17. This means the damage
-	 * increases by 1dX at each of those player levels
+	 * increases by 1dX at each of those player levels. Ugh, and dragonborn breath
+	 * weapon
 	 */
-	private boolean doesLevelWithPlayer;
+	@ElementCollection
+	private List<Integer> levelsWithPlayer;
 
 	public Spell() {
 		components = new ArrayList<>();

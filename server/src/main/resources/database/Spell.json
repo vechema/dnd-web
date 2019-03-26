@@ -11,6 +11,7 @@
 		},
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : ["6","11","16"],
 		"spellLevels" : {
 			"1" : {
 				"duration" : {
@@ -25,27 +26,6 @@
 					"damage" : {
 						"numDie" : 2,
 						"sidesOnDie" : 6
-					}
-				}
-			},
-			"6" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 3
-					}
-				}
-			},
-			"11" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 4
-					}
-				}
-			},
-			"16" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 5
 					}
 				}
 			}
@@ -63,6 +43,7 @@
 		},
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : ["6","11","16"],
 		"spellLevels" : {
 			"1" : {
 				"duration" : {
@@ -77,27 +58,6 @@
 					"damage" : {
 						"numDie" : 2,
 						"sidesOnDie" : 6
-					}
-				}
-			},
-			"6" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 3
-					}
-				}
-			},
-			"11" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 4
-					}
-				}
-			},
-			"16" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 5
 					}
 				}
 			}
@@ -115,6 +75,7 @@
 		},
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : ["6","11","16"],
 		"spellLevels" : {
 			"1" : {
 				"duration" : {
@@ -129,27 +90,6 @@
 					"damage" : {
 						"numDie" : 2,
 						"sidesOnDie" : 6
-					}
-				}
-			},
-			"6" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 3
-					}
-				}
-			},
-			"11" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 4
-					}
-				}
-			},
-			"16" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 5
 					}
 				}
 			}
@@ -167,6 +107,7 @@
 		},
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : ["6","11","16"],
 		"spellLevels" : {
 			"1" : {
 				"duration" : {
@@ -181,27 +122,6 @@
 					"damage" : {
 						"numDie" : 2,
 						"sidesOnDie" : 6
-					}
-				}
-			},
-			"6" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 3
-					}
-				}
-			},
-			"11" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 4
-					}
-				}
-			},
-			"16" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 5
 					}
 				}
 			}
@@ -219,6 +139,7 @@
 		},
 		"save" : "Constitution",
 		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : ["6","11","16"],
 		"spellLevels" : {
 			"1" : {
 				"duration" : {
@@ -233,27 +154,6 @@
 					"damage" : {
 						"numDie" : 2,
 						"sidesOnDie" : 6
-					}
-				}
-			},
-			"6" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 3
-					}
-				}
-			},
-			"11" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 4
-					}
-				}
-			},
-			"16" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 5
 					}
 				}
 			}
@@ -271,6 +171,7 @@
 		},
 		"save" : "Constitution",
 		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : ["6","11","16"],
 		"spellLevels" : {
 			"1" : {
 				"duration" : {
@@ -285,27 +186,6 @@
 					"damage" : {
 						"numDie" : 2,
 						"sidesOnDie" : 6
-					}
-				}
-			},
-			"6" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 3
-					}
-				}
-			},
-			"11" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 4
-					}
-				}
-			},
-			"16" : {
-				"attack" : {
-					"damage" : {
-						"numDie" : 5
 					}
 				}
 			}
@@ -327,7 +207,7 @@
 		},
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -362,7 +242,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -387,7 +267,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -421,7 +301,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -455,7 +335,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -485,7 +365,7 @@
 		},
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -550,7 +430,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -580,7 +460,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -614,7 +494,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -649,7 +529,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -675,7 +555,7 @@
 		},
 		"save" : "Constitution",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -709,7 +589,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -743,7 +623,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -772,7 +652,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -803,7 +683,7 @@
 		},
 		"save" : "Constitution",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -839,7 +719,7 @@
 		},
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -870,7 +750,7 @@
 		},
 		"save" : "Strength",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -904,7 +784,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -933,7 +813,7 @@
 			"timeUnit" : "BONUS_ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -968,7 +848,7 @@
 			"timeUnit" : "MINUTE"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1055,7 +935,7 @@
 		},
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1087,7 +967,7 @@
 		},
 		"save" : "Constitution",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1121,7 +1001,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1150,7 +1030,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1185,7 +1065,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1220,7 +1100,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1255,7 +1135,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1286,7 +1166,7 @@
 		},
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1320,7 +1200,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1351,7 +1231,7 @@
 			"timeUnit" : "BONUS_ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1385,7 +1265,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1448,7 +1328,7 @@
 		},
 		"save" : "Dexterity",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1483,7 +1363,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1512,7 +1392,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1547,7 +1427,7 @@
 		},
 		"save" : "Constitution",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1583,7 +1463,7 @@
 		},
 		"save" : "Wisdom",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1617,7 +1497,7 @@
 			"timeUnit" : "ACTION"
 		},
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1647,7 +1527,7 @@
 		},
 		"save" : "Wisdom",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "false",
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1682,7 +1562,7 @@
 		},
 		"save" : "Constitution",
 		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"levelsWithPlayer" : ["5","11","17"],
 		"spellLevels" : {
 			"0" : {
 				"duration" : {
@@ -1703,36 +1583,94 @@
 	},
 	{
 		"gameEntity" : {
-			"name" : "Acid Splash",
-			"description" : "You throw a bubble of acid at a creature you can see, or at two creatures within 5 feet of each other, and force them to pass a Dexterity save or take 1d6 acid damage",
-			"referenceURL" : "https://dnd5e.fandom.com/wiki/Acid_Splash"
+			"name" : "Absorb Elements",
+			"description" : " 1 Reaction, which you take when you take acid, cold, fire, lightning, or thunder damage.\nThe spell captures some of the incoming energy, lessening its effect on you and storing it for your next melee attack. You have resistance to the triggering damage type until the start of your next turn. Also, the first time you hit with a melee attack on your next turn, the target takes an extra 1d6 damage of the triggering type, and the spell ends.\nAt higher level.\nWhen you cast this spell using a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each slot level above 1st. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/absorb-elements"
 		},
-		"schoolOfMagic" : "CONJURATION",
-		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"schoolOfMagic" : "ABJURATION",
+		"spellComponents" : ["SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "REACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"spellLevels" : {
+			"1" : {
+				"duration" : {
+					"amount" : 1,
+					"timeUnit" : "ROUND"
+				},
+				"areaOfEffect" : "Self",
+				"attack" : {
+					"normalRange" : "0",
+					"maxRange" : "0",
+					"damage" : {
+						"numDie" : 1,
+						"sidesOnDie" : 6
+					}
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Alarm",
+			"description" : "You set an alarm against unwanted intrusion.\nChoose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a tiny or larger creature touches or enters the warded area. When you cast the spell, you can designate creatures that won’t set off the alarm. You also choose whether the alarm is mental or audible.\nA mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area. This ping awakens you if you are sleeping.\nAn audible alarm produces the sound of a hand bell for 10 seconds within 60 feet. Requires a tiny bell and a piece of fine silver wire",
+			"referenceURL" : "https://www.dnd-spells.com/spell/alarm-ritual"
+		},
+		"schoolOfMagic" : "ABJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"components" : ["bell", "silver wire"],
+		"ritual" : "true",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"spellLevels" : {
+			"1" : {
+				"duration" : {
+					"amount" : 8,
+					"timeUnit" : "HOUR"
+				},
+				"areaOfEffect" : "20 ft cube",
+				"attack" : {
+					"normalRange" : "30",
+					"maxRange" : "30"
+				}
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Animal Friendship",
+			"description" : " This spell lets you convince a beast that you mean it no harm.\nChoose a beast that you can see within range. It must see and hear you. If the beast’s Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell’s duration. If you or one of your companions harms the target, the spell ends. Requires a morsel of food\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/animal-friendship"
+		},
+		"schoolOfMagic" : "ENCHANTMENT",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
 		"ritual" : "false",
 		"requiresConcentration" : "false",
 		"castingTime" :  {
 			"amount" : 1,
 			"timeUnit" : "ACTION"
 		},
-		"save" : "Dexterity",
-		"defaultSpellLevel" : 0,
-		"doesLevelWithPlayer" : "true",
+		"save" : "Wisdom",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
 		"spellLevels" : {
-			"0" : {
+			"1" : {
 				"duration" : {
-					"amount" : 1,
-					"timeUnit" : "INSTANTANEOUS"
+					"amount" : 24,
+					"timeUnit" : "HOUR"
 				},
-				"areaOfEffect" : "5 ft",
 				"attack" : {
-					"normalRange" : "60",
-					"maxRange" : "60",
-					"damageType" : "ACID",
-					"damage" : {
-						"numDie" : 1,
-						"sidesOnDie" : 6
-					}
+					"normalRange" : "30",
+					"maxRange" : "30"
 				}
 			}
 		}
