@@ -2,7 +2,6 @@ package com.jegner.dnd.model.magic;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import javax.persistence.CascadeType;
 import javax.persistence.ElementCollection;

@@ -80,7 +80,8 @@ public class PrefetchDataUtility {
 
 	private ObjectMapper mapper = new ObjectMapper();
 
-	private static final String PREDEFINED_JSON_PATH = "src\\main\\resources\\database\\";
+	private static final String PREDEFINED_JSON_PATH = "src" + File.separator + "main" + File.separator + "resources"
+			+ File.separator + "database" + File.separator;
 
 	public void initializeAllData() throws Exception {
 
