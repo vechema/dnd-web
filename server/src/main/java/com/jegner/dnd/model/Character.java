@@ -50,6 +50,7 @@ public class Character {
 	private int weightInLbs;
 	private int heightInInches;
 	private int currentLevel;
+	private int currentProficiencyBonus;
 	@OneToOne
 	private Classs classs;
 	@OneToOne

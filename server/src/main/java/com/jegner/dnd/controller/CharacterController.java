@@ -27,6 +27,7 @@ public class CharacterController {
 		// get Race
 		newChar.setRace(makeRace());
 
+		// TODO Make experience class when creating character!
 		// set Experience
 		Experience xp = new Experience();
 		xp.setExperiencePoints(0);
