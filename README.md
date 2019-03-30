@@ -17,3 +17,7 @@ Using Spring Boot 2 to create a backend
 ### Starting the server
 
 Go to server directory and run `mvn spring-boot:run`. View backend at http://localhost:8080/
+
+### Using an IDE
+
+This project uses Lombok. You'll need to download the jar from https://projectlombok.org/download and follow the instructions from the install drop down to whatever IDE you're using

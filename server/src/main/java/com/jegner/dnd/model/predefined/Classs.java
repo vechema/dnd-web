@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.jegner.dnd.model.Proficiency;
@@ -19,6 +20,8 @@ import com.jegner.dnd.utility.GameEntity;
 import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Data
 @Entity
@@ -59,6 +62,16 @@ public class Classs {
 	 */
 	@ElementCollection
 	private List<Integer> levelsOfImprovement;
+
+	@Transient
+	@Getter
+	@Setter
+	private static List<Classs> classes = new ArrayList<>();
+
+	public static Classs findClassByName(String name) {
+		return classes.stream().filter(classs -> classs.getGameEntity().getName().equalsIgnoreCase(name)).findFirst()
+				.get();
+	}
 
 	public Classs() {
 		savingThrowAbilityScores = new ArrayList<>();

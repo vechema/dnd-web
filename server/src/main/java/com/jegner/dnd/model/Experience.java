@@ -21,7 +21,6 @@ public class Experience {
 	}
 
 	public static int getLevel(int experiencePoints2) {
-
-		return 0;
+		return 1;
 	}
 }

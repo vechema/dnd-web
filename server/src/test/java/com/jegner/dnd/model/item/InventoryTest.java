@@ -101,14 +101,14 @@ public class InventoryTest {
 		character.equip(plateArmor);
 		character.equip(club);
 
-		assertThat(character.getArmor(), is(plateArmor));
+		assertThat(character.getEquippedArmor(), is(plateArmor));
 		assertThat(character.getWeapon(), is(club));
 
 		// Equip other armor and weapon
 		character.equip(splintArmor);
 		character.equip(mace);
 
-		assertThat(character.getArmor(), is(splintArmor));
+		assertThat(character.getEquippedArmor(), is(splintArmor));
 		assertThat(character.getWeapon(), is(mace));
 
 	}

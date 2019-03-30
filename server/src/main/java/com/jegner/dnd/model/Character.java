@@ -46,7 +46,6 @@ public class Character {
 
 	@OneToOne(cascade = CascadeType.ALL)
 	private GameEntity gameEntity;
-	private String Player;
 	private boolean isMale;
 	private int weightInLbs;
 	private int heightInInches;
@@ -184,8 +183,11 @@ public class Character {
 		return inventory.isArmorEquipped();
 	}
 
-	public Object getArmor() {
-		return inventory.getEquippedArmor();
+	public Object getEquippedArmor() {
+		if (isArmorEquipped()) {
+			return inventory.getEquippedArmor();
+		}
+		return null;
 	}
 
 	public boolean isWeaponEquipped() {
@@ -193,7 +195,10 @@ public class Character {
 	}
 
 	public Object getWeapon() {
-		return inventory.getEquippedWeapon();
+		if (isWeaponEquipped()) {
+			return inventory.getEquippedWeapon();
+		}
+		return null;
 	}
 
 	public void addAbilityScore(AbilityScore abilityScore, int value) {
@@ -212,6 +217,18 @@ public class Character {
 
 		// TODO Need to remove old level modifys
 		modSys.addModify(this.classs.getLevelingTable().getLevel(currentLevel).getProficiencyBonus());
+	}
+
+	public void setName(String name) {
+		this.gameEntity.setName(name);
+	}
+
+	public void setClasssByName(String name) {
+		this.classs = Classs.findClassByName(name);
+	}
+
+	public void setRaceByName(String name) {
+		this.race = Race.findRaceByName(name);
 	}
 
 	/**

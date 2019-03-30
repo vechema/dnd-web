@@ -61,6 +61,9 @@ public class Inventory {
 	}
 
 	public Armor getEquippedArmor() {
+		if (!isArmorEquipped()) {
+			return null;
+		}
 		return (Armor) items.stream().filter(item -> item.getItem() instanceof Armor && item.isEquipped()).findFirst()
 				.get().getItem();
 	}
@@ -70,6 +73,9 @@ public class Inventory {
 	}
 
 	public Weapon getEquippedWeapon() {
+		if (!isWeaponEquipped()) {
+			return null;
+		}
 		return (Weapon) items.stream().filter(item -> item.getItem() instanceof Weapon && item.isEquipped()).findFirst()
 				.get().getItem();
 	}

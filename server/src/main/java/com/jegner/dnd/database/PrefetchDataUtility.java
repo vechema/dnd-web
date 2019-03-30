@@ -153,9 +153,12 @@ public class PrefetchDataUtility {
 				spellRepo);
 		Spell.setSpells(spells);
 		// Race (Trait, Weapon, Language, Ability Score)
-		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Race.json"), Race[].class, raceRepo);
+		List<Race> races = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Race.json"), Race[].class, raceRepo);
+		Race.setRaces(races);
 		// Classs (Ability Score, Skill, Weapon, Item)
-		generatePredefineds(new File(PREDEFINED_JSON_PATH + "Classs.json"), Classs[].class, classsRepo);
+		List<Classs> classes = generatePredefineds(new File(PREDEFINED_JSON_PATH + "Classs.json"), Classs[].class,
+				classsRepo);
+		Classs.setClasses(classes);
 
 	}
 

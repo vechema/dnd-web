@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.jegner.dnd.model.Attack;
@@ -24,6 +25,8 @@ import com.jegner.dnd.utility.GameEntity;
 import com.jegner.dnd.utility.Predefined;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Data
 @Entity
@@ -49,6 +52,15 @@ public class Race {
 	private Proficiency proficiency;
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Choice> choices;
+
+	@Transient
+	@Getter
+	@Setter
+	private static List<Race> races = new ArrayList<>();
+
+	public static Race findRaceByName(String name) {
+		return races.stream().filter(race -> race.getGameEntity().getName().equalsIgnoreCase(name)).findFirst().get();
+	}
 
 	public Race() {
 		abilityScoreIncreases = new HashMap<>();
