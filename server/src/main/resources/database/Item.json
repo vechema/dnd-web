@@ -1277,5 +1277,12 @@
 			"description" : "I just made this up for the level 1 spell Alarm",
 			"referenceURL" : "https://www.dnd-spells.com/spell/alarm-ritual"
 		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Diamond",
+			"description" : "I just made this up for the level 1 spell Chromatic Orb",
+			"referenceURL" : "https://www.dnd-spells.com/spell/chromatic-orb"
+		}
 	}
 ]
