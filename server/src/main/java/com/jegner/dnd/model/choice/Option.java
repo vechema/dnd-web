@@ -37,7 +37,7 @@ public class Option {
 	@OneToOne(cascade = CascadeType.ALL)
 	private GameEntity gameEntity;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.MERGE)
 	private Trait trait;
 	@OneToOne(cascade = CascadeType.ALL)
 	private Attack attack;
@@ -70,7 +70,12 @@ public class Option {
 	}
 
 	@JsonSetter("spell")
-	public void setSpellsFromString(String spellString) {
+	public void setSpellFromString(String spellString) {
 		spell = Spell.findSpellByName(spellString);
+	}
+
+	@JsonSetter("trait")
+	public void setTraitFromString(String traitString) {
+		trait = Trait.findCommonTraitByName(traitString);
 	}
 }
