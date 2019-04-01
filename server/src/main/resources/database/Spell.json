@@ -2012,7 +2012,6 @@
 			"amount" : 1,
 			"timeUnit" : "ACTION"
 		},
-		"save" : "Dexterity",
 		"defaultSpellLevel" : 1,
 		"levelsWithPlayer" : [],
 		"canBeUsedAtHigherSpellSlot" : "false",
@@ -2020,14 +2019,155 @@
 			"amount" : 10,
 			"timeUnit" : "MINUTE"
 		},
-		"areaOfEffect" : "5 ft",
+		"areaOfEffect" : "30 ft radius of self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Detect Magic",
+			"description" : "For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.\nThe spell can penetrate most barriers, but is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/detect-magic-ritual"
+		},
+		"schoolOfMagic" : "DIVINATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "true",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 10,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "30 ft radius from self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Detect Poison and Disease",
+			"description" : "For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you. You also identify the kind of poison, poisonous creature, or disease in each case. Requires a yew leaf.\nThe spell can penetrate most barriers, but is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/detect-poison-and-disease"
+		},
+		"schoolOfMagic" : "DIVINATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"components" : ["yew leaf"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 10,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "30 ft radius from self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Disguise Self",
+			"description" : "You make yourself – including your clothing, armor, weapons, and other belongings on your person – look different until the spell ends or until you use your action to dismiss it.\nYou can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can’t change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.\nThe changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of som eone who reaches out to touch you would bump into you while it was seemingly still in midair. To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/disguise-self"
+		},
+		"schoolOfMagic" : "ILLUSION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "HOUR"
+		},
+		"areaOfEffect" : "Self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Dissonant Whispers",
+			"description" : " You whisper a discordant melody that only one creature of your choice within range can hear, wracking it with terrible pain.\nThe target must make a Wisdom saving throw. On a failed save, it takes 3d6 psychic damage and must immediately use its reaction , if available, to move as far as its speed allows away from you. The creature doesn’t move into obviously dangerous ground, such as a fire or a pit. On a successful save, the target takes half as much damage and doesn’t have to move away. A deafened creature automatically succeeds on the save. \nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/dissonant-whispers"
+		},
+		"schoolOfMagic" : "ENCHANTMENT",
+		"spellComponents" : ["VERBAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Wisdom",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
 		"attack" : {
 			"normalRange" : "60",
 			"maxRange" : "60",
-			"damageType" : "ACID",
+			"damageType" : "PSYCHIC",
+			"damage" : {
+				"numDie" : 3,
+				"sidesOnDie" : 6
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Divine Favor",
+			"description" : "Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal and extra 1d4 radiant damage on a hit.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/divine-favor"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "BONUS_ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damageType" : "RADIANT",
 			"damage" : {
 				"numDie" : 1,
-				"sidesOnDie" : 6
+				"sidesOnDie" : 4
 			}
 		}
 	}

@@ -1284,5 +1284,12 @@
 			"description" : "I just made this up for the level 1 spell Chromatic Orb",
 			"referenceURL" : "https://www.dnd-spells.com/spell/chromatic-orb"
 		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Yew Leaf",
+			"description" : "I just made this up for the level 1 spell Detect Poison and Disease",
+			"referenceURL" : "https://www.dnd-spells.com/spell/detect-poison-and-disease"
+		}
 	}
 ]
