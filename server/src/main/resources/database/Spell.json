@@ -2170,5 +2170,126 @@
 				"sidesOnDie" : 4
 			}
 		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Earth Tremor",
+			"description" : "You cause a tremor in the ground in a 10-foot radius. Each creature other than you in that area must make a Dexterity saving throw. On a failed save, a creature takes 1d6 bludgeoning damage and is knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/earth-tremor"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "10 ft radius from self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damageType" : "BLUDGEONING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Ensnaring Strike",
+			"description" : " The next time you hit a creature with a weapon attack before this spell ends, a writhing mass of thorny vines appears at the point of impact, and the target must succeed on a Strength saving throw or be restrained by the magical vines until the spell ends. A Large or larger creature has advantage on this saving throw. If the target succeeds on the save, the vines shrivel away.\nWhile restrained by this spell, the target takes 1d6 piercing damage at the start of each of its turns. A creature restrained by the vines or one that can touch the creature can use its action to make a Strength check against your spell save DC. On a success, the target is freed. \nAt higher level\nIf you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/ensnaring-strike"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "BONUS_ACTION"
+		},
+		"save" : "Strength",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "Self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damageType" : "PIERCING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Entangle",
+			"description" : "Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the duration, these plants turn the ground in the area into difficult terrain.\nA creature in the area when you cast the spell must succeed on a Strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.\nWhen the spell ends, the conjured plants wilt away.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/entangle"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Strength",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "20 ft square",
+		"attack" : {
+			"normalRange" : "90",
+			"maxRange" : "90"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Expeditious Retreat",
+			"description" : "This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/expeditious-retreat"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "BONUS_ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 10,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
 	}
 ]
