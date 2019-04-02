@@ -2,6 +2,7 @@ package com.jegner.dnd.controller;
 
 import java.util.Arrays;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,6 +17,7 @@ import com.jegner.dnd.model.predefined.Race;
 import com.jegner.dnd.utility.GameEntity;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class CharacterController {
 
 	@RequestMapping("/char")

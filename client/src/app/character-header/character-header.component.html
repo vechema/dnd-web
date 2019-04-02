@@ -1,0 +1,91 @@
+<div class="header">
+  <div class="two-column character">
+
+    <div class="character-title">
+        <h2>{{character.gameEntity.name}}</h2>
+        <h3>{{character.race.gameEntity.name}} {{character.classs.gameEntity.name}} / Level {{character.experience.level}}</h3>
+        <h4>{{character.background}}</h4>
+    </div>
+
+    <div class="stats">
+        <div class="statBox" id="armorClass">
+          <h4>AC</h4>
+          <h2>{{character.modSys.characterAC}}</h2>
+        </div>
+        <div class="statBox" id="hitPoints">
+            <h4>Hit Points</h4>
+            <h2>{{character.modSys.characterHP}}/157</h2>
+        </div>
+        <div class="statBox" id="hitDie">
+            <h4>Hit Die</h4>
+            <h2>{{character.classs.hitDice}}/{{character.classs.hitDice}}</h2>
+        </div>
+        <div class="statBox" id="initiative">
+            <h4>Initiave</h4>
+            <h2>+{{character.initiative}}</h2>
+        </div>
+    </div>
+    
+  </div>
+
+
+  <div class="levelBar three-column">
+      <h4>LVL {{character.experience.level}}</h4>
+      <progress id="level" max="150000" value="{{character.experience.experiencePoints}}">{{character.experience.experiencePoints}}</progress>
+      <h4>LVL {{character.experience.level +1}}</h4>
+  </div>
+
+  <h4 id="progressIndicator">{{character.experience.experiencePoints}}/150000 XP</h4>
+
+  <div class="restButtons">
+    <div class="buttonGroup">
+        <button>Short Rest</button>
+        <button>Long Rest</button>
+    </div>
+  </div>
+</div>
+
+<div class="quickStatBar mat-elevation-z3">
+  <div class="quickStat">
+    <button class="close"><mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
+    </button>
+    <h2>21</h2>
+    <h4>Armour Class</h4>
+  </div>
+  <div class="quickStat">
+      <button class="close"><mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
+      </button>
+      <h2>+5</h2>
+      <h4>Initiative</h4>
+  </div>
+  <div class="quickStat">
+      <button class="close"><mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
+      </button>
+      <h2>30ft</h2>
+      <h4>Speed</h4>
+  </div>
+  <div class="quickStat">
+    <button class="close"><mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
+    </button>
+    <h2>+17</h2>
+    <h4>Passive Perception</h4>
+  </div>
+  <div class="quickStat">
+    <button class="close"><mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
+    </button>
+    <h2>+5</h2>
+    <h4>Proficiency Bonus</h4>
+  </div>
+  <div class="quickStat">
+    <button class="close"><mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
+    </button>
+    <h2>30ft</h2>
+    <h4>Vision</h4>
+  </div>
+
+  <button class="add"><mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon></button>
+</div>
+
+<div *ngFor="let character of characters">
+  {{char.gameEntity.name}}
+</div>
