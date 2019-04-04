@@ -2319,5 +2319,112 @@
 			"normalRange" : "60",
 			"maxRange" : "60"
 		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "False Life",
+			"description" : " Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 temporary hit points for the duration. Requires a small amount of alcohol or distilled spirits\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional temporary hit points for each slot level above 1st. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/false-life"
+		},
+		"schoolOfMagic" : "NECROMANCY",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "HOUR"
+		},
+		"areaOfEffect" : "Self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Feather Fall",
+			"description" : "Reaction: When you or a creature within 60 feet of you falls. Requires a small feather or piece of down\nChoose up to five falling creatures within range. A falling creature’s rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/feather-fall"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["VERBAL", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "REACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "5 creatures within range",
+		"attack" : {
+			"normalRange" : "60",
+			"maxRange" : "60"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Find Familiar",
+			"description" : "You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk. lizard, octopus, owl, poisonous snake, fish (quipper), rat, raven, sea horse, spider, or weasel. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey or fiend (your choice) instead of a beast. Requires 10 gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier\nYour familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can’t attack, but it can take other actions as normal.\nWhen the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.\nWhile your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar’s eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses.\nAs an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits you summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you.\nYou can’t have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature.\nFinally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your attack modifier for the roll. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/find-familiar-ritual"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "true",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "HOUR"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "10",
+			"maxRange" : "10"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Fog Cloud",
+			"description" : " You create a 20-foot-radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured, It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it.\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, the radius of the fog increases by 20 feet for each slot level above 1st. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/fog-cloud"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "HOUR"
+		},
+		"areaOfEffect" : "20 ft radius",
+		"attack" : {
+			"normalRange" : "120",
+			"maxRange" : "120"
+		}
 	}
 ]
