@@ -2426,5 +2426,91 @@
 			"normalRange" : "120",
 			"maxRange" : "120"
 		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Goodberry",
+			"description" : "Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for one day. Requires a sprig of mistletoe\nThe berries lose their potency if they have not been consumed within 24 hours of the casting of this spell.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/goodberry"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Grease",
+			"description" : "Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into difficult terrain for the duration. Requires a bit of pork rind or butter\nWhen the grease appears, each creature standing in its area must succeed on a Dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall prone.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/grease"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "10 ft square",
+		"attack" : {
+			"normalRange" : "60",
+			"maxRange" : "60"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Guiding Bolt",
+			"description" : " A flash of light streaks toward a creature of your choice within range.\nMake a ranged spell attack against the target. On a hit, the target takes 4d6 radiant damage, and the next attack roll made against this target before the end of your next turn has advantage, thanks to the mystical dim light glittering on the target until then. \nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/guiding-bolt"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "ROUND"
+		},
+		"attack" : {
+			"normalRange" : "120",
+			"maxRange" : "120",
+			"damageType" : "RADIANT",
+			"damage" : {
+				"numDie" : 4,
+				"sidesOnDie" : 6
+			}
+		}
 	}
 ]
