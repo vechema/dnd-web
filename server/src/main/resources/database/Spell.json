@@ -2377,7 +2377,7 @@
 	{
 		"gameEntity" : {
 			"name" : "Find Familiar",
-			"description" : "You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk. lizard, octopus, owl, poisonous snake, fish (quipper), rat, raven, sea horse, spider, or weasel. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey or fiend (your choice) instead of a beast. Requires 10 gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier\nYour familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can’t attack, but it can take other actions as normal.\nWhen the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.\nWhile your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar’s eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses.\nAs an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits you summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you.\nYou can’t have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature.\nFinally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your attack modifier for the roll. ",
+			"description" : "You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk. lizard, octopus, owl, poisonous snake, fish (quipper), rat, raven, sea horse, spider, or weasel. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey or fiend (your choice) instead of a beast. Requires 10 gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier\nYour familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can’t attack, but it can take other actions as normal.\nWhen the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.\nWhile your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar’s eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses.\nAs an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits you summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you.\nYou can’t have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature.\nFinally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your attack modifier for the roll.",
 			"referenceURL" : "https://www.dnd-spells.com/spell/find-familiar-ritual"
 		},
 		"schoolOfMagic" : "CONJURATION",
@@ -2576,7 +2576,7 @@
 		"gameEntity" : {
 			"name" : "Hellish Rebuke",
 			"description" : "Reaction: you are being damaged by a creature within 60 feet of you that you can see.\nYou point your finger, and the creature that damaged you is momentarily surrounded by hellish flames. The creature must make a Dexterity saving throw. It takes 2d10 fire damage on a failed save, or half as much damage on a successful one.\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st. ",
-			"referenceURL" : ""
+			"referenceURL" : "https://www.dnd-spells.com/spell/hellish-rebuke"
 		},
 		"schoolOfMagic" : "EVOCATION",
 		"spellComponents" : ["VERBAL", "SOMATIC"],
@@ -2601,6 +2601,94 @@
 			"damage" : {
 				"numDie" : 2,
 				"sidesOnDie" : 10
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Heroism",
+			"description" : " A willing creature you touch is imbued with bravery.\nUntil the spell ends, the creature is immune to being frightened and gains temporary hit points equal to your spellcasting ability modifier at the start of each of its turns. When the spell ends, the target loses any remaining temporary hit points from this spell.\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/heroism"
+		},
+		"schoolOfMagic" : "ENCHANTMENT",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Hex",
+			"description" : "You place a curse on a creature that you can see within range. Until the spell ends, you deal an extra 1d6 necrotic damage to the target whenever you hit it with an attack. Also, choose one ability when you cast the spell. The target has disadvantage on ability checks made with the chosen ability. Requires the petrified eye of a newt\nIf the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to curse a new creature.\nA remove curse cast on the target ends this spell early.\nAt higher level\nWhen you cast this spell using a spell slot of 3rd or 4th level, you can maintain your concentration on the spell for up to 8 hours.\nWhen you use a spell slot of 5th level or higher, you can maintain your concentration on the spell for up to 24 hours. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/hex"
+		},
+		"schoolOfMagic" : "ENCHANTMENT",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "BONUS_ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "HOUR"
+		},
+		"attack" : {
+			"normalRange" : "90",
+			"maxRange" : "90",
+			"damageType" : "NECROTIC",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Hunter's Mark",
+			"description" : " You choose a creature you can see within range and mystically mark it as your quarry.\nUntil the spell ends, you deal an extra 1d6 damage to the target whenever you hit it with a weapon attack, and you have advantage on any Wisdom (Perception) or Wisdom (Survival) check you make to find it. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to mark a new creature.\nAt higher level\nWhen you cast this spell using a spell slot of 3rd or 4th level, you can maintain your concentration on the spell for up to 8 hours.\nWhen you use a spell slot of 5th level or higher, you can maintain your concentration on the spell for up to 24 hours. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/hunters-mark"
+		},
+		"schoolOfMagic" : "DIVINATION",
+		"spellComponents" : ["VERBAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "BONUS_ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "HOUR"
+		},
+		"attack" : {
+			"normalRange" : "90",
+			"maxRange" : "90",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
 			}
 		}
 	}

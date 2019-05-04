@@ -24,7 +24,7 @@ public class GameEntity {
 	@Id
 	private Long id;
 	private String name;
-	@Column(length = 1500)
+	@Column(length = 2500)
 	private String description;
 	private URL referenceURL;
 
