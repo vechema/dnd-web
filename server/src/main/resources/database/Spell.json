@@ -2751,5 +2751,232 @@
 			"normalRange" : "0",
 			"maxRange" : "0"
 		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Illusory Script",
+			"description" : "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration. Requires a lead-based ink worth at least 10 gp, which the spell consumes\nTo you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know.\nShould the spell be dispelled, the original script and the illusion both disappear.\nA creature with truesight can read the hidden message.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/illusory-script-ritual"
+		},
+		"schoolOfMagic" : "ILLUSION",
+		"spellComponents" : ["SOMATIC", "MATERIAL"],
+		"ritual" : "true",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 10,
+			"timeUnit" : "DAY"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Inflict Wounds",
+			"description" : " Make a melee spell attack against a creature you can reach. On a hit, the target takes 3d10 necrotic damage.\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/inflict-wounds"
+		},
+		"schoolOfMagic" : "NECROMANCY",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damageType" : "NECROTIC",
+			"damage" : {
+				"numDie" : 3,
+				"sidesOnDie" : 10
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Jump",
+			"description" : "You touch a creature. The creature’s jump distance is tripled until the spell ends. Requires a grasshopper's hind leg",
+			"referenceURL" : "https://www.dnd-spells.com/spell/jump"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Longstrider",
+			"description" : " You touch a creature. The target’s speed increases by 10 feet until the spell ends. Requires a pinch of dirt\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/longstrider"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "HOUR"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Mage Armor",
+			"description" : "You touch a willing creature who isn’t wearing armor, and a protective magical force surrounds it until the spell ends. The target’s base AC becomes 13 + its Dexterity modifier. The spell ends it if the target dons armor or if you dismiss the spell as an action. Requires a piece of cured leather",
+			"referenceURL" : "https://www.dnd-spells.com/spell/mage-armor"
+		},
+		"schoolOfMagic" : "ABJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 8,
+			"timeUnit" : "HOUR"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Magic Missile",
+			"description" : " You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously and you can direct them to hit one creature or several.\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/magic-missile"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"attack" : {
+			"normalRange" : "120",
+			"maxRange" : "120",
+			"damageType" : "FORCE",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 4,
+				"bonus" : 1
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Protection from Evil and Good",
+			"description" : "Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead. Requires holy water or powdered silver and iron, which the spell consumes\nThe protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can’t be charmed, frightened, or possessed by them. If the target is already charmed, frightened, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/protection-from-evil-and-good"
+		},
+		"schoolOfMagic" : "ABJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 10,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Purify Food and Drink",
+			"description" : "All nonmagical food and drink within a 5-foot-radius sphere centered on a point of your choice within range is purified and rendered free of poison and disease.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/purify-food-and-drink-ritual"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "true",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "5 ft radius sphere",
+		"attack" : {
+			"normalRange" : "10",
+			"maxRange" : "10"
+		}
 	}
 ]
