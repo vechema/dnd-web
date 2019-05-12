@@ -3037,5 +3037,448 @@
 			"normalRange" : "30",
 			"maxRange" : "30"
 		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Searing Smite",
+			"description" : " The next time you hit a creature with a melee weapon attack during the spell’s duration, your weapon flares with white-hot intensitity, and the attack deals an extra 1d6 fire damage to the target and causes the target to ignite in flames.\nAt the start of each of its turns until the spell ends, the target must make a Constitution saving throw. On a failed save, it takes 1d6 fire damage. On a successful save, the spells ends. If the target or a creature within 5 feet of it uses an action to put out the flames, or if some other effect douses the flames (such as the target being submerged in water), the spell ends.\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, the initial extra damage dealt by the attack increases by 1d6 for each slot ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/searing-smite"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "BONUS_ACTION"
+		},
+		"save" : "Constitution",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damageType" : "FIRE",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Shield",
+			"description" : "Reaction trigger: You are hit by an attack or targeted by the magic missile spell\nAn invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/shield"
+		},
+		"schoolOfMagic" : "ABJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "REACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "ROUND"
+		},
+		"areaOfEffect" : "Self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Shield of Faith",
+			"description" : "A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration. Requires a small parchment with a bit of holy text written on it",
+			"referenceURL" : "https://www.dnd-spells.com/spell/shield-of-faith"
+		},
+		"schoolOfMagic" : "ABJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "BONUS_ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 10,
+			"timeUnit" : "MINUTE"
+		},
+		"attack" : {
+			"normalRange" : "60",
+			"maxRange" : "60"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Silent Image",
+			"description" : "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube. The image appears at a spot within range and lasts for the duration. The image is purely visual; it isn’t accompanied by sound, smell, or other sensory effects. Requires a bit of fleece.\nYou can use your action to cause the image to move to any spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking.\nPhysical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/silent-image"
+		},
+		"schoolOfMagic" : "ILLUSION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 10,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "15 ft cube",
+		"attack" : {
+			"normalRange" : "60",
+			"maxRange" : "60"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Sleep",
+			"description" : " This spell sends creatures into a magical slumber. Roll 5d8, the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring unconscious creatures). Requires a pinch of fine sand, rose petals, or a cricket\nStarting with the creature that has the lowest current hit points, each creature affected by this spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature’s hit points from the total before moving on to the creature with the next lowest hit points. A creature’s hit points must be equal to or less than the remaining total for that creature to be affected.\nUndead and creatures immune to being charmed aren’t affected by this spell.\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d8 for each slot level above 1st. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/sleep"
+		},
+		"schoolOfMagic" : "ENCHANTMENT",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "20 ft radius",
+		"attack" : {
+			"normalRange" : "90",
+			"maxRange" : "90",
+			"damage" : {
+				"numDie" : 5,
+				"sidesOnDie" : 8
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Snare",
+			"description" : "As you cast this spell, you use the rope to create a circle with a 5-foot radius on the ground or the floor. When you finish casting, the rope disappears and the circle becomes a magic trap. Requires 25 feet of rope, which the spell consumes.\nThis trap is nearly invisible, requiring a successful Intelligence (Investigation) check against your spell save DC to be discerned.\nThe trap triggers when a Small, Medium, or Large creature moves onto the ground or the floor in the spell’s radius. That creature must succeed on a Dexterity saving throw or be magically hoisted into the air, leaving it hanging upside down 3 feet above the ground or the floor. The creature is restrained there until the spell ends.\nA restrained creature can make a Dexterity saving throw at the end of each of its turns, ending the effect on itself on a success. Alternatively, the creature or someone else who can reach it can use an action to make an Intelligence (Arcana) check against your spell save DC. On a success, the restrained effect ends.\nAfter the trap is triggered, the spell ends when no creature is restrained by it.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/snare"
+		},
+		"schoolOfMagic" : "ABJURATION",
+		"spellComponents" : ["SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 8,
+			"timeUnit" : "HOUR"
+		},
+		"areaOfEffect" : "Touch",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Speak with Animals",
+			"description" : "You gain the ability to comprehend and verbally communicate with beasts for the duration.\nThe knowledge and awareness of many beasts is limited by their intelligence, but at minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the DM’s discretion.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/speak-with-animals-ritual"
+		},
+		"schoolOfMagic" : "DIVINATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "true",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 10,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Tasha’s Hideous Laughter",
+			"description" : "A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it. The target must succeed on a Wisdom saving throw or fall prone, becoming incapacitated and unable to stand up for the duration. A creature with an Intelligence score of 4 or less isn’t affected. Requires tiny tarts and a feather that is waved in the air\nAt the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw ifit’s triggered by damage. On a success, the spell ends.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/tashas-hideous-laughter"
+		},
+		"schoolOfMagic" : "ENCHANTMENT",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Wisdom",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Tenser’s Floating Disk",
+			"description" : "This spell creates a circular, horizontal plane of force, 3 feet in diameter and 1 inch thick, that floats 3 feet above the ground in an unoccupied space of your choice that you can see within range. Requires a drop of mercury\nThe disk remains for the duration, and can hold up to 500 pounds. If more weight is placed on it, the spell ends, and everything on the disk falls to the ground.\nThe disk is immobile while you are within 20 feet of it. If you move more than 20 feet away from it, the disk follows you so that it remains within 20 feet of you. It can more across uneven terrain, up or down stairs, slopes and the like, but it can’t cross an elevation change of 10 feet or more. For example, the disk can’t move across a 10-foot-deep pit, nor could it leave such a pit if it was created at the bottom.\nIf you move more than 100 feet from the disk (typically because it can’t move around an obstacle to follow you), the spell ends.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/tensers-floating-disk-ritual"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "true",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "HOUR"
+		},
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Thunderous Smite",
+			"description" : "The first time you hit with a melee weapon attack during this spell’s duration, your weapon rings with thunder that is audible within 300 feet of you, and the attack deals an extra 2d6 thunder damage to the target. Additionally, if the target is a creature, it must succeed on a Strength saving throw or be pushed 10 feet away from you and knocked prone.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/thunderous-smite"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "BONUS_ACTION"
+		},
+		"save" : "Strength",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damageType" : "THUNDER",
+			"damage" : {
+				"numDie" : 2,
+				"sidesOnDie" : 6
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Thunderwave",
+			"description" : " A wave of thunderous force sweeps out from you.\nEach creature in a 15-foot cube originating from you must make a Constitution saving throw. On a failed save, a creature takes 2d8 thunder damage and is pushed 10 feet away from you. On a successful save, the creature takes half as much damage and isn’t pushed.\nIn addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell’s effect, and the spell emits a thunderous boom audible out to 300 feet.\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/thunderwave"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL", "SOMATIC"],
+		"ritual" : "false",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Constitution",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "INSTANTANEOUS"
+		},
+		"areaOfEffect" : "Self, 15 ft cube",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damageType" : "THUNDER",
+			"damage" : {
+				"numDie" : 2,
+				"sidesOnDie" : 8
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Unseen Servant",
+			"description" : "This spell creates an invisible, mindless, shapeless force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 hit point, and a Strength of 2, and it can’t attack. If it drops to 0 hit points, the spell ends. Requires a piece of string and a bit of wood\nOnce on each of your turns as a bonus action, you can mentally command the servant to move up to 15 feet and inteact with an object. The servant can perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wine. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command.\nIf you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/unseen-servant-ritual"
+		},
+		"schoolOfMagic" : "CONJURATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "true",
+		"requiresConcentration" : "false",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"save" : "Dexterity",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "HOUR"
+		},
+		"attack" : {
+			"normalRange" : "60",
+			"maxRange" : "60"
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Witch Bolt",
+			"description" : " A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Requires a twig from a tree that has been struck by lightning.\nMake a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell’s range or if it has total cover from you.\nAt higher level\nWhen you cast this spell using a spell slot of 2nd level or higher, the initial damage increases by 1d12 for each slot level above 1st. ",
+			"referenceURL" : "https://www.dnd-spells.com/spell/witch-bolt"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL", "SOMATIC", "MATERIAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "true",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"attack" : {
+			"normalRange" : "30",
+			"maxRange" : "30",
+			"damageType" : "LIGHTNING",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 12
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Wrathful Smite",
+			"description" : "The next time you hit with a melee weapon attack during this spell’s duration, your attack deals an extra 1d6 psychic damage.\nAdditionally, if the target is a creature, it must make a Wisdom saving throw or be frightened of you until the spell ends. As an action, the creature can make a Wisdom check against your spell save DC to steel its resolve and end this spell.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/wrathful-smite"
+		},
+		"schoolOfMagic" : "EVOCATION",
+		"spellComponents" : ["VERBAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "BONUS_ACTION"
+		},
+		"save" : "Wisdom",
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damageType" : "PSYCHIC",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 6
+			}
+		}
+	},
+	{
+		"gameEntity" : {
+			"name" : "Zephyr Strike",
+			"description" : "You move like the wind. Until the spell ends, your movement doesn’t provoke opportunity attacks.\nOnce before the spell ends, you can give yourself advantage on one weapon attack roll on your turn. That attack deals an extra 1d8 force damage on a hit. Whether you hit or miss, your walking speed increases by 30 feet until the end of that turn.",
+			"referenceURL" : "https://www.dnd-spells.com/spell/zephyr-strike"
+		},
+		"schoolOfMagic" : "TRANSMUTATION",
+		"spellComponents" : ["VERBAL"],
+		"ritual" : "false",
+		"requiresConcentration" : "true",
+		"castingTime" :  {
+			"amount" : 1,
+			"timeUnit" : "BONUS_ACTION"
+		},
+		"defaultSpellLevel" : 1,
+		"levelsWithPlayer" : [],
+		"canBeUsedAtHigherSpellSlot" : "false",
+		"duration" : {
+			"amount" : 1,
+			"timeUnit" : "MINUTE"
+		},
+		"areaOfEffect" : "Self",
+		"attack" : {
+			"normalRange" : "0",
+			"maxRange" : "0",
+			"damageType" : "FORCE",
+			"damage" : {
+				"numDie" : 1,
+				"sidesOnDie" : 8
+			}
+		}
 	}
 ]
