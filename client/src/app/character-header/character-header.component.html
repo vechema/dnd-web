@@ -45,46 +45,47 @@
   </div>
 </div>
 
-<div class="quickStatBar mat-elevation-z3">
+<div class="quickStatBar mat-elevation-z8">
   <div class="quickStat">
     <button class="close"><mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
     </button>
-    <h2>21</h2>
-    <h4>Armour Class</h4>
+    <h2 class="quickStatBlockNum">{{character.ac}}</h2>
+    <h4 class="quickStatBlockLabel">Armour Class</h4>
   </div>
   <div class="quickStat">
       <button class="close"><mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
       </button>
-      <h2>+5</h2>
-      <h4>Initiative</h4>
+      <h2 class="quickStatBlockNum">+{{character.initiative}}</h2>
+      <h4 class="quickStatBlockLabel">Initiative</h4>
   </div>
   <div class="quickStat">
       <button class="close"><mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
       </button>
-      <h2>30ft</h2>
-      <h4>Speed</h4>
+      <h2 class="quickStatBlockNum">{{character.speed}} ft</h2>
+      <h4 class="quickStatBlockLabel">Speed</h4>
   </div>
   <div class="quickStat">
     <button class="close"><mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
     </button>
-    <h2>+17</h2>
-    <h4>Passive Perception</h4>
+    <h2 class="quickStatBlockNum">+17</h2>
+    <h4 class="quickStatBlockLabel">Passive Perception</h4>
   </div>
   <div class="quickStat">
     <button class="close"><mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
     </button>
-    <h2>+5</h2>
-    <h4>Proficiency Bonus</h4>
+    <h2 class="quickStatBlockNum">+{{character.currentProficiencyBonus}}</h2>
+    <h4 class="quickStatBlockLabel">Proficiency Bonus</h4>
   </div>
   <div class="quickStat">
     <button class="close"><mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
     </button>
-    <h2>30ft</h2>
-    <h4>Vision</h4>
+    <h2 class="quickStatBlockNum">30ft</h2>
+    <h4 class="quickStatBlockLabel">Vision</h4>
   </div>
 
   <button class="add"><mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon></button>
 </div>
+
 
 <div *ngFor="let character of characters">
   {{char.gameEntity.name}}

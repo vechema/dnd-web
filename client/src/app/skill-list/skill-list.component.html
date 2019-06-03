@@ -1,5 +1,23 @@
-<h2>Skill List</h2>
+<div class="characterStats">
 
-<div *ngFor="let skill of skills">
-  {{skill.gameEntity.name}}
-</div>
+    <div class="menuBar mat-elevation-z3">
+      <ul class="sheetList">
+        <a href="#"><li><mat-icon aria-hidden="false" aria-label="Example home icon">all_out</mat-icon>Skills</li></a>
+        <a href="#"><li><mat-icon aria-hidden="false" aria-label="Example home icon">card_travel</mat-icon>Inventory</li></a>
+        <a href="#"><li><mat-icon aria-hidden="false" aria-label="Example home icon">colorize</mat-icon>Combat</li></a>
+        <a href="#"><li><mat-icon aria-hidden="false" aria-label="Example home icon">folder_open</mat-icon>Notes</li></a>
+      </ul>
+    </div>
+  
+    <div class="gridLayout">
+      <div class="sheetBlock mat-elevation-z3">
+          <h2>Skill List</h2>
+
+          <div *ngFor="let skill of skills">
+            {{skill.gameEntity.name}}
+          </div>
+      </div>
+      
+    </div>
+    
+  </div>

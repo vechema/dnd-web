@@ -26,3 +26,11 @@ h4 {
     font-weight: 200;
     font-style: italic;
 }
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
