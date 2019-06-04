@@ -1,11 +1,14 @@
 package com.jegner.dnd.model;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
+import com.jegner.dnd.model.predefined.AbilityScore;
 
 import lombok.Data;
 
@@ -21,6 +24,10 @@ public class CharacterAbility {
 	private Map<AbilityScore, Integer> abilityScores;
 	public static final int STARTING_SCORE_LOW = 8;
 	public static final int STARTING_SCORE_HIGH = 15;
+
+	public CharacterAbility() {
+		abilityScores = new HashMap<>();
+	}
 
 	public static int costToBuy(int desiredScore) {
 		if (desiredScore < STARTING_SCORE_LOW || desiredScore > STARTING_SCORE_HIGH) {
@@ -38,7 +45,7 @@ public class CharacterAbility {
 	}
 
 	public int calculateModifier(AbilityScore abilityScore) {
-		return calculateModifier(abilityScore);
+		return calculateModifier(abilityScores.get(abilityScore));
 	}
 
 	public static int calculateModifier(int abilityScore) {

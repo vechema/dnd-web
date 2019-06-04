@@ -5,7 +5,7 @@
 			"description": "Acrobatics is a skill used when trying to maintain balance or general nimbleness. Examples include walking across a thin or rickety bridge, running along a slippery surface, or moving out of the way of a projectile. It can also be used to break free of a grapple.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Acrobatics"
 		},
-		"abilityModifier": "DEXTERITY"
+		"abilityModifier": "Dexterity"
 	},
 	{
 		"gameEntity": {
@@ -13,7 +13,7 @@
 			"description": "When dealing with animals, Animal Handling is called upon to determine how well that goes. Situations that might call for it range from calming a spooked horse or agitated wild animal, or petting a creature you find. It may also be used when trying to figure out an animal's intentions and instincts.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Animal_Handling"
 		},
-		"abilityModifier": "WISDOM"
+		"abilityModifier": "Wisdom"
 	},
 	{
 		"gameEntity": {
@@ -21,7 +21,7 @@
 			"description": "Arcana is used for recalling magical lore. This can include but is not limited to deciphering spells or summoning circles, determining magic items, knowing the planes of existence and its inhabitants, reading eldritch symbols, and remembering or understanding magic rites or rituals.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Arcana"
 		},
-		"abilityModifier": "INTELLIGENCE"
+		"abilityModifier": "Intelligence"
 	},
 	{
 		"gameEntity": {
@@ -29,7 +29,7 @@
 			"description": "Athletics checks are used when determining feats of endurance, usually when difficulty is encountered while climbing, jumping, or swimming. Examples include trying to scale a steep or slippery cliff, trying to make an unusually long jump, and resisting the pull of tides or monsters while swimming. It's also used when grappling a creature, and can be used to break free of a grapple.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Athletics"
 		},
-		"abilityModifier": "STRENGTH"
+		"abilityModifier": "Strength"
 	},
 	{
 		"gameEntity": {
@@ -37,7 +37,7 @@
 			"description": "Deception is used when lying. This can be verbally or not. If you're attempting to convince others of something untrue, Deception is called for. Using disguises, hiding the truth of situations, conning someone, and other situations of ambiguous truth all use Deception.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Deception"
 		},
-		"abilityModifier": "CHARISMA"
+		"abilityModifier": "Charisma"
 	},
 	{
 		"gameEntity": {
@@ -45,7 +45,7 @@
 			"description": "Much like the name suggests, History is used when recalling lore of the past. This can include wars big or small, legendary people, ancient kingdoms or lost civilizations, and miscellaneous historical events. It's also occasionally used when the name of an obscure land is brought up and determining if anyone knows of it.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#History"
 		},
-		"abilityModifier": "INTELLIGENCE"
+		"abilityModifier": "Wisdom"
 	},
 	{
 		"gameEntity": {
@@ -53,7 +53,7 @@
 			"description": "Insight is a famous and frequently used skill. Primarily, it's used to determine if someone is being truthful or not. It can also be used to glean how suspicious someone may be, if they're hiding something even if not lying, and any other situation which calls for studying a creature's behaviors and what can be learned from it.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Insight"
 		},
-		"abilityModifier": "WISDOM"
+		"abilityModifier": "Wisdom"
 	},
 	{
 		"gameEntity": {
@@ -61,7 +61,7 @@
 			"description": "When trying to scare someone through threats, Intimidation is used. This can be through words alone, threatening to do something violent; or pulling out a dagger in a silent show. Intimidation can be applied to multiple situations, such as trying to get information out of a prisoner, convincing someone to reconsider their decisions, or showing off your lack of tolerance for nonsense.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Intimidation"
 		},
-		"abilityModifier": "CHARISMA"
+		"abilityModifier": "Charisma"
 	},
 	{
 		"gameEntity": {
@@ -69,7 +69,7 @@
 			"description": "Not to be confused with Perception, Investigation determines what you're able to deduce about your surroundings or what you're studying. You might be able to figure out what weapon killed someone, locations of hidden doors or objects, weak points in structure, or the important bit of knowledge in a large book of text.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Investigation"
 		},
-		"abilityModifier": "INTELLIGENCE"
+		"abilityModifier": "Intelligence"
 	},
 	{
 		"gameEntity": {
@@ -77,7 +77,7 @@
 			"description": "Medicine checks are mostly used to stabilize a dying creature. The DC to do so is 10. It can also be used to diagnose illnesses and occasionally used when determining how something died.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Medicine"
 		},
-		"abilityModifier": "WISDOM"
+		"abilityModifier": "Wisdom"
 	},
 	{
 		"gameEntity": {
@@ -85,7 +85,7 @@
 			"description": "Nature checks are used when remembering lore about nature. This includes terrain, plants and which might be safe to eat, animals and their behaviors, the weather, and natural cycles.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Nature"
 		},
-		"abilityModifier": "INTELLIGENCE"
+		"abilityModifier": "Intelligence"
 	},
 	{
 		"gameEntity": {
@@ -93,7 +93,7 @@
 			"description": "Perception is among the most well-known skills, and is frequently mistakenly used in place of investigation. It's used to determine how much a character notices of their surroundings. This can be intentional or not. It relies on basic senses rather than contemplative thought or deductions. Situations that might call for perception include standing guard, eavesdropping, and detecting hidden creatures or subtle sights.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Perception"
 		},
-		"abilityModifier": "WISDOM"
+		"abilityModifier": "Wisdom"
 	},
 	{
 		"gameEntity": {
@@ -101,7 +101,7 @@
 			"description": "Performance checks are used when entertaining audiences. This can range from playing music to telling stories. It can, on occasion, also replace Deception or Intimidation if the act is dramatic enough. It determines how well a character can exaggerate to impress others.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Performance"
 		},
-		"abilityModifier": "CHARISMA"
+		"abilityModifier": "Charisma"
 	},
 	{
 		"gameEntity": {
@@ -109,7 +109,7 @@
 			"description": "Persuasion is used when trying to convince others your way. It is distinct from Deception and Intimidation because it's not through lies or threats, but convincing arguments, tact, social graces, and good nature. It's used when acting in good, honest faith. Situations that call for persuasion include convincing guards to let you speak to a noble, settling disputes between warring groups, or inspiring crowds into action.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Persuasion"
 		},
-		"abilityModifier": "CHARISMA"
+		"abilityModifier": "Charisma"
 	},
 	{
 		"gameEntity": {
@@ -117,7 +117,7 @@
 			"description": "Religion is used when remembering religious lore, such as deities of your pantheon or not, rites and prayers, holy symbols, religious hierarchies and organizations, and even the practices of cults.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Religion"
 		},
-		"abilityModifier": "INTELLIGENCE"
+		"abilityModifier": "Intelligence"
 	},
 	{
 		"gameEntity": {
@@ -125,7 +125,7 @@
 			"description": "Commonly associated with thievery, Sleight of Hand is used in situations that requires careful hand work. While attempting to pickpocket someone does require it, other examples include hiding an object on your person or planting something on someone else. It may also be called upon when doing activities that require fine movements, such as carving.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Sleight_of_Hand"
 		},
-		"abilityModifier": "DEXTERITY"
+		"abilityModifier": "Dexterity"
 	},
 	{
 		"gameEntity": {
@@ -133,7 +133,7 @@
 			"description": "Stealth checks are among the most common. They are used to determine how sneaky a character is being. Situations that use Stealth include slipping past guards, escaping situations unnoticed, hiding from enemies, or sneaking up on someone for a surprise.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Stealth"
 		},
-		"abilityModifier": "DEXTERITY"
+		"abilityModifier": "Dexterity"
 	},
 	{
 		"gameEntity": {
@@ -141,6 +141,6 @@
 			"description": "Survival is a skill used for dealing with the wilds. Situations that can call for Survival include tracking footprints, foraging for food or water, navigating wilderness, identifying signs of creatures nearby or living in the area, predicting the weather, and avoiding hazards such as pits or quicksand.",
 			"referenceURL": "https://dnd5e.fandom.com/wiki/Skills#Survival"
 		},
-		"abilityModifier": "WISDOM"
+		"abilityModifier": "Wisdom"
 	}
 ]

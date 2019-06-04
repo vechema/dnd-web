@@ -22,9 +22,10 @@ import com.jegner.dnd.exception.ResourceNotFoundException;
 import com.jegner.dnd.model.predefined.Skill;
 
 @RestController
-@RequestMapping("/skill")
+@RequestMapping("/" + SkillController.ENTITY_PATH)
 @CrossOrigin(origins = "http://localhost:4200")
 public class SkillController {
+	static final String ENTITY_PATH = "skill";
 
 	@Autowired
 	SkillRepository skillRepo;

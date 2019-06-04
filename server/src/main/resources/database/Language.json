@@ -1,0 +1,155 @@
+[
+	{
+		"gameEntity": {
+			"name": "Common",
+			"description": "Typically spoken by humans",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "true",
+		"script" : "COMMON"
+	},
+	{
+		"gameEntity": {
+			"name": "Dwarvish",
+			"description": "Typically spoken by dwarves",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "true",
+		"script" : "DWARVISH"
+	},
+	{
+		"gameEntity": {
+			"name": "Elvish",
+			"description": "Typically spoken by elves",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "true",
+		"script" : "ELVISH"
+	},
+	{
+		"gameEntity": {
+			"name": "Giant",
+			"description": "Typically spoken by ogres and giants",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "true",
+		"script" : "DWARVISH"
+	},
+	{
+		"gameEntity": {
+			"name": "Gnomish",
+			"description": "Typically spoken by gnomes",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "true",
+		"script" : "DWARVISH"
+	},
+	{
+		"gameEntity": {
+			"name": "Goblin",
+			"description": "Typically spoken by goblinoids",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "true",
+		"script" : "DWARVISH"
+	},
+	{
+		"gameEntity": {
+			"name": "Halfling",
+			"description": "Typically spoken by halflings",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "true",
+		"script" : "COMMON"
+	},
+	{
+		"gameEntity": {
+			"name": "Orc",
+			"description": "Typically spoken by orcs",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "true",
+		"script" : "DWARVISH"
+	},
+	{
+		"gameEntity": {
+			"name": "Abyssal",
+			"description": "Typically spoken by demons",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "false",
+		"script" : "INFERNAL"
+	},
+	{
+		"gameEntity": {
+			"name": "Celestial",
+			"description": "Typically spoken by celestials",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "false",
+		"script" : "CELESTIAL"
+	},
+	{
+		"gameEntity": {
+			"name": "Draconic",
+			"description": "Typically spoken by dragons and dragonborn",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "false",
+		"script" : "DRACONIC"
+	},
+	{
+		"gameEntity": {
+			"name": "Deep Speech",
+			"description": "Typically spoken by mind flayers and beholders",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "false",
+		"script" : "NONE"
+	},
+	{
+		"gameEntity": {
+			"name": "Infernal",
+			"description": "Typically spoken by devils",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "false",
+		"script" : "INFERNAL"
+	},
+	{
+		"gameEntity": {
+			"name": "Primordial",
+			"description": "Typically spoken by elementals",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "false",
+		"script" : "DWARVISH"
+	},
+	{
+		"gameEntity": {
+			"name": "Sylvan",
+			"description": "Typically spoken by fey",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "false",
+		"script" : "ELVISH"
+	},
+	{
+		"gameEntity": {
+			"name": "Undercommon",
+			"description": "Typically spoken by underdark traders",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "false",
+		"script" : "ELVISH"
+	},
+	{
+		"gameEntity": {
+			"name": "Druidic",
+			"description": "Typically spoken by druids",
+			"referenceURL": "https://dnd5e.fandom.com/wiki/Languages"
+		},
+		"standard": "false",
+		"script" : "NONE"
+	}
+]

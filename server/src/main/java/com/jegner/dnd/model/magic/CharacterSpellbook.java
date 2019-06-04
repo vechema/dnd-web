@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-import com.jegner.dnd.model.AbilityScore;
+import com.jegner.dnd.model.predefined.AbilityScore;
 
 import lombok.Data;
 

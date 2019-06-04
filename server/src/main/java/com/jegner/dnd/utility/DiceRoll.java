@@ -18,10 +18,18 @@ public class DiceRoll {
 	private int numDie;
 	private int sidesOnDie;
 	private int bonus;
+	private int multiplier;
 
-	public int getDamage() {
+	public DiceRoll() {
+		numDie = 1;
+		sidesOnDie = 1;
+		bonus = 0;
+		multiplier = 1;
+	}
 
-		return IntStream.range(0, this.numDie).map(i -> (int) (Math.random() * this.sidesOnDie) + 1 + this.bonus).sum();
+	public int getRoll() {
+		return IntStream.range(0, this.numDie)
+				.map(i -> ((int) (Math.random() * this.sidesOnDie) + 1 + this.bonus) * this.multiplier).sum();
 	}
 
 	@Override

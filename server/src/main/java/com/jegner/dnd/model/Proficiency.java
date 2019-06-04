@@ -1,5 +1,6 @@
 package com.jegner.dnd.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.ElementCollection;
@@ -8,8 +9,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonSetter;
 import com.jegner.dnd.model.item.EquipmentType;
 import com.jegner.dnd.model.item.Item;
+import com.jegner.dnd.model.predefined.AbilityScore;
 import com.jegner.dnd.model.predefined.Skill;
 
 import lombok.Data;
@@ -22,11 +25,26 @@ public class Proficiency {
 	@GeneratedValue
 	private long id;
 	@OneToMany
-	private List<Item> items; // tools
+	private List<Item> items; // tools, weapon
 	@OneToMany
 	private List<AbilityScore> abilityScores;
 	@OneToMany
 	private List<Skill> skills;
 	@ElementCollection
 	private List<EquipmentType> combatProficiencies;
+
+	public Proficiency() {
+		items = new ArrayList<>();
+		skills = new ArrayList<>();
+	}
+
+	@JsonSetter("items")
+	public void setItemsFromString(List<String> itemStrings) {
+		itemStrings.stream().forEach(itemString -> items.add(Item.findItemByName(itemString)));
+	}
+
+	@JsonSetter("skills")
+	public void setSkillsFromString(List<String> skillsString) {
+		skillsString.stream().forEach(skillString -> skills.add(Skill.findSkillByName(skillString)));
+	}
 }
