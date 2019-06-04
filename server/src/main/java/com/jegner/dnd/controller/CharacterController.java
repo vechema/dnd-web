@@ -79,6 +79,24 @@ public class CharacterController {
 
 	@RequestMapping("/")
 	public String index() {
-		return "New phone, who dis?";
+		StringBuilder result = new StringBuilder();
+		result.append("All endpoints support GET, PUT, POST, DELETE by ID as well as GET and DELETE all");
+		result.append("<ul>");
+		result.append("<li><a href=\"/armor\">Armors</a></li>");
+		result.append("<li><a href=\"/char\">Sample Character</a></li>");
+		result.append("<li><a href=\"/classs\">Classes</a></li>");
+		result.append("<li><a href=\"/container\">Items that are containers</a></li>");
+		result.append("<li><a href=\"/equipmentPack\">Equipment Pack items</a></li>");
+		result.append("<li><a href=\"/entity\">Game Entities, not really useful by itself</a></li>");
+		result.append("<li><a href=\"/item\">ALL items</a></li>");
+		result.append("<li><a href=\"/language\">Languages</a></li>");
+		result.append("<li><a href=\"/race\">Races</a></li>");
+		result.append("<li><a href=\"/skill\">Skills</a></li>");
+		result.append("<li><a href=\"/spell\">Spells</a></li>");
+		result.append("<li><a href=\"/trait\">Traits</a></li>");
+		result.append("<li><a href=\"/weapon\">Weapons</a></li>");
+		result.append("<li><a href=\"/weaponProperty\">Weapon Properties, not really useful by itself</a></li>");
+		result.append("</ul>");
+		return result.toString();
 	}
 }
