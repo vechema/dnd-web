@@ -120,6 +120,7 @@ progress[value]::-webkit-progress-value {
     background-color: white;
     padding: 8px 0;
     justify-content: center;
+    align-items: center;
 }
 
 .quickStat {
@@ -142,11 +143,39 @@ progress[value]::-webkit-progress-value {
 }
 
 .close {
-    display: flex;
+    display: block;
     margin-left: auto;
+    position: relative;
+    border-radius: 50%;
+    height: 26px;
+    width: 26px;
+    left: 8px;
+    top: -8px;
+    background-color: #83F7E5;
+    border: none;
+}
+
+.close>mat-icon {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -11px;
 }
 
 .menuBar {
     padding: 50px 0px;
     background-color: grey;
+}
+
+.add {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    background-color: #83F7E5;
+    border: none;
 }
