@@ -1,0 +1,26 @@
+.characterStats {
+    display: grid;
+    grid-template-columns: 120px auto;
+}
+
+.sheetBlock {
+    margin: 50px;
+}
+
+.sheetList {
+    padding: 8px;
+}
+
+.sheetList>a>li {
+    font-family: 'Roboto';
+    font-style: italic;
+    color: #2C2E3B;
+    font-weight: 100;
+    align-items: center;
+    display: flex;
+    margin: 14px 0px;
+}
+
+.sheetList>a>li>mat-icon {
+    margin-right: 10px;
+}
