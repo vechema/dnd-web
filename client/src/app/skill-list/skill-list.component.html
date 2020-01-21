@@ -12,11 +12,23 @@
     <div class="gridLayout">
       <div class="sheetBlock mat-elevation-z3">
           <h2>Skill List</h2>
+          <hr>
+          <table class="responsiveTable">
+            <tr>
+              <th  *ngFor="let column of headers">
+                  <mat-icon aria-hidden="false" aria-label="Example home icon">info_outline</mat-icon>{{column}}<mat-icon aria-hidden="false" aria-label="Example home icon">arrow_drop_down</mat-icon>
+              </th>
+            </tr>
 
-          <div *ngFor="let skill of skills">
-            {{skill.gameEntity.name}}
-          </div>
-      </div>
+            <tr *ngFor="let row of rows">
+              <td *ngFor="let column of headers">
+                  {{row[column]}}
+              </td>
+            </tr>
+          
+          <div *ngFor="let skill of skills" class="column">
+            {{skill.gameEntity.name}}</div>
+    </table>
       
     </div>
     

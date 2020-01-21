@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { SkillService } from '../shared/skill/skill.service';
+import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-skill-list',
@@ -9,14 +10,55 @@ import { SkillService } from '../shared/skill/skill.service';
 })
 export class SkillListComponent implements OnInit {
 
-  skills: Array<any>;
+  headers = ["Proficient", "Bonus", "Skill", "Modifier"];
 
-  constructor(private skillService: SkillService) { }
+  rows = [
+    {
+      "Proficient": true,
+      "Bonus": "-1",
+      "Skill": "Acrobatics",
+      "Modifier": "Dexterity"
+    },
+    {
+      "Proficient": false,
+      "Bonus": "+2",
+      "Skill": "Animal Handling",
+      "Modifier": "Wisdom"
+    },
+    {
+      "Proficient": false,
+      "Bonus": "+2",
+      "Skill": "Arcana",
+      "Modifier": "Intelligence"
+    },
+    {
+      "Proficient": false,
+      "Bonus": "+5",
+      "Skill": "Athletics",
+      "Modifier": "Strength"
+    },
+    {
+      "Proficient": false,
+      "Bonus": "+2",
+      "Skill": "Deception",
+      "Modifier": "Wisdom"
+    },
+    {
+      "Proficient": false,
+      "Bonus": "-1",
+      "Skill": "History",
+      "Modifier": "Intelligence"
+    }
+  ]
 
-  ngOnInit() {
-    this.skillService.getAllSkills().subscribe(data => {
-      this.skills = data
-    });
-  }
+// skills: Array<any>;
+
+// constructor(private skillService: SkillService) { }
+
+//   ngOnInit() {
+//     this.skillService.getAllSkills().subscribe(data => {
+//       this.skills = data
+//     });
+//   }
 
 }
