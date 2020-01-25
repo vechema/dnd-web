@@ -1,5 +1,35 @@
-<h2>Skill List</h2>
+<div class="characterStats">
 
-<div *ngFor="let skill of skills">
-  {{skill.gameEntity.name}}
-</div>
+    <div class="menuBar mat-elevation-z3">
+      <ul class="sheetList">
+        <a href="#"><li><mat-icon aria-hidden="false" aria-label="Example home icon">all_out</mat-icon>Skills</li></a>
+        <a href="#"><li><mat-icon aria-hidden="false" aria-label="Example home icon">card_travel</mat-icon>Inventory</li></a>
+        <a href="#"><li><mat-icon aria-hidden="false" aria-label="Example home icon">colorize</mat-icon>Combat</li></a>
+        <a href="#"><li><mat-icon aria-hidden="false" aria-label="Example home icon">folder_open</mat-icon>Notes</li></a>
+      </ul>
+    </div>
+  
+    <div class="gridLayout">
+      <div class="sheetBlock mat-elevation-z3">
+          <h2>Skill List</h2>
+          <hr>
+          <table class="responsiveTable">
+            <tr>
+              <th  *ngFor="let column of headers">
+                  <mat-icon aria-hidden="false" aria-label="Example home icon">info_outline</mat-icon>{{column}}<mat-icon aria-hidden="false" aria-label="Example home icon">arrow_drop_down</mat-icon>
+              </th>
+            </tr>
+
+            <tr *ngFor="let row of rows">
+              <td *ngFor="let column of headers">
+                  {{row[column]}}
+              </td>
+            </tr>
+          
+          <div *ngFor="let skill of skills" class="column">
+            {{skill.gameEntity.name}}</div>
+    </table>
+      
+    </div>
+    
+  </div>

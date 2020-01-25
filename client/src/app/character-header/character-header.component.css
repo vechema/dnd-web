@@ -1,0 +1,181 @@
+.header {
+    background-image: linear-gradient(
+        rgba(44, 46, 59, 0.80), 
+        rgba(44, 46, 59, 0.80)
+      ),
+      url("/assets/img/forest.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+}
+
+.two-column {
+    display: flex;
+}
+
+.three-column {
+    display: flex;
+}
+
+.character {
+    padding-top: 48px;
+    margin: 0 80px 40px;
+    justify-content: stretch;
+}
+
+.character-title {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.character-title>h2 {
+    margin: 0 0 8px;
+}
+
+.character-title>h3 {
+    margin: 0;
+}
+
+.character-title>h4 {
+    margin: 0;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+}
+
+.statBox {
+    text-align: center;
+    margin: 0 20px;
+    border: 2px solid #83F7E5;
+    border-radius: 20px;
+    padding: 0 32px 8px;
+}
+
+.statBox>h4 {
+    margin: 12px 0;
+}
+
+.statBox>h2 {
+    margin: 0;
+}
+
+.levelBar {
+    align-items: center;
+    justify-content: stretch;
+    margin: 0 80px;
+    height: 8px;
+}
+
+.levelBar>h4 {
+    flex-grow: 0;
+    margin: 0 20px;
+}
+
+.levelBar>progress {
+    flex-grow: 2;
+}
+
+progress[value] {
+    height: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: rgba(131, 247, 229, 0.20);
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: #83F7E5;
+}
+
+#progressIndicator {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0 0;
+}
+
+.restButtons {
+    padding: 20px 0 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonGroup>button {
+    padding: 8px 32px;
+    border: 2px solid #83F7E5;
+    border-radius: 8px;
+    margin: 0 4px;
+    font-family: 'Roboto', Arial;
+    background-color: rgba(131, 247, 229, 0.20);
+    color: white;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.quickStatBar {
+    display: flex;
+    background-color: white;
+    padding: 8px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.quickStat {
+    background-color: #2C2E3B;
+    text-align: center;
+    border: 2px solid #83F7E5;
+    border-radius: 14px;
+    width: 120px;
+    height: 115px;
+    margin: 0 8px;
+}
+
+.quickStatBlockNum {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.quickStatBlockLabel {
+    margin-top: 0px;
+}
+
+.close {
+    display: block;
+    margin-left: auto;
+    position: relative;
+    border-radius: 50%;
+    height: 26px;
+    width: 26px;
+    left: 8px;
+    top: -8px;
+    background-color: #83F7E5;
+    border: none;
+}
+
+.close>mat-icon {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -11px;
+}
+
+.menuBar {
+    padding: 50px 0px;
+    background-color: grey;
+}
+
+.add {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    background-color: #83F7E5;
+    border: none;
+}
